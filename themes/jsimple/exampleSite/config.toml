@@ -1,0 +1,91 @@
+baseurl = "https://example.com"
+languageCode = "zh-CN"
+hasCJKLanguage = true
+title = "好少年光芒万丈"
+theme = "jsimple"
+themesDir = "./themes/"
+
+# Define the number of posts per page
+paginate = 10
+
+disablePathToLower = true
+summaryLength = 50
+
+[params.iconshow]
+    category = true
+    series = false
+    tag = true
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[permalinks]
+    post = "/:year/:month/:day/:slug"
+
+[params]
+    # Tell me who you are
+    siteName = "hojun"
+		keywords = "hojunkey"
+		description = "hojundesc"
+		shortName = "HJ"
+    
+    # 左侧面板配置
+    avatar = "https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg"
+    coverTitle = "hello ，stranger"
+    coverDescription = "一个好奇的博客"
+    
+    weixin = "https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg"
+    sinaWb = "https://weibo.com/5673857615/profile?topnav=1&wvr=6&is_all=1"
+    qq = "https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes"
+    github = "https://github.com/honjun"
+    bili = "https://space.bilibili.com/271849279/#/"
+		favicon = "https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg"
+    
+    # define which types of pages should be shown. By default the type with the most regular pages
+    mainSections = ["posts"]
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    # Add custom assets with their paths relative to the static folder
+    custom_css = []
+    custom_js  = []
+    
+    # 评论配置
+    v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz"
+    v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ"
+    
+    # 文章底部配置
+    tipImg="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg"
+    QQGroup="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"
+    weixinG="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"
+    
+    # 熊掌号
+    baiduXZ="http://author.baidu.com/home/1594654793276567"
+# Create custom menu entries by defining a label and a link for
+# them. Since you can also link posts, you've the option the
+# place the links before or after them.
+#
+# E.g.: "Home" appears before all linked posts in the menu
+# and "Tags" / "Categories" after them.
+# 头部栏目配置
+
+[[params.topMenu]]
+    name   = "首页"
+    link   = "/"
+    target = ""
+[[params.topMenu]]
+    name   = "技术"
+    link   = "/categories/技术/"
+    target = ""
+[[params.topMenu]]
+    name   = "生活"
+    link   = "/categories/生活/"
+    target = ""
+[[params.topMenu]]
+    name   = "友链"
+    link   = "/links/"
+    target = ""
+   
