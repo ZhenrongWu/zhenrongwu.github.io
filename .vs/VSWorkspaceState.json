@@ -3,9 +3,7 @@
     "",
     "\\archetypes",
     "\\content",
-    "\\content\\posts",
-    "\\resources",
-    "\\resources\\_gen"
+    "\\content\\posts"
   ],
   "SelectedNode": "\\content\\about-hugo.md",
   "PreviewInSolutionExplorer": false
