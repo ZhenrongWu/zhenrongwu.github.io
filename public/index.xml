@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhenrong&#39;s blog</title>
+    <link>https://MyBlog.github.io/</link>
+    <description>Recent content on Zhenrong&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-TW</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://MyBlog.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>5件關於App的事情</title>
+      <link>https://MyBlog.github.io/posts/2021_04_22/</link>
+      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://MyBlog.github.io/posts/2021_04_22/</guid>
+      <description>1. 製作App的意義 製作一款App我覺得要說困難可以很困難， 要說簡單也可以很簡單，因為現在有很多已經寫好功能的軟體， 能去完成做App這件事，做出一款App我認為這不是最重要的事情， 而我認為最重要的事是，這個App可以解決或幫助什麼事， 以及在製作這個App時我自己學到了什麼。
+2. 事先了解顧客的需求 當我們要製作一款App時，要先了解顧客需要的功能， 假如顧客所需要的功能是網頁就可以完成的事， 那製作App這件事情就可以把它去除， 因為製作App的開發成本要比網頁來的高，同時在製程方面也是比網頁來的長， 所以在製作App前請務必與顧客好好的溝通。
+3. Wireframe的必要性 在製作App初期，我們需要先把Wireframe呈現出來， 那什麼是Wireframe，Wireframe簡單來說就是一種低擬真度的表現手法， 主要目的是能清楚的表達App需要的功能以及頁面上的排版， 在與顧客討論過程中，也能即時的做修改， 那這邊有推薦的幾個軟體像是Adobe XD、Sketch都是很好的選擇， 當然，如果這時候身邊只有紙跟筆，那我們也可以把Wireframe畫出來跟顧客看喔~
+4. 設計師與工程師的溝通 在開發App的過程，設計師與工程師時常會有意見上的衝突， 而往往衝突的產生是因為沒有把已確定好的事項，訂製一套規則， 而這套規則所需要有的內容像是，圖片的尺寸、頁面位置的標記、動態效果的呈現， 這些事情如果沒有給工程師，那工程師也無法得知設計師所想要的內容， 畢竟工程師講求的是合理的邏輯以及明確的事件。
+5. 設備上的測試 在開發過程Android跟IOS是我們常見的手機系統， 在一般使用者的認知上，可能會覺Android手機在測試上會比較方便， 因為Android手機取得比較容易，價格也比較便宜， 但同時Android手機的品牌也眾多，而這樣就會造成螢幕比例多樣， 所以在開發者的角度上IOS要比Android手機來的好， 所以在開發前請務必與顧客確定好設備規格，同時也別忘了簽約這件事。
+最後希望這篇文章可以幫助到有需要的人， 這篇文章是一個開始，之後我還是會陸陸續續更新， 但日後都會比較偏向跟遊戲開發有關的文章， 畢竟開發遊戲是我擅長的事，也是一輩子想一直做下去的事。
+與文中有關的資訊： https://reurl.cc/4yeaL2、 https://www.adobe.com/tw/products/xd.html、 https://www.sketch.com/</description>
+    </item>
+    
+    <item>
+      <title>關於我</title>
+      <link>https://MyBlog.github.io/about-hugo/</link>
+      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://MyBlog.github.io/about-hugo/</guid>
+      <description>撰寫中&amp;hellip;&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>
