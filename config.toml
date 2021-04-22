@@ -1,7 +1,7 @@
-baseURL = "https://example.com"
-languageCode = "en-us"
+baseURL = "https://zhenrongwu.github.io"
+languageCode = "en-TW"
 defaultContentLanguage = "en"
-title = "Zhenrong"
+title = "Zhenrong's blog"
 theme = "hermit"
 # enableGitInfo = true
 pygmentsCodefences  = true
@@ -57,11 +57,11 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   # Check https://github.com/Track3/hermit#social-icons for more info.
   [[params.social]]
     name = "twitter"
-    url = "https://twitter.com/"
+    url = "https://twitter.com/home?lang=zh-tw"
 
   [[params.social]]
     name = "instagram"
-    url = "https://instagram.com/"
+    url = "https://www.instagram.com/?hl=zh-tw"
 
   [[params.social]]
     name = "github"
