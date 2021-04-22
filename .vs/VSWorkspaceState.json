@@ -3,7 +3,8 @@
     "",
     "\\archetypes",
     "\\content",
-    "\\content\\posts"
+    "\\content\\posts",
+    "\\data"
   ],
   "SelectedNode": "\\content\\about-hugo.md",
   "PreviewInSolutionExplorer": false
