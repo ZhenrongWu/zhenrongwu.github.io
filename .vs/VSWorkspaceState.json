@@ -1,11 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\archetypes",
     "\\content",
-    "\\content\\posts",
-    "\\data"
+    "\\content\\posts"
   ],
-  "SelectedNode": "\\content\\posts\\Share five things about app.md",
+  "SelectedNode": "\\content",
   "PreviewInSolutionExplorer": false
 }
