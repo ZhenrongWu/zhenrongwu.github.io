@@ -2,7 +2,7 @@ baseurl                  = "https://zhenrongwu.github.io"           # Your domai
 languageCode             = "zh-tw"
 defaultContentLanguage   = "tw"
 isMultilingual           = false
-title                    = "®¶ºaªº³¡¸¨®æ"
+title                    = "Zhenrong's blog"
 theme                    = "sam"
 pygmentsStyle            = "monokai"                        # https://help.farbox.com/pygments.html
 pygmentsCodefences       = true
@@ -13,7 +13,7 @@ pygmentsCodefences       = true
     dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
     favicon              = "sam.ico"
     homepage             = "Main"                           # What to call the home page link, link will not be rendered if empty
-    footerText           = "Copyright 2021 by zhen-rong"
+    footerText           = "Copyright 2021 by ®¶ºa"
 
 # Metadata for Open Graph and Twitter
     description          = "A new Hugo site."               # Max 160 characters show in search results
