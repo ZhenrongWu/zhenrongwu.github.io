@@ -13,7 +13,7 @@ pygmentsCodefences       = true
     dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
     favicon              = "sam.ico"
     homepage             = "Main"                           # What to call the home page link, link will not be rendered if empty
-    footerText           = "Copyright 2021 by ®¶ºa"
+    footerText           = "Copyright 2021 by zhen-rong"
 
 # Metadata for Open Graph and Twitter
     description          = "A new Hugo site."               # Max 160 characters show in search results
