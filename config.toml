@@ -6,7 +6,7 @@ title                    = "Zhenrong's blog"
 theme                    = "sam"
 pygmentsStyle            = "monokai"                        # https://help.farbox.com/pygments.html
 pygmentsCodefences       = true
-googleAnalytics        = "G-3DDPK1ZPLE"                               # Tracking code, eg. "UA-111111111-1"
+googleAnalytics        = "G-LEED6SX3PW"                               # Tracking code, eg. "UA-111111111-1"
 
 [params]
     dateform             = "Mon Jan 02, 2006"
