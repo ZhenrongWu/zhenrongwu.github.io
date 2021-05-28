@@ -1,8 +1,8 @@
 baseurl                  = "https://zhenrongwu.github.io"           # Your domain name
-languageCode             = "en-us"
-defaultContentLanguage   = "en"
+languageCode             = "zh-tw"
+defaultContentLanguage   = "tw"
 isMultilingual           = false
-title                    = "Zhenrong's blog"
+title                    = "®¶ºaªº³¡¸¨®æ"
 theme                    = "sam"
 pygmentsStyle            = "monokai"                        # https://help.farbox.com/pygments.html
 pygmentsCodefences       = true
