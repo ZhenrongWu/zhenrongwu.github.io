@@ -1,4 +1,4 @@
-[tw]
+[zh-tw]
 title = "我的部落格"
 weight = 1
 LanguageName = "TW"
@@ -6,7 +6,7 @@ contentDir = "content/traditional-chinese"
 
 [en]
 title = "My Blog"
-description = ""
+description = "Hello World!"
 contentDir = "content/english" 
 weight = 2
 LanguageDirection = "rtl" 

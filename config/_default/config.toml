@@ -1,6 +1,6 @@
 baseURL = "https://zhenrongwu.github.io"
-languageCode = "tw"
-DefaultContentLanguage = "tw"
+languageCode = "zh-tw"
+DefaultContentLanguage = "zh-tw"
 title = "Zhenrong's Blog"
 theme = "anatole"
 summarylength = 10
