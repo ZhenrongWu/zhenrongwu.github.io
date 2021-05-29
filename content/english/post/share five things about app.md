@@ -36,7 +36,7 @@ In the process of discussing with customers, you can also make changes in real t
 Then there are several recommended softwares, Adobe XD and Sketch, which are all good choices.
 Of course, if there are only paper and pen at this time, then we can also draw the wire frame directly for customers to see.
 
-##4. Communication between designer and engineer
+## 4. Communication between designer and engineer
 
 In the process of developing applications, designers and engineers often conflict,
 And conflicts often occur because there are no good things, and there are already rules for ordering.
@@ -47,7 +47,7 @@ Engineers emphasize unreasonable logic and clear events.
 ## 5. Test on the device
 
 During the development process, Android and IOS are our common mobile phone systems.
-In general users¡¦ perceptions, they may find Android phones to be more convenient for testing.
+In general users's perceptions, they may find Android phones to be more convenient for testing.
 Because Android phones are easier to obtain and the price is cheaper,
 But at the same time the brand of Android phones has also experienced it, and this will trigger a screen light curtain,
 So from the perspective of developers, IOS Android phones are good,
