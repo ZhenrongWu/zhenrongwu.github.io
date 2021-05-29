@@ -2,22 +2,22 @@
   name = "首頁"
   identifier = "main"
   weight = 100
-  url = "/tw"
+  url = "/"
 
   [[main]]
   name = "文章"
   weight = 200
   identifier = "posts"
-  url = "/tw/post"
+  url = "/post/"
 
   [[main]]
   name = "關於"
   weight = 300
   identifier = "about"
-  url = "/tw/about"
+  url = "/about/"
 
   [[main]]
   name = "聯絡"
   weight = 400
   identifier = "contact"
-  url = "/tw/contact"
+  url = "/contact/"

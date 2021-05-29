@@ -46,3 +46,8 @@ url = "https://www.instagram.com/tim4224171/?hl=zh-tw"
 icon = "fas fa-envelope"
 title = "e-mail"
 url = "mailto:a782134@ltugmail.ltu.edu.tw"
+
+[[socialIcons]]
+icon = "fab fa-twitter"
+title = "Twitter"
+url = "https://twitter.com/tim4224171"

@@ -1,7 +1,7 @@
 ---
 author: Hugo Authors
-title: للتواصل
-date: 2019-03-08
+title: 聯絡我
+date: 2021-05-29
 description: Contact Page
 contact: true
 ---
