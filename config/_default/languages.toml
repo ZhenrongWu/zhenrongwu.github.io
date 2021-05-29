@@ -1,13 +1,13 @@
-[en]
-title = "My blog"
+[tw]
+title = "我的部落格"
 weight = 1
-LanguageName = "EN"
-contentDir = "content/english"
+LanguageName = "TW"
+contentDir = "content/traditional-chinese"
 
-[ar]
-title = "عربي"
-description = "أنا أحمد"
-contentDir = "content/arabic" 
+[en]
+title = "My Blog"
+description = ""
+contentDir = "content/english" 
 weight = 2
 LanguageDirection = "rtl" 
-LanguageName = "AR"
+LanguageName = "EN"

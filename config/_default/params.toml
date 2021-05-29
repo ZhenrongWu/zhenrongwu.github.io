@@ -1,10 +1,3 @@
-
-title = "I'm Jane Doe"
-author = "Jane Doe"
-#copyright = "2020-2021"
-description = "Call me Jane"
-profilePicture = "images/profile.jpg"
-keywords = ""
 favicon = "favicons/"
 # example ["css/custom.css"]
 customCss = []
@@ -38,22 +31,18 @@ use = "katex"  # options: "katex", "mathjax". default is "katex".
 
 ## Social links
 # use 'fab' when brand icons, use 'fas' when standard solid icons.
-[[socialIcons]]
-icon = "fab fa-linkedin"
-title = "Linkedin"
-url = "https://de.linkedin.com/"
 
 [[socialIcons]]
 icon = "fab fa-github"
 title = "GitHub"
-url = "https://github.com/lxndrblz/anatole/"
+url = "https://github.com/ZhenrongWu"
 
 [[socialIcons]]
 icon = "fab fa-instagram"
 title = "instagram"
-url = "https://www.instagram.com/"
+url = "https://www.instagram.com/tim4224171/?hl=zh-tw"
 
 [[socialIcons]]
 icon = "fas fa-envelope"
 title = "e-mail"
-url = "mailto:mail@example.com"
+url = "mailto:a782134@ltugmail.ltu.edu.tw"
