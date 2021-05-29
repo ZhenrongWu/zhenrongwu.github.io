@@ -9,5 +9,5 @@ title = "My Blog"
 description = "Hello World!"
 contentDir = "content/english" 
 weight = 2
-LanguageDirection = "rtl" 
+# LanguageDirection = "rtl" 
 LanguageName = "EN"
