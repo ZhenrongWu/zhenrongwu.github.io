@@ -8,10 +8,10 @@ enableEmoji = true
 enableRobotsTXT = true
 
 # Enable Disqus
-#disqusShortname = ""
+disqusShortname = "myblog-7gyc4scw0e"
 
 # Google Analytics
-#googleAnalytics = "UA-123-45"
+googleAnalytics = "G-LEED6SX3PW"
 
 # Syntax highlighting
 pygmentsUseClasses = true
