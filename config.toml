@@ -1,6 +1,6 @@
 baseurl                  = "https://zhenrongwu.github.io"           # Your domain name
 languageCode             = "zh-tw"
-defaultContentLanguage   = "zh-tw"
+defaultContentLanguage   = "tw"
 isMultilingual           = false
 title                    = "Zhenrong's blog"
 theme                    = "sam"
