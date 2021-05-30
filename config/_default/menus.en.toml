@@ -16,8 +16,8 @@
   identifier = "about"
   url = "/en/about"
 
-  [[main]]
-  name = "Contact"
-  weight = 400
-  identifier = "contact"
-  url = "/en/contact"
+  # [[main]]
+  # name = "Contact"
+  # weight = 400
+  # identifier = "contact"
+  # url = "/en/contact"
