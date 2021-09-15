@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 吳振榮 | 個人部落格</title>
+    <link>https://zhenrongwu.github.io/categories/</link>
+    <description>Recent content in Categories on 吳振榮 | 個人部落格</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zhenrongwu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>App</title>
+      <link>https://zhenrongwu.github.io/categories/app/</link>
+      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhenrongwu.github.io/categories/app/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
