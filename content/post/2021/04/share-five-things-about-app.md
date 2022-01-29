@@ -62,7 +62,7 @@ archives = ["2021/04"]
 但日後都會比較偏向跟遊戲開發有關的文章，
 畢竟開發遊戲是我擅長，且一輩子想一直做下去的事。
 
-### 與文中有關的資訊：
-1. https://reurl.cc/4yeaL2
-2. https://www.adobe.com/tw/products/xd.html
-3. https://www.sketch.com/
+### 參考來源
+- https://reurl.cc/4yeaL2
+- https://www.adobe.com/tw/products/xd.html
+- https://www.sketch.com/
