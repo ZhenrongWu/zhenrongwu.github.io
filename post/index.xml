@@ -6,7 +6,23 @@
     <description>Recent content in Posts on 吳振榮 | 個人部落格</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zhenrongwu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zhenrongwu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rider Debug 模式在 Unity 的應用</title>
+      <link>https://zhenrongwu.github.io/post/2022/01/debug-unity-applications/</link>
+      <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhenrongwu.github.io/post/2022/01/debug-unity-applications/</guid>
+      <description>前言 因為一直很懶的寫部落格， 再加上自己有點完美主義， 同時也不知道該寫甚麼內容， 但這樣下去只會使自己停滯不前， 所以從現在到今年結束， 我每週都會固定紀錄一篇自己學習的知識。 而之所以會寫這篇是因為發覺自己並不熟悉 Rider Debug 模式要如何在 Unity 使用。
+正文 第一步：將 Attach to Unity Editor 改成 Attch to Unity Editor &amp;amp; Play，這樣的調整是為了讓 Unity 的 Play 鍵也能被啟用
+第二步：在想要知道是否有被執行的那行程式碼中按下 F9
+第三步：按下F5 (這邊要說明一下，本人快捷鍵模式是選用 ReSharper，雖然官方文件和編輯器的提示是 Alt+F5，但本人這邊實作下來就是 F5)
+第四步：當程式碼有被執行時，就會跳到 Rider，這時候可以按下 F10 看後續運行的流程
+第五步：當知道問題後，就可以按下 Shift+F5 跳出 Debug Mode 模式
+結語 如果想知道更詳細的操作內容，可以點擊下方的參考來源，希望本篇有幫助到需要的人。
+參考來源  https://www.jetbrains.com/help/rider/Debugging_Unity_Applications.html  </description>
+    </item>
+    
     <item>
       <title>分享五件關於App的事情</title>
       <link>https://zhenrongwu.github.io/post/2021/04/share-five-things-about-app/</link>
@@ -19,7 +35,7 @@
 4. 設計師與工程師的溝通 在開發App的過程，設計師與工程師時常會有意見上的衝突， 而往往衝突的產生是，因為沒有把已確定好的事項訂製一套規定， 而這套規定所需要有的內容像是，圖片的尺寸、頁面位置的標記、動態效果的呈現， 這些事情如果沒有給工程師，那工程師也無法得知設計師所想要的內容， 畢竟工程師講求的是合理的邏輯以及明確的事件。
 5. 設備上的測試 在開發過程Android跟IOS是我們常見的手機系統， 在一般使用者的認知上，可能會覺得Android手機在測試上會比較方便， 因為Android手機取得比較容易，價格也比較便宜， 但同時Android手機的品牌也眾多，而這樣就會造成螢幕比例多樣， 所以在開發者的角度上IOS要比Android手機來的好， 所以在開發前請務必與顧客確定好設備規格，同時也別忘了簽約這件事。
 結語 最後，希望這篇文章可以幫助到有需要的人， 這篇文章是一個開始，之後我還是會陸陸續續更新， 但日後都會比較偏向跟遊戲開發有關的文章， 畢竟開發遊戲是我擅長，且一輩子想一直做下去的事。
-與文中有關的資訊：  https://reurl.cc/4yeaL2 https://www.adobe.com/tw/products/xd.html https://www.sketch.com/  </description>
+參考來源  https://reurl.cc/4yeaL2 https://www.adobe.com/tw/products/xd.html https://www.sketch.com/  </description>
     </item>
     
   </channel>

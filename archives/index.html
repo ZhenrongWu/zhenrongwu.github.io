@@ -151,6 +151,9 @@
     <a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800"
         href="https://zhenrongwu.github.io/archives/2021/04">2021/04 (1)</a>
     
+    <a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800"
+        href="https://zhenrongwu.github.io/archives/2022/01">2022/01 (1)</a>
+    
     
 </div>
         
@@ -159,6 +162,10 @@
     
     <a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800"
         href="https://zhenrongwu.github.io/categories/app">App</a>
+
+    
+    <a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800"
+        href="https://zhenrongwu.github.io/categories/ide">Ide</a>
 
     
 </div>
@@ -171,6 +178,16 @@
             <span
                 class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
                 record
+            </span></a>
+        <a href="/tags/rider">
+            <span
+                class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+                rider
+            </span></a>
+        <a href="/tags/unity">
+            <span
+                class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+                unity
             </span></a>
         <a href="/tags/wireframe">
             <span
@@ -195,6 +212,15 @@
                     </p>
                 </div>
             </div>
+        <a href="/post/2022/01/debug-unity-applications/" class="">
+            <div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+                <div class="px-2">
+                    <div class="text-gray-900 font-bold text-xl dark:text-white">Rider Debug 模式在 Unity 的應用</div>
+                    <p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+                        <time><span class="icon-access_time mr-1"></span>2022/01/29</time>
+                    </p>
+                </div>
+            </div>
         </a>
     </div>
 </div>
@@ -206,7 +232,7 @@
         </div><footer class="bg-gray-800 text-white p-6">
     
     <div class="container max-w-screen-xl mr-auto ml-auto">
-        <p>&copy; 2021 <a href="https://zhenrongwu.github.io" class="duration-200 hover:opacity-50">吳振榮 | 個人部落格</a></p>
+        <p>&copy; 2022 <a href="https://zhenrongwu.github.io" class="duration-200 hover:opacity-50">吳振榮 | 個人部落格</a></p>
         
     </div>
     <script>
@@ -221,31 +247,6 @@
           document.documentElement.classList.add('dark')
         } else {
           document.documentElement.classList.remove('dark')
-        }
-        function toggleDarkMode() {
-        if (document.documentElement.classList.contains('dark')) {
-            icon.classList.remove("icon-sun");
-            icon.classList.add("icon-moon");
-            icon2.classList.remove("icon-sun");
-            icon2.classList.add("icon-moon");
-            document.documentElement.classList.remove('dark')
-            localStorage.theme = 'light'
-        } else {
-            icon.classList.remove("icon-moon");
-            icon.classList.add("icon-sun");
-            icon2.classList.remove("icon-moon");
-            icon2.classList.add("icon-sun");
-            document.documentElement.classList.add('dark')
-            localStorage.theme = 'dark'
-        }
-    }
-    </script>
-</footer>
-</div>
-</body>
-
-</html>
-List.remove('dark')
         }
         function toggleDarkMode() {
         if (document.documentElement.classList.contains('dark')) {
