@@ -24,7 +24,6 @@
       "meta",
       "nav",
       "noscript",
-      "ol",
       "p",
       "script",
       "section",
@@ -174,7 +173,6 @@
       "py-1",
       "py-2",
       "py-3",
-      "py-4",
       "py-5",
       "relative",
       "right-0",
@@ -218,15 +216,10 @@
       "mobileMenu",
       "tags",
       "thumb",
-      "內容",
       "前言",
       "參考來源",
-      "參考資料",
-      "參考資料httpswwwjetbrainscomhelpriderdebugging_unity_applicationshtml",
       "正文",
-      "結語",
-      "結論",
-      "與文中有關的資訊"
+      "結語"
     ]
   }
 }
