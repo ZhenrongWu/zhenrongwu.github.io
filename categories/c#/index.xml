@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>unity on 吳振榮 | 個人部落格</title>
-    <link>https://zhenrongwu.github.io/tags/unity/</link>
-    <description>Recent content in unity on 吳振榮 | 個人部落格</description>
+    <title>C# on 吳振榮 | 個人部落格</title>
+    <link>https://zhenrongwu.github.io/categories/c#/</link>
+    <description>Recent content in C# on 吳振榮 | 個人部落格</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 06 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zhenrongwu.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zhenrongwu.github.io/categories/c#/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 Unity 中正確的暫停方法</title>
       <link>https://zhenrongwu.github.io/post/2022/02/06/the_correct_way_to_pause_in_unity/</link>
@@ -15,22 +15,6 @@
       <guid>https://zhenrongwu.github.io/post/2022/02/06/the_correct_way_to_pause_in_unity/</guid>
       <description>前言 在初期大家一開始在學習 Unity 的暫停功能時， 相信大家最常用的就是 Time.timeScale， 而這個方法是藉由改變時間來達到此效果， 同時在小專案上也能快速實現， 但這個做法會有一些問題， 像是介面的動畫效果、場景加載、音效觸發等問題， 當然，用 Time.timeScale 也並非不能解決以上講的問題， 但當專案大時為了讓程式碼更乾淨， 同時能更好控管遊戲裡物件的狀態， 所以接下來要講的方法是， 藉由一個管理器來處理遊戲內暫停的功能， 而裡面有用到的知識有列舉、委派、事件， 以及最重要的單例模式。
 程式碼 GameState public enum GameState { Gameplay, Pause } GameStateManager public class GameStateManager { private static GameStateManager _instance; public static GameStateManager Instance { get { if (_instance == null) { _instance = new GameStateManager(); } return _instance; } } public GameState CurrentGameState { get; private set; } public delegate void GameStateChangeHandler(GameState newGameState); public event GameStateChangeHandler OnGameStateChanged; private GameStateManager() { } public void SetState(GameState newGameState) { if (newGameState == CurrentGameState) { return; } CurrentGameState = newGameState; OnGameStateChanged?</description>
-    </item>
-    
-    <item>
-      <title>Rider Debug 模式在 Unity 的應用</title>
-      <link>https://zhenrongwu.github.io/post/2022/01/29/debug_unity_applications/</link>
-      <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhenrongwu.github.io/post/2022/01/29/debug_unity_applications/</guid>
-      <description>前言 因為一直很懶的寫部落格， 再加上自己有點完美主義， 同時也不知道該寫甚麼內容， 但這樣下去只會使自己停滯不前， 所以從現在到今年結束， 我每週都會固定紀錄一篇自己學習的知識。 而之所以會寫這篇是因為發覺自己並不熟悉 Rider Debug 模式要如何在 Unity 使用。
-正文 第一步：將 Attach to Unity Editor 改成 Attch to Unity Editor &amp;amp; Play，這樣的調整是為了讓 Unity 的 Play 鍵也能被啟用
-第二步：在想要知道是否有被執行的那行程式碼中按下 F9
-第三步：按下F5 (這邊要說明一下，本人快捷鍵模式是選用 ReSharper，雖然官方文件和編輯器的提示是 Alt+F5，但本人這邊實作下來就是 F5)
-第四步：當程式碼有被執行時，就會跳到 Rider，這時候可以按下 F10 看後續運行的流程
-第五步：當知道問題後，就可以按下 Shift+F5 跳出 Debug Mode 模式
-結語 如果想知道更詳細的操作內容，可以點擊下方的參考來源，希望本篇有幫助到需要的人。
-參考來源  https://www.jetbrains.com/help/rider/Debugging_Unity_Applications.html  </description>
     </item>
     
   </channel>
