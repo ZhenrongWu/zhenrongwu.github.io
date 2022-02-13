@@ -1,11 +1,11 @@
-baseURL = "https://zhenrongwu.github.io"
-title = "吳振榮 | 個人部落格"
-author = "ZhenrongWu"
-languageCode = "zh-TW"
 DefaultContentLanguage = "en"
+author = "ZhenrongWu"
+baseURL = "https://zhenrongwu.github.io"
 enableInlineShortcodes = true
-theme = "Blonde"
 enableRobotsTXT = true
+languageCode = "zh-TW"
+theme = "Blonde"
+title = "吳振榮 | 個人部落格"
 
 # Please enable this feature if the site is available in Japanese, Chinese or Korean.
 #hasCJKLanguage = true
@@ -34,30 +34,30 @@ tagsLimit = 20
 # Light mode by default : light
 darkmode = "light"
 
-  [params.post]
-    # Show thumbnails
-    thumbnail = true
+[params.post]
+# Show thumbnails
+thumbnail = true
 
-    # Disable the "NO IMAGE" image.
-    noimage = true
+# Disable the "NO IMAGE" image.
+noimage = true
 
-    # See the Tailwind CSS documentation to set it up.
-    # Recommended settings are h-32 to h-48.
-    # https://tailwindcss.com/docs/height
-    thumbnail_height = "h-44"
+# See the Tailwind CSS documentation to set it up.
+# Recommended settings are h-32 to h-48.
+# https://tailwindcss.com/docs/height
+thumbnail_height = "h-44"
 
-    # https://tailwindcss.com/docs/width
-    thumbnail_width = "w-auto"
+# https://tailwindcss.com/docs/width
+thumbnail_width = "w-auto"
 
-    # Number of characters in description
-    description = "130"
+# Number of characters in description
+description = "130"
 
-  [params.widgets]
-    # Display widgets
-    display = true
+[params.widgets]
+# Display widgets
+display = true
 
-    # Order of widgets to display
-    widgets = ["search", "archive", "category", "tags", "recent"]
+# Order of widgets to display
+widgets = ["search", "archive", "category", "tags", "recent"]
 
 # If you're using Yandex.Metrica, you can enable this feature.
 #[params.analytics.yandexmetrica]
@@ -66,55 +66,49 @@ darkmode = "light"
 
 [menu]
 
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
 
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 2
-
-  # [[menu.main]]
-  #   identifier = "contact"
-  #   name = "Contact"
-  #   url = "/contact/"
-  #   weight = 3
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 2
 
 [taxonomies]
+archive = "archives"
 category = "categories"
 tag = "tags"
-archive = "archives"
 
 [privacy]
 
-  [privacy.vimeo]
-    disabled = false
-    simple = true
+[privacy.vimeo]
+disabled = false
+simple = true
 
-  [privacy.twitter]
-    disabled = false
-    enableDNT = true
-    simple = true
+[privacy.twitter]
+disabled = false
+enableDNT = true
+simple = true
 
-  [privacy.instagram]
-    disabled = false
-    simple = true
+[privacy.instagram]
+disabled = false
+simple = true
 
-  [privacy.youtube]
-    disabled = false
-    privacyEnhanced = true
+[privacy.youtube]
+disabled = false
+privacyEnhanced = true
 
 [services]
 
-  [services.instagram]
-    disableInlineCSS = true
+[services.instagram]
+disableInlineCSS = true
 
-  [services.twitter]
-    disableInlineCSS = true
+[services.twitter]
+disableInlineCSS = true
 
 [build]
-  writeStats = true
+writeStats = true
