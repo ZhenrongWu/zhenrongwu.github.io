@@ -3,28 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://zhenrongwu.github.io/</loc>
-    <lastmod>2022-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://zhenrongwu.github.io/about/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zhenrongwu.github.io/categories/c#/</loc>
-    <lastmod>2022-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zhenrongwu.github.io/categories/</loc>
-    <lastmod>2022-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zhenrongwu.github.io/post/</loc>
-    <lastmod>2022-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zhenrongwu.github.io/tags/</loc>
-    <lastmod>2022-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zhenrongwu.github.io/tags/unity/</loc>
-    <lastmod>2022-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://zhenrongwu.github.io/post/2022/02/13/perfect-aiming-with-animation-rigging-in-unity-/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zhenrongwu.github.io/post/2022/02/06/the_correct_way_to_pause_in_unity/</loc>
     <lastmod>2022-02-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhenrongwu.github.io/about/</loc>
-    <lastmod>2022-01-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zhenrongwu.github.io/categories/ide/</loc>
     <lastmod>2022-01-29T00:00:00+00:00</lastmod>
@@ -57,7 +60,5 @@
     <loc>https://zhenrongwu.github.io/archives/2022/02/</loc>
   </url><url>
     <loc>https://zhenrongwu.github.io/archives/</loc>
-  </url><url>
-    <loc>https://zhenrongwu.github.io/contact/</loc>
   </url>
 </urlset>

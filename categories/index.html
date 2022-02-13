@@ -52,8 +52,8 @@
 <link rel="canonical" href="https://zhenrongwu.github.io/categories/">
 
 <meta name="twitter:description" content="">
-<meta property="article:published_time" content="2022-02-06T00:00:00&#43;00:00">
-<meta property="article:updated_time" content="2022-02-06T00:00:00&#43;00:00">
+<meta property="article:published_time" content="2022-02-13T00:00:00&#43;00:00">
+<meta property="article:updated_time" content="2022-02-13T00:00:00&#43;00:00">
 
 
 
@@ -140,7 +140,7 @@
     
     
     
-    <img alt="thumbnail" id="thumb" class="lg:w-auto lg:h-44" src="/img/default.jpg">
+    
     
     
     
@@ -148,7 +148,7 @@
             <div class="text-gray-900 font-bold text-xl mb-2 dark:text-white">C#</div>
             <p class="text-gray-700 text-base pb-5 dark:text-gray-300">...</p>
             <p class="text-sm text-gray-600 absolute items-center right-0 bottom-0 dark:text-gray-400">
-                <time><span class="icon-access_time mr-1"></span>2022/02/06</time>
+                <time><span class="icon-access_time mr-1"></span>2022/02/13</time>
             </p>
     </div>
 </div>
@@ -160,7 +160,7 @@
     
     
     
-    <img alt="thumbnail" id="thumb" class="lg:w-auto lg:h-44" src="/img/default.jpg">
+    
     
     
     
@@ -180,7 +180,7 @@
     
     
     
-    <img alt="thumbnail" id="thumb" class="lg:w-auto lg:h-44" src="/img/default.jpg">
+    
     
     
     
@@ -227,7 +227,7 @@
         href="https://zhenrongwu.github.io/archives/2022/01">2022/01 (1)</a>
     
     <a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800"
-        href="https://zhenrongwu.github.io/archives/2022/02">2022/02 (1)</a>
+        href="https://zhenrongwu.github.io/archives/2022/02">2022/02 (2)</a>
     
     
 </div>
@@ -288,6 +288,15 @@
     <p class="text-xl text-center text-gray-700 py-5 dark:text-gray-300">Recent Posts</p>
     <div class="mx-6">
         
+        <a href="/post/2022/02/13/perfect-aiming-with-animation-rigging-in-unity-/" class="">
+            <div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+                <div class="px-2">
+                    <div class="text-gray-900 font-bold text-xl dark:text-white">使用 Unity 中的 Animation Rigging 讓瞄準動作更加完美</div>
+                    <p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+                        <time><span class="icon-access_time mr-1"></span>2022/02/13</time>
+                    </p>
+                </div>
+            </div>
         <a href="/post/2022/01/29/debug_unity_applications/" class="">
             <div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
                 <div class="px-2">
@@ -336,34 +345,33 @@
         var icon2 = document.getElementById("icon2");
         
         if (document.documentElement.classList.contains("dark") || localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          icon.classList.remove("icon-moon");
-          icon.classList.add("icon-sun");
-          icon2.classList.remove("icon-moon");
-          icon2.classList.add("icon-sun");
-          document.documentElement.classList.add('dark')
-        } else {
-          document.documentElement.classList.remove('dark')
-        }
-        function toggleDarkMode() {
-        if (document.documentElement.classList.contains('dark')) {
-            icon.classList.remove("icon-sun");
-            icon.classList.add("icon-moon");
-            icon2.classList.remove("icon-sun");
-            icon2.classList.add("icon-moon");
-            document.documentElement.classList.remove('dark')
-            localStorage.theme = 'light'
-        } else {
             icon.classList.remove("icon-moon");
             icon.classList.add("icon-sun");
             icon2.classList.remove("icon-moon");
             icon2.classList.add("icon-sun");
             document.documentElement.classList.add('dark')
-            localStorage.theme = 'dark'
+        } else {
+            document.documentElement.classList.remove('dark')
         }
-    }
+        function toggleDarkMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                icon.classList.remove("icon-sun");
+                icon.classList.add("icon-moon");
+                icon2.classList.remove("icon-sun");
+                icon2.classList.add("icon-moon");
+                document.documentElement.classList.remove('dark')
+                localStorage.theme = 'light'
+            } else {
+                icon.classList.remove("icon-moon");
+                icon.classList.add("icon-sun");
+                icon2.classList.remove("icon-moon");
+                icon2.classList.add("icon-sun");
+                document.documentElement.classList.add('dark')
+                localStorage.theme = 'dark'
+            }
+        }
     </script>
-</footer>
-</div>
+</footer></div>
 </body>
 
 </html>
