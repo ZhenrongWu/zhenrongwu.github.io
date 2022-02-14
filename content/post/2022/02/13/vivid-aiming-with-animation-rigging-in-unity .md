@@ -33,7 +33,7 @@ archives = ["2022/02"]
 步驟四：在剛剛新增的 AimRig 物件底下，添加二個空物件，物件一為 [BodyAim](https://i.imgur.com/aRrTXLb.png)，物件二為 [Aim](https://i.imgur.com/tAQCNqc.png)，
 而這兩個物件都要新增元件 [Multi-Aim Constraint](https://i.imgur.com/7FZVGgo.png)
 
-步驟五：設定 BodyAim 跟 Aim 的 Multi-Aim Constraint 裡的 Constrained Object，這邊以 Aim 為[範例](https://i.imgur.com/pCUt8eE.png)，這個參數的功能是用來需要約束的對象。
+步驟五：設定 BodyAim 跟 Aim 的 Multi-Aim Constraint 裡的 Constrained Object，這邊以 Aim 為[範例](https://i.imgur.com/pCUt8eE.png)，這個參數的功能是用來約束對象。
 
 步驟六：這邊我們一樣是設定 Multi-Aim Constraint 裡的參數，這邊要設定的參數是 Axis，這邊是一個坑需要非常注意， Axis 看的是瞄準動作的[本地座標](https://i.imgur.com/pn1wYPX.png)，這邊非常的重要，請讀者在製作時務必弄懂。
 
