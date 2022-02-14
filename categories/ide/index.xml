@@ -19,7 +19,7 @@
 第三步：按下F5 (這邊要說明一下，本人快捷鍵模式是選用 ReSharper，雖然官方文件和編輯器的提示是 Alt+F5，但本人這邊實作下來就是 F5)
 第四步：當程式碼有被執行時，就會跳到 Rider，這時候可以按下 F10 看後續運行的流程
 第五步：當知道問題後，就可以按下 Shift+F5 跳出 Debug Mode 模式
-結語 如果想知道更詳細的操作內容，可以點擊下方的參考來源，希望本篇有幫助到需要的人。
+結語 如果想知道更詳細的操作內容，可以點擊下方的參考連結，希望本篇有幫助到需要的人。
 參考來源  https://www.jetbrains.com/help/rider/Debugging_Unity_Applications.html  </description>
     </item>
     

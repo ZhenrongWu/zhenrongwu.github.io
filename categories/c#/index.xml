@@ -8,12 +8,20 @@
     <language>zh-TW</language>
     <lastBuildDate>Sun, 13 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zhenrongwu.github.io/categories/c#/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>使用 Unity 中的 Animation Rigging 讓瞄準動作更加完美</title>
-      <link>https://zhenrongwu.github.io/post/2022/02/13/perfect-aiming-with-animation-rigging-in-unity-/</link>
+      <title>使用 Unity 中的 Animation Rigging 讓瞄準動作更加自然</title>
+      <link>https://zhenrongwu.github.io/post/2022/02/13/vivid-aiming-with-animation-rigging-in-unity-/</link>
       <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://zhenrongwu.github.io/post/2022/02/13/perfect-aiming-with-animation-rigging-in-unity-/</guid>
-      <description>前言 結論 參考來源 </description>
+      <guid>https://zhenrongwu.github.io/post/2022/02/13/vivid-aiming-with-animation-rigging-in-unity-/</guid>
+      <description>前言 由於畢業專題剛好有射擊功能， 而在瞄準動作上雖然有專屬的動作， 但當在不同角度時， 角色手臂和身體轉向並沒辦法跟著準心做改變， 而這個問題也卡了蠻久的， 剛好看到 Youtuber CodeMonkey 這位大大的教學， 因此，解決了我這個問題， 同時也順便學習 Animation Rigging 這個功能要怎麼使用， 對於這個功能本人目前還很陌生。
+正文 步驟一：在 Package Manager 中下載 Animation Rigging
+步驟二：在玩家身上添加 Rig Builder 跟 Bone Renderer (Rig Builder：建置骨架，Bone Renderer 顯示骨架)
+步驟三：在玩家底下添加一個空物件，此物件改名成 AimRig，同時添加元件 Rig
+步驟四：在剛剛新增的 AimRig 物件底下，添加二個空物件，物件一為 BodyAim，物件二為 Aim， 而這兩個物件都要新增元件 Multi-Aim Constraint
+步驟五：設定 BodyAim 跟 Aim 的 Multi-Aim Constraint 裡的 Constrained Object，這邊以 Aim 為範例，這個參數的功能是用來需要約束的對象。
+步驟六：這邊我們一樣是設定 Multi-Aim Constraint 裡的參數，這邊要設定的參數是 Axis，這邊是一個坑需要非常注意， Axis 看的是瞄準動作的本地座標，這邊非常的重要，請讀者在製作時務必弄懂。
+步驟七：Multi-Aim Constraint 最後參數的設定，Source Objects 這邊就是依照約束對象所要追隨的物件。
+步驟八：為了讓 Animation Rigging 不要一開就影響玩家的動作，所以這邊我們需要寫個簡單的程式，不過這邊只會把關鍵的程式碼展示出來。</description>
     </item>
     
     <item>
