@@ -18,7 +18,7 @@
 步驟二：在玩家身上添加 Rig Builder 跟 Bone Renderer (Rig Builder：建置骨架，Bone Renderer 顯示骨架)
 步驟三：在玩家底下添加一個空物件，此物件改名成 AimRig，同時添加元件 Rig
 步驟四：在剛剛新增的 AimRig 物件底下，添加二個空物件，物件一為 BodyAim，物件二為 Aim， 而這兩個物件都要新增元件 Multi-Aim Constraint
-步驟五：設定 BodyAim 跟 Aim 的 Multi-Aim Constraint 裡的 Constrained Object，這邊以 Aim 為範例，這個參數的功能是用來需要約束的對象。
+步驟五：設定 BodyAim 跟 Aim 的 Multi-Aim Constraint 裡的 Constrained Object，這邊以 Aim 為範例，這個參數的功能是用來約束對象。
 步驟六：這邊我們一樣是設定 Multi-Aim Constraint 裡的參數，這邊要設定的參數是 Axis，這邊是一個坑需要非常注意， Axis 看的是瞄準動作的本地座標，這邊非常的重要，請讀者在製作時務必弄懂。
 步驟七：Multi-Aim Constraint 最後參數的設定，Source Objects 這邊就是依照約束對象所要追隨的物件。
 步驟八：為了讓 Animation Rigging 不要一開就影響玩家的動作，所以這邊我們需要寫個簡單的程式，不過這邊只會把關鍵的程式碼展示出來。</description>
