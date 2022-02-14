@@ -37,7 +37,7 @@ archives = ["2022/01"]
 
 ## 結語
 
-如果想知道更詳細的操作內容，可以點擊下方的參考來源，希望本篇有幫助到需要的人。
+如果想知道更詳細的操作內容，可以點擊下方的參考連結，希望本篇有幫助到需要的人。
 
 ### 參考來源
  - https://www.jetbrains.com/help/rider/Debugging_Unity_Applications.html 
