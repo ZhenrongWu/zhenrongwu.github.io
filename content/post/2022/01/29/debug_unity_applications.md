@@ -2,13 +2,9 @@
 author = "Hugo Authors"
 title = "Rider Debug 模式在 Unity 的應用"
 date = "2022-01-29"
-description = ""
-tags = [
-    "rider",
-    "unity",
-]
 categories = [
-    "IDE",
+    "Rider",
+    "Unity",
 ]
 archives = ["2022/01"]
 +++

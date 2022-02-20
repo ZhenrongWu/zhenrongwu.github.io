@@ -3,11 +3,9 @@ author = "Hugo Authors"
 title = "使用 Unity 中的 Animation Rigging 讓瞄準動作更加自然"
 date = "2022-02-13"
 description = ""
-tags = [
-    "unity",
-]
 categories = [
     "C#",
+    "Unity",
 ]
 archives = ["2022/02"]
 +++

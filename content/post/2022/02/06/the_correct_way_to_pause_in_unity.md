@@ -2,12 +2,9 @@
 author = "Hugo Authors"
 title = "在 Unity 中正確的暫停方法"
 date = "2022-02-06"
-description = ""
-tags = [
-    "unity",
-]
 categories = [
     "C#",
+    "Unity",
 ]
 archives = ["2022/02"]
 +++

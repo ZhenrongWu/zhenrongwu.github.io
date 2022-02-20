@@ -3,7 +3,7 @@ author = "ZhenrongWu"
 baseURL = "https://zhenrongwu.github.io"
 enableInlineShortcodes = true
 enableRobotsTXT = true
-languageCode = "zh-TW"
+languageCode = "zh-tw"
 theme = "Blonde"
 title = "吳振榮 | 個人部落格"
 
@@ -68,7 +68,7 @@ widgets = ["search", "archive", "category", "tags", "recent"]
 
 [[menu.main]]
 identifier = "home"
-name = "Home"
+name = "Blog"
 url = "/"
 weight = 1
 

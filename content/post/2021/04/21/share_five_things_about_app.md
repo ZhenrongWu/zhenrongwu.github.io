@@ -2,13 +2,9 @@
 author = "Hugo Authors"
 title = "分享五件關於App的事情"
 date = "2021-04-21"
-description = "大三下時的期中作業"
-tags = [
-    "record",
-    "wireframe",
-]
 categories = [
     "App",
+    "Wireframe",
 ]
 archives = ["2021/04"]
 +++
