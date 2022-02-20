@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2022/01 on 吳振榮 | 個人部落格</title>
-    <link>https://zhenrongwu.github.io/archives/2022/01/</link>
-    <description>Recent content in 2022/01 on 吳振榮 | 個人部落格</description>
+    <title>Rider on 吳振榮 | 個人部落格</title>
+    <link>https://zhenrongwu.github.io/categories/rider/</link>
+    <description>Recent content in Rider on 吳振榮 | 個人部落格</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language><atom:link href="https://zhenrongwu.github.io/archives/2022/01/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 29 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zhenrongwu.github.io/categories/rider/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rider Debug 模式在 Unity 的應用</title>
       <link>https://zhenrongwu.github.io/post/2022/01/29/debug_unity_applications/</link>

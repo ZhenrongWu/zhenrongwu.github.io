@@ -5,7 +5,7 @@
     <link>https://zhenrongwu.github.io/categories/</link>
     <description>Recent content in Categories on 吳振榮 | 個人部落格</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-TW</language>
+    <language>zh-tw</language>
     <lastBuildDate>Sun, 13 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zhenrongwu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C#</title>
@@ -17,11 +17,20 @@
     </item>
     
     <item>
-      <title>IDE</title>
-      <link>https://zhenrongwu.github.io/categories/ide/</link>
+      <title>Unity</title>
+      <link>https://zhenrongwu.github.io/categories/unity/</link>
+      <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhenrongwu.github.io/categories/unity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rider</title>
+      <link>https://zhenrongwu.github.io/categories/rider/</link>
       <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://zhenrongwu.github.io/categories/ide/</guid>
+      <guid>https://zhenrongwu.github.io/categories/rider/</guid>
       <description></description>
     </item>
     
@@ -31,6 +40,15 @@
       <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://zhenrongwu.github.io/categories/app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wireframe</title>
+      <link>https://zhenrongwu.github.io/categories/wireframe/</link>
+      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhenrongwu.github.io/categories/wireframe/</guid>
       <description></description>
     </item>
     
