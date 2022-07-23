@@ -17,7 +17,7 @@ author = "Hugo Authors"
 - 2022/01 參加 Global Game Jam 2022
 - 2021/11 參加全國大專程式設計極客挑戰賽 獲得決賽資格
 - 2021/01 參加 Global Game Jam 2021
-- 2020/07~12 在弘遠數位娛樂有限公司實習 榮獲DIGI+Talent數位新星大賞的特選獲得優選
+- 2020/07~12 在弘遠數位娛樂有限公司實習 榮獲DIGI+Talent數位新星大賞的特選
 - 2020/08 參加 Faust Game Jam 2020
 - 2020/01 參加 Global Game Jam 2020
 
