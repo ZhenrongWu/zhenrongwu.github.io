@@ -1,80 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>吳振榮 | 個人部落格</title>
+    <title>XXX | 個人部落格</title>
     <link>https://zhenrongwu.github.io/</link>
-    <description>Recent content on 吳振榮 | 個人部落格</description>
+    <description>Recent content on XXX | 個人部落格</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Sun, 13 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zhenrongwu.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>https://zhenrongwu.github.io/about/</link>
-      <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhenrongwu.github.io/about/</guid>
-      <description>你好，我叫吳振榮，畢業於嶺東科技大學數位媒體設計系，雙主修企業管理系。使用 Unity3D 開發遊戲已有四年多，中間曾參加過四場 Game Jam， 從 2D、3D、AR、VR、Arduino 都有開發經驗。在程式語言上熟悉 C#，也會藉由空閒期間學習其他程式語言，例如：Python。在網頁和後端開發上有基礎的知識， 也有實作過一兩個小作品。在 Google Play 和 Google Extension Store 以及 Steam 都曾上架過一個作品，目前在遊戲業擔任遊戲工程師。
-Experience  2022/06 入圍巴哈姆特 ACG 創作大賽 遊戲組 2022/06 畢業於嶺東科技大學 數位媒體設計系 企業管理系 2022/05 入圍放視大賞 遊戲組_PC 遊戲組 2022/01 參加 Global Game Jam 2022 2021/11 參加全國大專程式設計極客挑戰賽 獲得決賽資格 2021/01 參加 Global Game Jam 2021 2020/07~12 在弘遠數位娛樂有限公司實習 榮獲 DIGI+Talent 數位新星大賞的特選 2020/08 參加 Faust Game Jam 2020 2020/01 參加 Global Game Jam 2020  Skill  Unity、Unreal Engine C# Python HTML、CSS、Javascript MySQL Trello、Notion Git Maya、3ds Max Illustrator、Photoshop、InDesign After Effect、Premiere  </description>
-    </item>
-    
-    <item>
-      <title>使用 Unity 中的 Animation Rigging 讓瞄準動作更加自然</title>
-      <link>https://zhenrongwu.github.io/post/2022/02/13/vivid-aiming-with-animation-rigging-in-unity-/</link>
-      <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhenrongwu.github.io/post/2022/02/13/vivid-aiming-with-animation-rigging-in-unity-/</guid>
-      <description>前言 由於畢業專題剛好有射擊功能， 而在瞄準動作上雖然有專屬的動作， 但當在不同角度時， 角色手臂和身體轉向並沒辦法跟著準心做改變， 而這個問題也卡了蠻久的， 剛好看到 Youtuber CodeMonkey 這位大大的教學， 因此，解決了我這個問題， 同時也順便學習 Animation Rigging 這個功能要怎麼使用， 對於這個功能本人目前還很陌生。
-正文 步驟一：在 Package Manager 中下載 Animation Rigging
-步驟二：在玩家身上添加 Rig Builder 跟 Bone Renderer (Rig Builder：建置骨架，Bone Renderer 顯示骨架)
-步驟三：在玩家底下添加一個空物件，此物件改名成 AimRig，同時添加元件 Rig
-步驟四：在剛剛新增的 AimRig 物件底下，添加二個空物件，物件一為 BodyAim，物件二為 Aim， 而這兩個物件都要新增元件 Multi-Aim Constraint
-步驟五：設定 BodyAim 跟 Aim 的 Multi-Aim Constraint 裡的 Constrained Object，這邊以 Aim 為範例，這個參數的功能是用來約束對象。
-步驟六：這邊我們一樣是設定 Multi-Aim Constraint 裡的參數，這邊要設定的參數是 Axis，這邊是一個坑需要非常注意， Axis 看的是瞄準動作的本地座標，這邊非常的重要，請讀者在製作時務必弄懂。
-步驟七：Multi-Aim Constraint 最後參數的設定，Source Objects 這邊就是依照約束對象所要追隨的物件。
-步驟八：為了讓 Animation Rigging 不要一開就影響玩家的動作，所以這邊我們需要寫個簡單的程式，不過這邊只會把關鍵的程式碼展示出來。</description>
-    </item>
-    
-    <item>
-      <title>在 Unity 中正確的暫停方法</title>
-      <link>https://zhenrongwu.github.io/post/2022/02/06/the_correct_way_to_pause_in_unity/</link>
-      <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhenrongwu.github.io/post/2022/02/06/the_correct_way_to_pause_in_unity/</guid>
-      <description>前言 在初期大家一開始在學習 Unity 的暫停功能時， 相信大家最常用的就是 Time.timeScale， 而這個方法是藉由改變時間來達到此效果， 同時在小專案上也能快速實現， 但這個做法會有一些問題， 像是介面的動畫效果、場景加載、音效觸發等問題， 當然，用 Time.timeScale 也並非不能解決以上講的問題， 但當專案大時為了讓程式碼更乾淨， 同時能更好控管遊戲裡物件的狀態， 所以接下來要講的方法是， 藉由一個管理器來處理遊戲內暫停的功能， 而裡面有用到的知識有列舉、委派、事件， 以及最重要的單例模式。
-程式碼 GameState public enum GameState { Gameplay, Pause } GameStateManager public class GameStateManager { private static GameStateManager _instance; public static GameStateManager Instance { get { if (_instance == null) { _instance = new GameStateManager(); } return _instance; } } public GameState CurrentGameState { get; private set; } public delegate void GameStateChangeHandler(GameState newGameState); public event GameStateChangeHandler OnGameStateChanged; private GameStateManager() { } public void SetState(GameState newGameState) { if (newGameState == CurrentGameState) { return; } CurrentGameState = newGameState; OnGameStateChanged?</description>
-    </item>
-    
-    <item>
-      <title>Rider Debug 模式在 Unity 的應用</title>
-      <link>https://zhenrongwu.github.io/post/2022/01/29/debug_unity_applications/</link>
-      <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhenrongwu.github.io/post/2022/01/29/debug_unity_applications/</guid>
-      <description>前言 因為一直很懶的寫部落格， 再加上自己有點完美主義， 同時也不知道該寫甚麼內容， 而之所以會寫這篇， 是因為發覺自己並不熟悉 Rider Debug 模式要如何在 Unity 使用。
-正文 第一步：將 Attach to Unity Editor 改成 Attch to Unity Editor &amp;amp; Play，這樣的調整是為了讓 Unity 的 Play 鍵也能被啟用
-第二步：在想要知道是否有被執行的那行程式碼中按下 F9
-第三步：按下F5 (這邊要說明一下，本人快捷鍵模式是選用 ReSharper，雖然官方文件和編輯器的提示是 Alt+F5，但本人這邊實作下來就是 F5)
-第四步：當程式碼有被執行時，就會跳到 Rider，這時候可以按下 F10 看後續運行的流程
-第五步：當知道問題後，就可以按下 Shift+F5 跳出 Debug Mode 模式
-結語 如果想知道更詳細的操作內容，可以點擊下方的參考連結，希望本篇有幫助到需要的人。
-參考來源  https://www.jetbrains.com/help/rider/Debugging_Unity_Applications.html  </description>
-    </item>
-    
-    <item>
-      <title>分享五件關於App的事情</title>
-      <link>https://zhenrongwu.github.io/post/2021/04/21/share_five_things_about_app/</link>
-      <pubDate>Wed, 21 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhenrongwu.github.io/post/2021/04/21/share_five_things_about_app/</guid>
-      <description>1. 製作App的動機 製作一款App要說困難可以很困難，要說簡單也可以很簡單， 因為現在已經有很多寫好功能的軟體能完全製作一款App， 做出一款App我認為這不是最重要的事情， 而我認為最重要的事情是，這個App可以解決或幫助什麼人、事、物， 以及在製作這個App時自己學到了什麼。
-2. 事先了解顧客的需求 當我們要製作一款App時，要先了解顧客的需求， 假如顧客所需要的功能是網頁可以完成的事， 那製作App就可以把它去除，因為製作App的開發成本要比網頁來的高， 同時在製程方面也是比網頁來的長， 所以在製作App前請務必與顧客好好的溝通。
-3. Wireframe的必要性 在製作App初期，我們需要先把Wireframe呈現出來， 那什麼是Wireframe，Wireframe簡單來說就是一種低擬真度的表現手法， 主要目的是能清楚的表達App需要的功能以及頁面上的排版， 在與顧客討論過程中也能即時的做修改， 那這邊有推薦的幾個軟體像是Adobe XD、Sketch都是很好的選擇， 當然，如果這時候身邊只有紙跟筆，那我們也可以直接把Wireframe畫在紙上與顧客商討。
-4. 設計師與工程師的溝通 在開發App的過程，設計師與工程師時常會有意見上的衝突， 而往往衝突的產生是，因為沒有把已確定好的事項訂製一套規定， 而這套規定所需要有的內容像是，圖片的尺寸、頁面位置的標記、動態效果的呈現， 這些事情如果沒有給工程師，那工程師也無法得知設計師所想要的內容， 畢竟工程師講求的是合理的邏輯以及明確的事件。
-5. 設備上的測試 在開發過程Android跟IOS是我們常見的手機系統， 在一般使用者的認知上，可能會覺得Android手機在測試上會比較方便， 因為Android手機取得比較容易，價格也比較便宜， 但同時Android手機的品牌也眾多，而這樣就會造成螢幕比例多樣， 所以在開發者的角度上IOS要比Android手機來的好， 所以在開發前請務必與顧客確定好設備規格，同時也別忘了簽約這件事。
-結語 最後，希望這篇文章可以幫助到有需要的人， 這篇文章是一個開始，之後我還是會陸陸續續更新， 但日後都會比較偏向跟遊戲開發有關的文章， 畢竟開發遊戲是我擅長，且一輩子想一直做下去的事。
-參考來源  https://reurl.cc/4yeaL2 https://www.adobe.com/tw/products/xd.html https://www.sketch.com/  </description>
-    </item>
-    
+    <language>zh-tw</language><atom:link href="https://zhenrongwu.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://zhenrongwu.github.io/archives/</link>
@@ -82,6 +13,24 @@ Experience  2022/06 入圍巴哈姆特 ACG 創作大賽 遊戲組 2022/06 畢業
       
       <guid>https://zhenrongwu.github.io/archives/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://zhenrongwu.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhenrongwu.github.io/about/</guid>
+      <description>內容</description>
+    </item>
+    
+    <item>
+      <title>標題</title>
+      <link>https://zhenrongwu.github.io/posts/tamplate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhenrongwu.github.io/posts/tamplate/</guid>
+      <description>內文</description>
     </item>
     
   </channel>
