@@ -1,11 +1,11 @@
 DefaultContentLanguage = "en"
-author = "ZhenrongWu"
+author = ""
 baseURL = "https://zhenrongwu.github.io"
 enableInlineShortcodes = true
 enableRobotsTXT = true
 languageCode = "zh-tw"
 theme = "Blonde"
-title = "吳振榮 | 個人部落格"
+title = "XXX | 個人部落格"
 
 # Please enable this feature if the site is available in Japanese, Chinese or Korean.
 #hasCJKLanguage = true
