@@ -214,199 +214,193 @@ const Resume = () => {
   };
 
   return (
-    <main className="resume-section" role="main">
-      <Container>
-        {/* 頁面標題 */}
-        <Row className="mb-5">
-          <Col className="text-center">
-            <div className="position-relative d-inline-block mb-4">
-              <span
-                className="bg-lavender position-absolute"
-                style={{
-                  height: "8px",
-                  width: "100%",
-                  bottom: "8px",
-                  left: "0",
-                  zIndex: "-1",
-                  opacity: "0.5",
-                }}
-              ></span>
-              <h1 className="display-4 fw-bold">
-                履<span className="text-lavender">歷</span>
-              </h1>
-            </div>
-            <p className="lead text-muted">歡迎了解我的經歷和個人成就</p>
-          </Col>
-        </Row>
+    <Container className="py-5">
+      {/* 頁面標題 */}
+      <Row className="mb-5">
+        <Col className="text-center">
+          <div className="position-relative d-inline-block mb-4">
+            <span
+              className="bg-lavender position-absolute"
+              style={{
+                height: "8px",
+                width: "100%",
+                bottom: "8px",
+                left: "0",
+                zIndex: "-1",
+                opacity: "0.5",
+              }}
+            ></span>
+            <h1 className="display-4 fw-bold">
+              履<span className="text-lavender">歷</span>
+            </h1>
+          </div>
+          <p className="lead text-muted">歡迎了解我的經歷和個人成就</p>
+        </Col>
+      </Row>
 
-        {/* 下載按鈕 */}
-        <Row className="justify-content-center mb-4">
-          <Col xs={12} className="text-center">
-            <Button
-              variant="primary"
-              onClick={() => toPDF()}
-              className="download-button btn-lavender"
-              aria-label="下載履歷 PDF 檔案"
-            >
-              <AiOutlineDownload
-                aria-hidden="true"
-                style={{ marginRight: "8px" }}
-              />
-              <span>下載履歷</span>
-              <div className="button-background" aria-hidden="true"></div>
-            </Button>
-          </Col>
-        </Row>
+      {/* 下載按鈕 */}
+      <Row className="justify-content-center mb-4">
+        <Col xs={12} className="text-center">
+          <Button
+            variant="primary"
+            onClick={() => toPDF()}
+            className="download-button btn-lavender"
+            aria-label="下載履歷 PDF 檔案"
+          >
+            <AiOutlineDownload
+              aria-hidden="true"
+              style={{ marginRight: "8px" }}
+            />
+            <span>下載履歷</span>
+            <div className="button-background" aria-hidden="true"></div>
+          </Button>
+        </Col>
+      </Row>
 
-        {/* 履歷內容 */}
-        <div ref={targetRef} className="resume-content">
-          <article className="resume">
-            <Row>
-              <Col lg={6} className="resume-left">
-                {/* 個人資訊 */}
-                <header className="resume-header mb-5">
-                  <h1 className="heading-name" tabIndex="0">
-                    {resumeData.personalInfo.name}
-                  </h1>
-                  <div className="heading-meta">
-                    <p className="meta-item" tabIndex="0">
-                      {resumeData.personalInfo.title}
-                    </p>
-                    <p className="meta-item">
-                      <a
-                        href={`mailto:${resumeData.personalInfo.email}`}
-                        className="contact-link"
-                      >
-                        {resumeData.personalInfo.email}
-                      </a>
-                    </p>
-                    <p className="meta-item">
-                      <a
-                        href={`tel:${resumeData.personalInfo.phone}`}
-                        className="contact-link"
-                      >
-                        {resumeData.personalInfo.phone}
-                      </a>
-                    </p>
-                    <p className="meta-item" tabIndex="0">
-                      {resumeData.personalInfo.location}
-                    </p>
-                  </div>
-                </header>
+      {/* 履歷內容 */}
+      <div ref={targetRef} className="resume-content">
+        <article className="resume">
+          <Row>
+            <Col lg={6} className="resume-left">
+              {/* 個人資訊 */}
+              <header className="resume-header mb-5">
+                <h1 className="heading-name" tabIndex="0">
+                  {resumeData.personalInfo.name}
+                </h1>
+                <div className="heading-meta">
+                  <p className="meta-item" tabIndex="0">
+                    {resumeData.personalInfo.title}
+                  </p>
+                  <p className="meta-item">
+                    <a
+                      href={`mailto:${resumeData.personalInfo.email}`}
+                      className="contact-link"
+                    >
+                      {resumeData.personalInfo.email}
+                    </a>
+                  </p>
+                  <p className="meta-item">
+                    <a
+                      href={`tel:${resumeData.personalInfo.phone}`}
+                      className="contact-link"
+                    >
+                      {resumeData.personalInfo.phone}
+                    </a>
+                  </p>
+                  <p className="meta-item" tabIndex="0">
+                    {resumeData.personalInfo.location}
+                  </p>
+                </div>
+              </header>
 
-                {/* 工作經驗 */}
-                <section
-                  className="resume-section timeline-section"
-                  aria-labelledby="work-experience"
-                >
-                  <h2
-                    id="work-experience"
-                    className="resume-title"
-                    tabIndex="0"
-                  >
-                    工作經驗
-                  </h2>
-                  <div className="timeline">
-                    {resumeData.workExperience.map((exp, index) => (
-                      <div key={index} className="timeline-item">
-                        <div className="timeline-dot"></div>
-                        <div className="timeline-date" tabIndex="0">
-                          {exp.period}
-                        </div>
-                        <div className="timeline-content resume-item">
-                          <h3 tabIndex="0">{exp.position}</h3>
-                          <h4 tabIndex="0">{exp.company}</h4>
-                          <ul>
-                            {exp.responsibilities.map((item, i) => (
-                              <li key={i} tabIndex="0">
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+              {/* 工作經驗 */}
+              <section
+                className="resume-section timeline-section"
+                aria-labelledby="work-experience"
+              >
+                <h2 id="work-experience" className="resume-title" tabIndex="0">
+                  工作經驗
+                </h2>
+                <div className="timeline">
+                  {resumeData.workExperience.map((exp, index) => (
+                    <div key={index} className="timeline-item">
+                      <div className="timeline-dot"></div>
+                      <div className="timeline-date" tabIndex="0">
+                        {exp.period}
                       </div>
-                    ))}
-                  </div>
-                </section>
-
-                {/* 教育背景 */}
-                <section className="resume-section" aria-labelledby="education">
-                  <h2 id="education" className="resume-title" tabIndex="0">
-                    教育背景
-                  </h2>
-                  {resumeData.education.map((edu, index) => (
-                    <div key={index} className="resume-item">
-                      <h3 tabIndex="0">{edu.institution}</h3>
-                      <h4 tabIndex="0">{edu.degree}</h4>
-                      <p className="resume-date" tabIndex="0">
-                        {edu.period}
-                      </p>
+                      <div className="timeline-content resume-item">
+                        <h3 tabIndex="0">{exp.position}</h3>
+                        <h4 tabIndex="0">{exp.company}</h4>
+                        <ul>
+                          {exp.responsibilities.map((item, i) => (
+                            <li key={i} tabIndex="0">
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   ))}
-                </section>
-              </Col>
+                </div>
+              </section>
 
-              <Col lg={6} className="resume-right">
-                {/* 競賽經驗 */}
-                <section
-                  className="resume-section timeline-section"
-                  aria-labelledby="competitions"
-                >
-                  <h2 id="competitions" className="resume-title" tabIndex="0">
-                    競賽經驗
-                  </h2>
-                  <div className="timeline">
-                    {resumeData.competitions.map((comp, index) => (
-                      <div key={index} className="timeline-item">
-                        <div className="timeline-dot"></div>
-                        <div className="timeline-date" tabIndex="0">
-                          {comp.year}
-                        </div>
-                        <div className="timeline-content resume-item">
-                          <h3 tabIndex="0">{comp.name}</h3>
-                          <h4 tabIndex="0">{comp.result}</h4>
-                          <p tabIndex="0">{comp.description}</p>
-                        </div>
-                      </div>
-                    ))}
+              {/* 教育背景 */}
+              <section className="resume-section" aria-labelledby="education">
+                <h2 id="education" className="resume-title" tabIndex="0">
+                  教育背景
+                </h2>
+                {resumeData.education.map((edu, index) => (
+                  <div key={index} className="resume-item">
+                    <h3 tabIndex="0">{edu.institution}</h3>
+                    <h4 tabIndex="0">{edu.degree}</h4>
+                    <p className="resume-date" tabIndex="0">
+                      {edu.period}
+                    </p>
                   </div>
-                </section>
+                ))}
+              </section>
+            </Col>
 
-                {/* 個人成就 */}
-                <section
-                  className="resume-section timeline-section"
-                  aria-labelledby="achievements"
-                >
-                  <h2 id="achievements" className="resume-title" tabIndex="0">
-                    個人成就
-                  </h2>
-                  <div className="timeline">
-                    {resumeData.achievements.map((achievement, index) => (
-                      <div key={index} className="timeline-item">
-                        <div className="timeline-dot"></div>
-                        <div className="timeline-date" tabIndex="0">
-                          {achievement.period}
-                        </div>
-                        <div className="timeline-content resume-item">
-                          <h3 tabIndex="0">{achievement.title}</h3>
-                          <p tabIndex="0">{achievement.description}</p>
-                          <ul>
-                            {achievement.highlights.map((highlight, i) => (
-                              <li key={i} tabIndex="0">
-                                {highlight}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+            <Col lg={6} className="resume-right">
+              {/* 競賽經驗 */}
+              <section
+                className="resume-section timeline-section"
+                aria-labelledby="competitions"
+              >
+                <h2 id="competitions" className="resume-title" tabIndex="0">
+                  競賽經驗
+                </h2>
+                <div className="timeline">
+                  {resumeData.competitions.map((comp, index) => (
+                    <div key={index} className="timeline-item">
+                      <div className="timeline-dot"></div>
+                      <div className="timeline-date" tabIndex="0">
+                        {comp.year}
                       </div>
-                    ))}
-                  </div>
-                </section>
-              </Col>
-            </Row>
-          </article>
-        </div>
-      </Container>
+                      <div className="timeline-content resume-item">
+                        <h3 tabIndex="0">{comp.name}</h3>
+                        <h4 tabIndex="0">{comp.result}</h4>
+                        <p tabIndex="0">{comp.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* 個人成就 */}
+              <section
+                className="resume-section timeline-section"
+                aria-labelledby="achievements"
+              >
+                <h2 id="achievements" className="resume-title" tabIndex="0">
+                  個人成就
+                </h2>
+                <div className="timeline">
+                  {resumeData.achievements.map((achievement, index) => (
+                    <div key={index} className="timeline-item">
+                      <div className="timeline-dot"></div>
+                      <div className="timeline-date" tabIndex="0">
+                        {achievement.period}
+                      </div>
+                      <div className="timeline-content resume-item">
+                        <h3 tabIndex="0">{achievement.title}</h3>
+                        <p tabIndex="0">{achievement.description}</p>
+                        <ul>
+                          {achievement.highlights.map((highlight, i) => (
+                            <li key={i} tabIndex="0">
+                              {highlight}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </Col>
+          </Row>
+        </article>
+      </div>
       <style jsx>{`
         .timeline-section {
           position: relative;
@@ -547,7 +541,7 @@ const Resume = () => {
           transform: translateY(-2px);
         }
       `}</style>
-    </main>
+    </Container>
   );
 };
 
