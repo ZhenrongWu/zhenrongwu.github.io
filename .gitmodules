@@ -1,4 +1,0 @@
-[submodule "public"]
-	path = public
-	url = https://github.com/ZhenrongWu/zhenrongwu.github.io.git
-	branch = gh-pages 
