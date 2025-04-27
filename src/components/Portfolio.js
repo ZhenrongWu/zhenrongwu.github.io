@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
-import "../styles/components.css";
+import "../styles/components.scss";
+import "../styles/theme.scss";
 
 const ProjectCard = ({ project, index }) => {
   // 使用 useState 來追蹤卡片是否被翻轉
