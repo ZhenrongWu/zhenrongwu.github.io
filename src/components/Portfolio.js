@@ -122,7 +122,7 @@ const ProjectCard = ({ project, index }) => {
                   </p>
                 </div>
 
-                <div className="my-3">
+                <div className="card-back-content my-3">
                   <p className="mb-4" style={{ lineHeight: "1.6" }}>
                     {project.description}
                   </p>
@@ -260,6 +260,29 @@ const Portfolio = () => {
 
   return (
     <Container className="py-5">
+      <style>
+        {`
+          @media (max-width: 576px) {
+            .card-back-content {
+              max-height: 320px;
+              overflow-y: auto;
+              padding-right: 5px;
+            }
+            .card-back-content::-webkit-scrollbar {
+              width: 4px;
+            }
+            .card-back-content::-webkit-scrollbar-track {
+              background: #f1f1f1;
+              border-radius: 4px;
+            }
+            .card-back-content::-webkit-scrollbar-thumb {
+              background: rgba(108, 99, 255, 0.5);
+              border-radius: 4px;
+            }
+          }
+        `}
+      </style>
+
       {/* 頁面標題 */}
       <Row className="mb-5">
         <Col className="text-center">
