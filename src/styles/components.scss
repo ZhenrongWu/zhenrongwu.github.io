@@ -1,5 +1,5 @@
 /* 組件樣式統一管理 */
-@import './theme.scss';
+/* 注意：theme.scss 會在 App.js 中單獨導入，這裡不需要重複導入 */
 
 /* ====== Home 組件樣式 ====== */
 .home {
@@ -149,7 +149,7 @@
       bottom: 0;
       left: 12px;
       width: 1px;
-      background: $color-primary;
+      background: #663399; /* 使用固定顏色而非變數，避免依賴 theme */
       border-radius: 0;
     }
     
@@ -166,7 +166,7 @@
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background-color: $color-primary;
+      background-color: #663399; /* 使用固定顏色而非變數 */
       border: none;
       box-shadow: none;
       z-index: 1;
@@ -232,7 +232,7 @@
   }
   
   .contact-link {
-    color: $color-primary;
+    color: #663399; /* 使用固定顏色而非變數 */
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease;
@@ -244,12 +244,12 @@
       height: 1px;
       bottom: -2px;
       left: 0;
-      background-color: $color-accent;
+      background-color: #8A2BE2; /* 使用固定顏色而非變數 */
       transition: width 0.3s ease;
     }
     
     &:hover, &:focus {
-      color: $color-accent;
+      color: #8A2BE2; /* 使用固定顏色而非變數 */
       text-decoration: none;
       
       &:after {
