@@ -1,0 +1,55 @@
+/* Mobile Overrides */
+@import './theme.scss';
+
+@media (max-width: 576px) {
+  /* Remove navigation underline effect */
+  .navbar-lavender .nav-link {
+    &:after {
+      display: none !important;
+    }
+    
+    &:hover,
+    &:focus {
+      color: $color-white-faded;
+    }
+  }
+  
+  /* Remove button outline and underline on click */
+  .btn, a.btn {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    outline: none !important;
+  }
+  
+  .btn:focus, 
+  .btn:active, 
+  a.btn:focus, 
+  a.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+  
+  /* Ensure buttons maintain color when clicked */
+  .btn-lavender {
+    &:focus, 
+    &:active {
+      background-color: $color-primary !important;
+      color: $color-white !important;
+    }
+  }
+  
+  .btn-outline-lavender {
+    &:focus,
+    &:active {
+      color: $color-primary !important;
+      background-color: transparent !important;
+    }
+  }
+  
+  /* Remove tap highlight for all elements */
+  * {
+    -webkit-tap-highlight-color: transparent !important;
+  }
+}
