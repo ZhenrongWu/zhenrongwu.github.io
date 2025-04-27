@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import { usePDF } from "react-to-pdf";
+import "../styles/components.css";
 
 const Resume = () => {
   const { toPDF, targetRef } = usePDF({
@@ -219,17 +220,7 @@ const Resume = () => {
       <Row className="mb-5">
         <Col className="text-center">
           <div className="position-relative d-inline-block mb-4">
-            <span
-              className="bg-lavender position-absolute"
-              style={{
-                height: "8px",
-                width: "100%",
-                bottom: "8px",
-                left: "0",
-                zIndex: "-1",
-                opacity: "0.5",
-              }}
-            ></span>
+            <span className="title-underline bg-lavender position-absolute"></span>
             <h1 className="display-4 fw-bold">
               履<span className="text-lavender">歷</span>
             </h1>
@@ -401,146 +392,6 @@ const Resume = () => {
           </Row>
         </article>
       </div>
-      <style jsx>{`
-        .timeline-section {
-          position: relative;
-        }
-
-        .timeline {
-          position: relative;
-          padding: 0;
-          margin-top: 20px;
-          list-style: none;
-        }
-
-        .timeline:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 12px;
-          width: 1px;
-          background: #663399;
-          border-radius: 0;
-        }
-
-        .timeline-item {
-          position: relative;
-          margin-bottom: 30px;
-          padding-left: 40px;
-        }
-
-        .timeline-dot {
-          position: absolute;
-          left: 6px;
-          top: 5px;
-          width: 12px;
-          height: 12px;
-          border-radius: 50%;
-          background-color: #663399;
-          border: none;
-          box-shadow: none;
-          z-index: 1;
-        }
-
-        .timeline-date {
-          font-weight: normal;
-          color: #666;
-          margin-bottom: 8px;
-          font-size: 0.85rem;
-          letter-spacing: 0.5px;
-        }
-
-        .timeline-content {
-          position: relative;
-          padding: 0;
-          background-color: transparent;
-          border-radius: 0;
-          box-shadow: none;
-          border-left: none;
-        }
-
-        .timeline-content h3 {
-          color: #333;
-          font-size: 1.1rem;
-          margin-bottom: 8px;
-        }
-
-        .timeline-content h4 {
-          font-size: 0.95rem;
-          color: #555;
-          margin-bottom: 8px;
-        }
-
-        .timeline-content p,
-        .timeline-content ul {
-          color: #666;
-          font-size: 0.9rem;
-        }
-
-        .timeline-content ul {
-          padding-left: 18px;
-        }
-
-        .timeline-content li {
-          margin-bottom: 4px;
-        }
-
-        @media (max-width: 768px) {
-          .timeline:before {
-            left: 8px;
-          }
-
-          .timeline-item {
-            padding-left: 30px;
-          }
-
-          .timeline-dot {
-            left: 2px;
-            width: 10px;
-            height: 10px;
-          }
-        }
-
-        .contact-link {
-          color: #663399;
-          text-decoration: none;
-          position: relative;
-          transition: all 0.3s ease;
-        }
-
-        .contact-link:after {
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 1px;
-          bottom: -2px;
-          left: 0;
-          background-color: #8a2be2;
-          transition: width 0.3s ease;
-        }
-
-        .contact-link:hover,
-        .contact-link:focus {
-          color: #8a2be2;
-          text-decoration: none;
-        }
-
-        .contact-link:hover:after,
-        .contact-link:focus:after {
-          width: 100%;
-        }
-
-        .download-button {
-          position: relative;
-          overflow: hidden;
-          transition: all 0.3s ease;
-        }
-
-        .download-button:hover {
-          transform: translateY(-2px);
-        }
-      `}</style>
     </Container>
   );
 };

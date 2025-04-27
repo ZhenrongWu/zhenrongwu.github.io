@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
+import "../styles/components.css";
 
 const ProjectCard = ({ project, index }) => {
   // 使用 useState 來追蹤卡片是否被翻轉
@@ -11,46 +12,21 @@ const ProjectCard = ({ project, index }) => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="mb-4"
-      style={{ perspective: "1500px" }}
+      className="project-card-wrapper mb-4"
     >
       <motion.div
-        className="position-relative"
-        style={{
-          transformStyle: "preserve-3d",
-          height: "420px",
-        }}
+        className="project-card-container position-relative"
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.5, type: "spring", damping: 15 }}
       >
         {/* 卡片正面 */}
-        <motion.div
-          className="position-absolute w-100 h-100"
-          style={{
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-          }}
-        >
-          <motion.div
-            className="h-100"
-            style={{
-              border: "2px solid rgba(108, 99, 255, 0.35)",
-              borderRadius: "12px",
-            }}
-          >
+        <motion.div className="project-card-face position-absolute w-100 h-100">
+          <motion.div className="project-card-border h-100">
             <Card
-              className="h-100 border-0 shadow-sm"
-              style={{
-                overflow: "hidden",
-                cursor: "pointer",
-                borderRadius: "12px",
-              }}
+              className="project-card-card h-100 border-0 shadow-sm"
               onClick={() => setIsFlipped(true)}
             >
-              <div
-                className="position-relative overflow-hidden"
-                style={{ height: "220px" }}
-              >
+              <div className="project-card-img-container position-relative overflow-hidden">
                 <Card.Img
                   variant="top"
                   src={project.image}
@@ -69,8 +45,7 @@ const ProjectCard = ({ project, index }) => {
 
                 <div className="mt-auto">
                   <button
-                    className="btn btn-sm btn-outline-lavender"
-                    style={{ borderRadius: "20px", padding: "0.4em 1.2em" }}
+                    className="btn btn-sm btn-outline-lavender project-card-button"
                     onClick={(e) => {
                       e.stopPropagation();
                       setIsFlipped(true);
@@ -85,28 +60,10 @@ const ProjectCard = ({ project, index }) => {
         </motion.div>
 
         {/* 卡片背面 */}
-        <motion.div
-          className="position-absolute w-100 h-100"
-          style={{
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
-          }}
-        >
-          <motion.div
-            className="h-100"
-            style={{
-              border: "2px solid rgba(108, 99, 255, 0.35)",
-              borderRadius: "12px",
-            }}
-          >
+        <motion.div className="project-card-face project-card-face-back position-absolute w-100 h-100">
+          <motion.div className="project-card-border h-100">
             <Card
-              className="h-100 border-0 shadow-sm"
-              style={{
-                cursor: "pointer",
-                borderRadius: "12px",
-                background: "linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%)",
-              }}
+              className="project-card-card project-card-card-back h-100 border-0 shadow-sm"
               onClick={() => setIsFlipped(false)}
             >
               <Card.Body className="d-flex flex-column h-100 p-4">
@@ -114,16 +71,13 @@ const ProjectCard = ({ project, index }) => {
                   <h4 className="text-lavender fw-bold mb-1">
                     {project.title}
                   </h4>
-                  <p
-                    className="text-muted small mb-0"
-                    style={{ letterSpacing: "0.5px" }}
-                  >
+                  <p className="project-card-category text-muted small mb-0">
                     {project.category}
                   </p>
                 </div>
 
                 <div className="card-back-content my-3">
-                  <p className="mb-4" style={{ lineHeight: "1.6" }}>
+                  <p className="project-card-description mb-4">
                     {project.description}
                   </p>
 
@@ -132,12 +86,7 @@ const ProjectCard = ({ project, index }) => {
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="badge bg-white text-lavender me-2 mb-2"
-                        style={{
-                          borderRadius: "20px",
-                          boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
-                          padding: "0.5em 1em",
-                        }}
+                        className="project-card-tag badge bg-white text-lavender me-2 mb-2"
                       >
                         {tag}
                       </span>
@@ -155,16 +104,14 @@ const ProjectCard = ({ project, index }) => {
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-sm btn-lavender"
-                        style={{ borderRadius: "20px", padding: "0.4em 1.2em" }}
+                        className="btn btn-sm btn-lavender project-card-button"
                         onClick={(e) => e.stopPropagation()}
                       >
                         查看作品
                       </a>
                     )}
                     <button
-                      className="btn btn-sm btn-outline-lavender"
-                      style={{ borderRadius: "20px", padding: "0.4em 1.2em" }}
+                      className="btn btn-sm btn-outline-lavender project-card-button"
                       onClick={(e) => {
                         e.stopPropagation();
                         setIsFlipped(false);
@@ -260,44 +207,11 @@ const Portfolio = () => {
 
   return (
     <Container className="py-5">
-      <style>
-        {`
-          @media (max-width: 576px) {
-            .card-back-content {
-              max-height: 320px;
-              overflow-y: auto;
-              padding-right: 5px;
-            }
-            .card-back-content::-webkit-scrollbar {
-              width: 4px;
-            }
-            .card-back-content::-webkit-scrollbar-track {
-              background: #f1f1f1;
-              border-radius: 4px;
-            }
-            .card-back-content::-webkit-scrollbar-thumb {
-              background: rgba(108, 99, 255, 0.5);
-              border-radius: 4px;
-            }
-          }
-        `}
-      </style>
-
       {/* 頁面標題 */}
       <Row className="mb-5">
         <Col className="text-center">
           <div className="position-relative d-inline-block mb-4">
-            <span
-              className="bg-lavender position-absolute"
-              style={{
-                height: "8px",
-                width: "100%",
-                bottom: "8px",
-                left: "0",
-                zIndex: "-1",
-                opacity: "0.5",
-              }}
-            ></span>
+            <span className="title-underline bg-lavender position-absolute"></span>
             <h1 className="display-4 fw-bold">
               作品<span className="text-lavender">集</span>
             </h1>

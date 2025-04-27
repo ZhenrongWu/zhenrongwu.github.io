@@ -1,0 +1,270 @@
+/* 組件樣式統一管理 */
+@import './theme.scss';
+
+/* ====== Home 組件樣式 ====== */
+.home {
+  &-image-container {
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+    
+    &.image-clicked {
+      transform: scale(0.95);
+    }
+    
+    img {
+      transition: all 0.3s ease;
+    }
+    
+    @media (max-width: 768px) {
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+  
+  &-paragraph {
+    text-align: justify;
+    word-break: break-word;
+    text-justify: inter-ideograph;
+  }
+}
+
+/* ====== Portfolio 組件樣式 ====== */
+.project-card {
+  &-wrapper {
+    perspective: 1500px;
+    margin-bottom: 1.5rem;
+  }
+  
+  &-container {
+    transform-style: preserve-3d;
+    height: 420px;
+  }
+  
+  &-face {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    
+    &-back {
+      transform: rotateY(180deg);
+    }
+  }
+  
+  &-border {
+    border: 2px solid rgba(108, 99, 255, 0.35);
+    border-radius: 12px;
+  }
+  
+  &-card {
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 12px;
+    
+    &-back {
+      background: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
+    }
+  }
+  
+  &-img-container {
+    height: 220px;
+  }
+  
+  &-category {
+    letter-spacing: 0.5px;
+  }
+  
+  &-tag {
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 0.5em 1em;
+  }
+  
+  &-description {
+    line-height: 1.6;
+  }
+  
+  &-button {
+    border-radius: 20px;
+    padding: 0.4em 1.2em;
+  }
+}
+
+.card-back-content {
+  @media (max-width: 576px) {
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 5px;
+    
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: rgba(108, 99, 255, 0.5);
+      border-radius: 4px;
+    }
+  }
+}
+
+.title-underline {
+  height: 8px;
+  width: 100%;
+  bottom: 8px;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* ====== Resume 組件樣式 ====== */
+.resume {
+  &-content {
+    position: relative;
+  }
+  
+  /* 時間線樣式 */
+  .timeline {
+    &-section {
+      position: relative;
+    }
+    
+    position: relative;
+    padding: 0;
+    margin-top: 20px;
+    list-style: none;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 12px;
+      width: 1px;
+      background: $color-primary;
+      border-radius: 0;
+    }
+    
+    &-item {
+      position: relative;
+      margin-bottom: 30px;
+      padding-left: 40px;
+    }
+    
+    &-dot {
+      position: absolute;
+      left: 6px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $color-primary;
+      border: none;
+      box-shadow: none;
+      z-index: 1;
+    }
+    
+    &-date {
+      font-weight: normal;
+      color: #666;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+    }
+    
+    &-content {
+      position: relative;
+      padding: 0;
+      background-color: transparent;
+      border-radius: 0;
+      box-shadow: none;
+      border-left: none;
+      
+      h3 {
+        color: #333;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+      }
+      
+      h4 {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 8px;
+      }
+      
+      p, ul {
+        color: #666;
+        font-size: 0.9rem;
+      }
+      
+      ul {
+        padding-left: 18px;
+      }
+      
+      li {
+        margin-bottom: 4px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      &:before {
+        left: 8px;
+      }
+      
+      &-item {
+        padding-left: 30px;
+      }
+      
+      &-dot {
+        left: 2px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+  
+  .contact-link {
+    color: $color-primary;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: $color-accent;
+      transition: width 0.3s ease;
+    }
+    
+    &:hover, &:focus {
+      color: $color-accent;
+      text-decoration: none;
+      
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+  
+  .download-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+} 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
+import "../styles/components.css";
 
 const Home = () => {
   const [isImageClicked, setIsImageClicked] = useState(false);
@@ -41,14 +42,7 @@ const Home = () => {
             />
           </div>
 
-          <p
-            className="mb-4"
-            style={{
-              textAlign: "justify",
-              wordBreak: "break-word",
-              textJustify: "inter-ideograph",
-            }}
-          >
+          <p className="mb-4 home-paragraph">
             每一個專案對我來說，都像是自己的孩子一樣珍貴。
             我用心呵護和投入熱情，因為這是我所熱愛的領域。
             在這個瞬息萬變的數位時代，我始終保持著學習的熱忱與行動力。
@@ -70,7 +64,7 @@ const Home = () => {
             style={{ maxWidth: "550px", margin: "0 auto" }}
           >
             <div
-              className={`image-container ${
+              className={`home-image-container ${
                 isImageClicked ? "image-clicked" : ""
               }`}
               onClick={handleImageClick}
@@ -85,32 +79,6 @@ const Home = () => {
           </div>
         </Col>
       </Row>
-
-      <style jsx="true">{`
-        .image-container {
-          overflow: hidden;
-          cursor: pointer;
-          transition: transform 0.3s ease;
-        }
-
-        .image-container:hover {
-          transform: scale(1.05);
-        }
-
-        .image-clicked {
-          transform: scale(0.95);
-        }
-
-        .image-container img {
-          transition: all 0.3s ease;
-        }
-
-        @media (max-width: 768px) {
-          .image-container:hover {
-            transform: scale(1.03);
-          }
-        }
-      `}</style>
     </Container>
   );
 };
