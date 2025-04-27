@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
-import "../styles/components.css";
+import "../styles/components.scss";
+import "../styles/theme.scss";
 
 const Home = () => {
   const [isImageClicked, setIsImageClicked] = useState(false);
