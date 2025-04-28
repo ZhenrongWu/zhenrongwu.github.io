@@ -353,7 +353,7 @@ const ProfessionalIntro = memo(() => (
 
       <div className="text-muted mb-0">
         擁有 <span className="badge bg-lavender">六年以上</span>{" "}
-        的遊戲開發經驗， 以及 <span className="badge bg-lavender">半年</span>{" "}
+        的軟體開發經驗， 以及 <span className="badge bg-lavender">半年</span>{" "}
         程式教學經驗。 主要專精於遊戲開發和網頁前端技術。
       </div>
     </Col>
