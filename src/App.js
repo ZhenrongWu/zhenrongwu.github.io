@@ -5,9 +5,7 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
 import NotFound from "./components/NotFound";
-import "./styles/theme.css";
-import "./styles/mobile-overrides.css";
-import "./styles/components.css";
+import "./styles/main.css";
 
 const App = () => {
   return (

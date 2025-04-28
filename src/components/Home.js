@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
-import "../styles/components.scss";
-import "../styles/theme.scss";
 
 const Home = () => {
   const [isImageClicked, setIsImageClicked] = useState(false);
@@ -53,7 +51,7 @@ const Home = () => {
           </p>
 
           <div className="d-flex gap-3">
-            <Button as={Link} to="/portfolio" className="btn-lavender">
+            <Button as={Link} to="/portfolio" className="btn btn-lavender">
               查看作品集
             </Button>
           </div>

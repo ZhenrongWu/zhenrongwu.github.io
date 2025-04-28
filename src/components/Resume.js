@@ -2,8 +2,6 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import { usePDF } from "react-to-pdf";
-import "../styles/components.scss";
-import "../styles/theme.scss";
 
 const Resume = () => {
   const { toPDF, targetRef } = usePDF({

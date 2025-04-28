@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
-import "../styles/components.scss";
-import "../styles/theme.scss";
 
 const ProjectCard = ({ project, index }) => {
   // 使用 useState 來追蹤卡片是否被翻轉
@@ -10,8 +8,8 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="project-card-wrapper mb-4"
     >
@@ -85,10 +83,7 @@ const ProjectCard = ({ project, index }) => {
                   <h6 className="mb-2 fw-bold text-lavender">使用技術：</h6>
                   <div className="mb-4">
                     {project.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="project-card-tag badge bg-white text-lavender me-2 mb-2"
-                      >
+                      <span key={tagIndex} className="project-card-tag">
                         {tag}
                       </span>
                     ))}
