@@ -100,7 +100,6 @@
   background-color: #4B0082;
   color: #ffffff;
   border-color: #4B0082;
-  transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -114,7 +113,6 @@
 .btn-outline-lavender:hover, .btn-outline-lavender:focus, .btn-outline-lavender:active {
   background-color: #663399;
   color: #ffffff;
-  transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
