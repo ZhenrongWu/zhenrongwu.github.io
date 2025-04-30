@@ -12,7 +12,7 @@ const Home = () => {
   };
 
   return (
-    <Container className="py-5 bg-lavender-light">
+    <Container className="py-5">
       <Row className="align-items-center">
         <Col md={6} className="mb-4 mb-md-0">
           <h1 className="fw-bold mb-3">
@@ -58,10 +58,7 @@ const Home = () => {
         </Col>
 
         <Col md={6} className="text-center">
-          <div
-            className="p-4 bg-white rounded shadow"
-            style={{ maxWidth: "550px", margin: "0 auto" }}
-          >
+          <div className="home-image-wrapper">
             <div
               className={`home-image-container ${
                 isImageClicked ? "image-clicked" : ""
