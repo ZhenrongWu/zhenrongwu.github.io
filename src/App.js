@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
+import NotFound from "./components/NotFound";
 import Loading from "./components/Loading";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.css";
@@ -54,6 +55,7 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/resume" element={<Resume />} />
+              <Route path="/*" element={<NotFound />} />
             </Route>
           </Routes>
         </Router>
