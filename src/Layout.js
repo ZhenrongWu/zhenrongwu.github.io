@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { Navbar, Container, Nav, Row, Col } from "react-bootstrap";
 import { FaGithub, FaLinkedin, FaCode } from "react-icons/fa";
-import ScrollToTop from "./common/ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 const Navigation = () => {
   const location = useLocation();
