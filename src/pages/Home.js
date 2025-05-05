@@ -1,16 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
-  const [isImageClicked, setIsImageClicked] = useState(false);
-
-  const handleImageClick = () => {
-    setIsImageClicked(true);
-    setTimeout(() => setIsImageClicked(false), 300);
-  };
-
   return (
     <Container className="py-5">
       <Row className="align-items-center">
@@ -58,12 +51,7 @@ const Home = () => {
 
         <Col md={6} className="text-center">
           <div className="home-image-wrapper">
-            <div
-              className={`home-image-container ${
-                isImageClicked ? "image-clicked" : ""
-              }`}
-              onClick={handleImageClick}
-            >
+            <div className="home-image-container">
               <Image
                 src="https://i.imgur.com/fqdkX0P.jpg"
                 alt="個人照"

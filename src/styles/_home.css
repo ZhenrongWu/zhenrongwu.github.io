@@ -1,30 +1,43 @@
 .home-image-container {
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: none;
   position: relative;
-}
-
-.home-image-container:hover {
-  transform: scale(1.05);
-}
-
-.home-image-container.image-clicked {
-  transform: scale(0.95);
+  border-radius: inherit;
 }
 
 .home-image-container img {
-  transition: all 0.3s ease;
-  border: 1px solid rgba(102, 51, 153, 0.1);
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* 閃光動畫層 */
+.image-flash {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.1) 60%, transparent 100%);
+  opacity: 1;
+  animation: flash-pop 0.3s;
+  border-radius: inherit;
+  z-index: 2;
+}
+@keyframes flash-pop {
+  0% { opacity: 0.8; }
+  60% { opacity: 0.5; }
+  100% { opacity: 0; }
 }
 
 .home-image-wrapper {
   max-width: 550px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 0.5rem;
   background-color: #ffffff;
   border-radius: 1rem;
   position: relative;
@@ -50,16 +63,11 @@
 }
 
 @media (max-width: 768px) {
-  .home-image-container:hover {
-    transform: scale(1.03);
-  }
-  
   .home-image-wrapper {
     padding: 1rem;
     margin: 0 1rem;
     border-radius: 0.75rem;
   }
-  
   .home-image-wrapper::before {
     padding: 2px;
     border-radius: 0.75rem;
@@ -72,7 +80,6 @@
     margin: 0 0.5rem;
     border-radius: 0.5rem;
   }
-  
   .home-image-wrapper::before {
     padding: 1.5px;
     border-radius: 0.5rem;
