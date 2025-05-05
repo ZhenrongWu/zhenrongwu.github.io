@@ -59,6 +59,34 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
+<<<<<<< HEAD
+=======
+      <style jsx="true">{`
+        .social-icon-link {
+          color: #6c757d;
+          transition: color 0.3s ease, transform 0.3s ease;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0.5rem;
+        }
+        .social-icon-link:hover {
+          color: var(--bs-lavender);
+          transform: translateY(-3px);
+        }
+        .social-icon {
+          display: inline-flex;
+        }
+        @media (max-width: 767.98px) {
+          .social-icon-link {
+            padding: 0.25rem;
+          }
+          .social-icon {
+            font-size: 1.25rem !important;
+          }
+        }
+      `}</style>
+>>>>>>> 84ef2e4 (refactor: split Navigation and Footer components from Layout into components directory)
     </footer>
   );
 };
