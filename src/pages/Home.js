@@ -34,10 +34,9 @@ const Home = () => {
                 2000,
               ]}
               speed={10}
-              className="h4 text-lavender-dark"
+              className="h4 text-lavender-dark type-animation-inline"
               wrapper="h2"
               repeat={Infinity}
-              style={{ display: "inline-block" }}
             />
           </div>
 

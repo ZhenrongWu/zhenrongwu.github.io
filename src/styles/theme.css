@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* ================= 主題變數 ================= */
+/* 薰衣草紫色主題 - 深邃神秘版 */
+:root {
+  /* 主色調 */
+  --lavender-main: #663399;
+  --lavender-dark: #4B0082;
+  --lavender-light: #F5F0FF;
+  --lavender-accent: #8A2BE2;
+  --lavender-blue: #4B0082;
+  /* 通用顏色 */
+  --white: #fff;
+  --white-half: rgba(255,255,255,0.5);
+  --shadow-light: 0 2px 8px rgba(102, 51, 153, 0.08);
+  --shadow-medium: 0 4px 12px rgba(102, 51, 153, 0.12);
+  --shadow-strong: 0 8px 24px rgba(102, 51, 153, 0.15);
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
+  /* Bootstrap 覆蓋色 */
+  --bs-lavender: #663399;
+} 
