@@ -59,8 +59,6 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-<<<<<<< HEAD
-=======
       <style jsx="true">{`
         .social-icon-link {
           color: #6c757d;
@@ -86,7 +84,6 @@ const Footer = () => {
           }
         }
       `}</style>
->>>>>>> 84ef2e4 (refactor: split Navigation and Footer components from Layout into components directory)
     </footer>
   );
 };

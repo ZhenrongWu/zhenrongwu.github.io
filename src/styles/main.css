@@ -656,4 +656,85 @@
   }
 }
 
-/* test */
+/* ================= ScrollToTop 按鈕樣式 ================= */
+.top-button {
+  position: fixed;
+  bottom: clamp(20px, 5vh, 40px);
+  right: clamp(20px, 5vw, 40px);
+  width: clamp(40px, 12vw, 50px);
+  height: clamp(40px, 12vw, 50px);
+  background-color: #663399;
+  background-image: linear-gradient(45deg, #663399, #4B0082);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.top-button.show {
+  opacity: 0.9;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.top-button:hover,
+.top-button:focus {
+  opacity: 1;
+  background-image: linear-gradient(45deg, #7a46b3, #663399);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.top-button:focus {
+  box-shadow: 0 0 0 3px rgba(102, 51, 153, 0.4);
+}
+
+/* 支援觸控裝置的懸停效果 */
+@media (hover: hover) {
+  .top-button:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* 小螢幕裝置優化 */
+@media (max-width: 480px) {
+  .top-button {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* 減少動畫效果 */
+@media (prefers-reduced-motion: reduce) {
+  .top-button {
+    transition: none;
+  }
+}
+
+/* 高對比度模式 */
+@media (forced-colors: active) {
+  .top-button {
+    border: 2px solid ButtonText;
+  }
+}
+
+:root {
+  --navbar-height: 64px;
+}
+
+.main-content {
+  margin-top: calc(var(--navbar-height) + 1rem);
+  margin-bottom: 1rem;
+}
