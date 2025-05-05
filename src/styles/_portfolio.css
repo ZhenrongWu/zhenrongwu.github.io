@@ -1,0 +1,138 @@
+.project-card-wrapper {
+  perspective: 1500px;
+  margin-bottom: 1.5rem;
+}
+
+.project-card-container {
+  transform-style: preserve-3d;
+  height: 420px;
+  position: relative;
+}
+
+.project-card-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.project-card-face-back {
+  transform: rotateY(180deg);
+}
+
+.project-card-border {
+  height: 100%;
+  border: 2px solid rgba(102, 51, 153, 0.15);
+  border-radius: 12px;
+  padding: 4px;
+  background: linear-gradient(to right bottom, rgba(102, 51, 153, 0.05), rgba(102, 51, 153, 0.02));
+}
+
+.project-card-card {
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(102, 51, 153, 0.1);
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.project-card-card-back {
+  background: linear-gradient(135deg, #f8f6ff 0%, #f5f2ff 100%);
+}
+
+.project-card-img-container {
+  height: 220px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(102, 51, 153, 0.1);
+}
+
+.project-card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back-content {
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.card-back-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card-back-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.card-back-content::-webkit-scrollbar-thumb {
+  background: rgba(102, 51, 153, 0.5);
+  border-radius: 4px;
+}
+
+.project-card-category {
+  letter-spacing: 0.5px;
+}
+.project-card-tag {
+  background-color: #ffffff;
+  color: #663399;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0 0.4rem 0.5rem 0;
+  border: 1px solid rgba(102, 51, 153, 0.3);
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 4px rgba(102, 51, 153, 0.1);
+}
+.project-card-description {
+  color: #444;
+  line-height: 1.6;
+}
+.project-card-button {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.project-card-button.btn-outline-lavender {
+  color: #663399;
+  border-color: #663399;
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.project-card-button.btn-outline-lavender:hover,
+.project-card-button.btn-outline-lavender:focus {
+  color: #ffffff;
+  background-color: #663399;
+  border-color: #663399;
+}
+
+.project-card-button.btn-lavender {
+  color: #ffffff;
+  background-color: #663399;
+  border-color: #663399;
+}
+
+.project-card-button.btn-lavender:hover,
+.project-card-button.btn-lavender:focus {
+  color: #ffffff;
+  background-color: #4B0082;
+  border-color: #4B0082;
+}
+
+.title-underline {
+  height: 8px;
+  width: 100%;
+  bottom: 8px;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+}

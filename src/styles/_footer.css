@@ -1,0 +1,29 @@
+.footer-lavender {
+  color: #ffffff;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+.footer-lavender a {
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  /* 底部下劃線效果 */
+  /* 懸停和焦點狀態 */
+}
+.footer-lavender a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+.footer-lavender a:hover, .footer-lavender a:focus {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+.footer-lavender a:hover:after, .footer-lavender a:focus:after {
+  width: 100%;
+}
