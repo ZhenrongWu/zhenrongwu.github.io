@@ -53,7 +53,7 @@ const Home = () => {
           <div className="home-image-wrapper">
             <div className="home-image-container">
               <Image
-                src="https://i.imgur.com/fqdkX0P.jpg"
+                src="https://imgur.com/BEeKkLj.jpg"
                 alt="個人照"
                 fluid
                 className="rounded"
