@@ -397,6 +397,8 @@ const About = () => {
       { name: "JavaScript", icon: <FaJs />, color: "#F7DF1E" },
       { name: "PHP", icon: <FaPhp />, color: "#777BB4" },
       { name: "Python", icon: <FaPython />, color: "#3776AB" },
+      { name: "AJAX", icon: <FaJs />, color: "#00B8D9" },
+      { name: "RESTful", icon: <FaNodeJs />, color: "#4CAF50" },
     ],
     frameworks: [
       { name: "jQuery", icon: <SiJquery />, color: "#0769AD" },
