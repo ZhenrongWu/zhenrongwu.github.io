@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 const Home = () => {
   return (
     <Container className="py-5">
-      <Row className="align-items-center">
+      <Row className="align-items-center justify-content-center">
         <Col md={6} className="mb-4 mb-md-0">
           <h1 className="fw-bold mb-3">
             Hi! 我是
