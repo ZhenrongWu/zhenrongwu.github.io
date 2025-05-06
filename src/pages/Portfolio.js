@@ -131,9 +131,28 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
+      title: "圖像畫廊",
+      category: "網頁開發",
+      description: "整合 Pexels API 的圖像網站，瀏覽與下載精美圖片。",
+      image: "https://i.imgur.com/Fu5crtp.jpg",
+      date: "2025年5月",
+      tags: [
+        "HTML",
+        "CSS",
+        "Sass",
+        "JavaScript",
+        "React",
+        "Ajax",
+        "VS Code",
+        "Git",
+      ],
+      url: "https://image-gallery-2025.netlify.app/",
+    },
+    {
+      id: 2,
       title: "胖老爹食堂",
       category: "網頁開發",
-      description: "一頁式商家網站",
+      description: "專為小型商家設計的一頁式網站，提供簡潔的線上展示平台。",
       image: "https://i.imgur.com/n81DUZp.jpg",
       date: "2025年1月",
       tags: [
@@ -148,7 +167,7 @@ const Portfolio = () => {
       url: "https://fat-dad-eatery.netlify.app/",
     },
     {
-      id: 2,
+      id: 3,
       title: "開發者英雄基地",
       category: "網頁開發",
       description: "個人電子商務平台，含有付款系統和訂單功能。",
@@ -158,7 +177,7 @@ const Portfolio = () => {
       url: "https://devherohub.com/",
     },
     {
-      id: 3,
+      id: 4,
       title: "Sandwich-Tycoon",
       category: "遊戲開發",
       description:
@@ -169,7 +188,7 @@ const Portfolio = () => {
       url: "https://play.google.com/store/apps/details?id=com.Nobollel.SandwichTycoon&hl=zh_TW",
     },
     {
-      id: 4,
+      id: 5,
       title: "迴魂",
       category: "遊戲開發",
       description:
@@ -180,7 +199,7 @@ const Portfolio = () => {
       url: "https://store.steampowered.com/app/2075110/Incarnation/?l=tchinese",
     },
     {
-      id: 5,
+      id: 6,
       title: "嶺東科技大學 教學評量自動填寫",
       category: "網頁應用",
       description: "懶人小工具。",
@@ -188,16 +207,6 @@ const Portfolio = () => {
       date: "2021年12月",
       tags: ["HTML", "CSS", "JavaScript", "VS Code", "Git"],
       url: "https://chromewebstore.google.com/detail/dnkodhghfphabiopghdmpcmpojlchajg?utm_source=item-share-cb",
-    },
-    {
-      id: 6,
-      title: "Ctrl+S",
-      category: "遊戲開發",
-      description: "參與 FGJ 的作品，與當時一同實習的夥伴一同開發的遊戲。",
-      image: "https://imgur.com/JG6aUO2.jpg",
-      date: "2020年9月",
-      tags: ["Unity", "C#"],
-      url: "https://wanderviewer.itch.io/ctrls",
     },
   ];
 
