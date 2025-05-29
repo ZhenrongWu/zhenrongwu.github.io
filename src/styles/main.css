@@ -6,6 +6,7 @@
 /* 全局布局樣式 */
 :root {
   --navbar-height: 64px;
+  --footer-height: 80px;  /* 根據實際 footer 高度調整 */
 }
 
 .layout-wrapper {
