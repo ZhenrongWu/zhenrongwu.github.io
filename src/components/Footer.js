@@ -27,17 +27,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="footer-lavender">
+    <footer className="footer-lavender py-3">
       <Container>
-        <Row className="align-items-center g-0">
-          <Col lg={4} className="text-center text-lg-start">
-            <h3>Designed and Developed by Zhenrong Wu</h3>
+        <Row className="align-items-center gy-3">
+          <Col lg={4} sm={12} className="text-center text-lg-start">
+            <h3 className="h6 mb-0">Designed and Developed by Zhenrong Wu</h3>
           </Col>
-          <Col lg={4} className="text-center">
-            <h3>Copyright © {currentYear} 我的網站</h3>
+          <Col lg={4} sm={12} className="text-center">
+            <h3 className="h6 mb-0">Copyright © {currentYear} 我的網站</h3>
           </Col>
-          <Col lg={4} className="text-center text-lg-end">
-            <div className="social-links">
+          <Col lg={4} sm={12} className="text-center text-lg-end">
+            <div className="d-flex gap-3 justify-content-center justify-content-lg-end">
               {socialLinks.map(({ url, icon, label, ariaLabel }) => (
                 <a
                   key={url}
@@ -45,9 +45,10 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={ariaLabel}
+                  className="social-icon-link"
                   title={label}
                 >
-                  {icon}
+                  <span className="social-icon fs-4">{icon}</span>
                 </a>
               ))}
             </div>

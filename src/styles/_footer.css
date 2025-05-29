@@ -1,7 +1,6 @@
 .footer-lavender {
   color: #ffffff;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
-  padding: 1rem 0;
   width: 100%;
   position: relative;
   z-index: 10;
@@ -47,21 +46,61 @@
   width: 100%;
 }
 
+.social-icon-link {
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.social-icon-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-3px);
+}
+
+.social-icon {
+  display: inline-flex;
+}
+
+/* 平板和手機共用樣式 */
+@media (max-width: 991.98px) {
+  .footer-lavender .row > div {
+    width: 100%;
+  }
+  
+  .footer-lavender h3 {
+    font-size: 0.9rem;
+  }
+  
+  .social-icon {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* 純平板樣式 */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer-lavender {
+    padding: 1rem 0;
+  }
+}
+
+/* 手機樣式 */
 @media (max-width: 767.98px) {
   .footer-lavender {
     padding: 0.75rem 0;
   }
 
-  .footer-lavender h3 {
-    font-size: 0.8rem;
-    margin-bottom: 0.5rem;
-  }
-
   .footer-lavender .row > div {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .footer-lavender .row > div:last-child {
     margin-bottom: 0;
+  }
+
+  .social-icon-link {
+    padding: 0.25rem;
   }
 }
