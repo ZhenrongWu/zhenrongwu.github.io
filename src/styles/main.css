@@ -3,6 +3,26 @@
 /* 主題顏色變數（薰衣草紫色主題） */
 /* 主色調：#663399，亮色調：#F5F0FF，暗色調：#4B0082，強調色：#8A2BE2 */
 
+/* 全局布局樣式 */
+:root {
+  --navbar-height: 64px;
+}
+
+.layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  padding-top: calc(var(--navbar-height) + 1rem);
+  padding-bottom: 2rem;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
 /* 背景顏色類 */
 .bg-lavender-light {
   background-color: #F5F0FF;

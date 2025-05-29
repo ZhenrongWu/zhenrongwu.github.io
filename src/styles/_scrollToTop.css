@@ -70,12 +70,3 @@
     border: 2px solid ButtonText;
   }
 }
-
-:root {
-  --navbar-height: 64px;
-}
-
-.main-content {
-  margin-top: calc(var(--navbar-height) + 1rem);
-  margin-bottom: 1rem;
-}

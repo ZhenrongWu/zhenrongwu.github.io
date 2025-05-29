@@ -7,12 +7,12 @@ import Footer from "./components/Footer";
 
 const Layout = () => {
   return (
-    <div className="d-flex flex-column min-vh-100">
-      <header>
+    <div className="layout-wrapper">
+      <header className="fixed-top">
         <Navigation />
       </header>
 
-      <main className="flex-grow-1 main-content">
+      <main className="main-content">
         <Container className="px-3 px-sm-4">
           <Outlet />
         </Container>
