@@ -1,7 +1,26 @@
 .footer-lavender {
   color: #ffffff;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
+
+.footer-lavender h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-lavender .social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
 .footer-lavender a {
   color: #ffffff;
   text-decoration: none;
@@ -26,4 +45,23 @@
 }
 .footer-lavender a:hover:after, .footer-lavender a:focus:after {
   width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .footer-lavender {
+    padding: 0.75rem 0;
+  }
+
+  .footer-lavender h3 {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-lavender .row > div {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-lavender .row > div:last-child {
+    margin-bottom: 0;
+  }
 }
