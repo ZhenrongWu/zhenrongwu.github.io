@@ -1,3 +1,6 @@
+/* 按鈕樣式 */
+
+/* 實心按鈕 */
 .btn.btn-lavender {
   background-color: #663399;
   border-color: #663399;
@@ -5,8 +8,9 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
-.btn.btn-lavender:hover, 
-.btn.btn-lavender:focus, 
+
+.btn.btn-lavender:hover,
+.btn.btn-lavender:focus,
 .btn.btn-lavender:active {
   background-color: #4B0082;
   color: #ffffff;
@@ -14,6 +18,7 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* 外框按鈕 */
 .btn-outline-lavender {
   background-color: transparent;
   border-color: #663399;
@@ -21,7 +26,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
-.btn-outline-lavender:hover, .btn-outline-lavender:focus, .btn-outline-lavender:active {
+
+.btn-outline-lavender:hover,
+.btn-outline-lavender:focus,
+.btn-outline-lavender:active {
   background-color: #663399;
   color: #ffffff;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);

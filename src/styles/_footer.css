@@ -1,17 +1,29 @@
+/* ==========================================
+   頁腳樣式 - 薰衣草紫色主題
+   ========================================== */
+
+/* 頁腳基本樣式 */
 .footer-lavender {
   color: #ffffff;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   position: relative;
   z-index: 10;
+  flex-shrink: 0;
 }
 
+/* 頁腳標題樣式 */
 .footer-lavender h3 {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
+/* ==========================================
+   社群媒體連結區域
+   ========================================== */
+
+/* 社群連結容器 */
 .footer-lavender .social-links {
   display: flex;
   gap: 1rem;
@@ -20,14 +32,15 @@
   margin: 0;
 }
 
+/* 頁腳一般連結樣式 */
 .footer-lavender a {
   color: #ffffff;
   text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
-  /* 底部下劃線效果 */
-  /* 懸停和焦點狀態 */
 }
+
+/* 連結底部下劃線效果 */
 .footer-lavender a:after {
   content: "";
   position: absolute;
@@ -38,14 +51,24 @@
   background-color: #ffffff;
   transition: width 0.3s ease;
 }
-.footer-lavender a:hover, .footer-lavender a:focus {
+
+/* 連結懸停和焦點狀態 */
+.footer-lavender a:hover,
+.footer-lavender a:focus {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
 }
-.footer-lavender a:hover:after, .footer-lavender a:focus:after {
+
+.footer-lavender a:hover:after,
+.footer-lavender a:focus:after {
   width: 100%;
 }
 
+/* ==========================================
+   社群媒體圖示樣式
+   ========================================== */
+
+/* 社群圖示連結樣式 */
 .social-icon-link {
   color: #ffffff;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -55,16 +78,20 @@
   padding: 0.5rem;
 }
 
+/* 社群圖示懸停效果 */
 .social-icon-link:hover {
   color: rgba(255, 255, 255, 0.8);
   transform: translateY(-3px);
 }
 
+/* 社群圖示容器 */
 .social-icon {
   display: inline-flex;
 }
 
-/* 平板和手機共用樣式 */
+/* ==========================================
+   響應式設計 - 平板和手機共用
+   ========================================== */
 @media (max-width: 991.98px) {
   .footer-lavender .row > div {
     width: 100%;
@@ -79,14 +106,18 @@
   }
 }
 
-/* 純平板樣式 */
+/* ==========================================
+   響應式設計 - 平板裝置
+   ========================================== */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .footer-lavender {
     padding: 1rem 0;
   }
 }
 
-/* 手機樣式 */
+/* ==========================================
+   響應式設計 - 手機裝置
+   ========================================== */
 @media (max-width: 767.98px) {
   .footer-lavender {
     padding: 0.75rem 0;

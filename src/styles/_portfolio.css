@@ -1,3 +1,6 @@
+/* 作品集頁面樣式 */
+
+/* 專案卡片 3D 翻轉效果 */
 .project-card-wrapper {
   perspective: 1500px;
   margin-bottom: 1.5rem;
@@ -23,6 +26,7 @@
   transform: rotateY(180deg);
 }
 
+/* 專案卡片視覺設計 */
 .project-card-border {
   height: 100%;
   border: 2px solid rgba(102, 51, 153, 0.15);
@@ -44,6 +48,7 @@
   background: linear-gradient(135deg, #f8f6ff 0%, #f5f2ff 100%);
 }
 
+/* 專案卡片圖片區域 */
 .project-card-img-container {
   height: 220px;
   overflow: hidden;
@@ -56,6 +61,7 @@
   object-fit: cover;
 }
 
+/* 專案卡片內容區域 */
 .card-back-content {
   max-height: 320px;
   overflow-y: auto;
@@ -76,9 +82,11 @@
   border-radius: 4px;
 }
 
+/* 專案資訊標籤和內容 */
 .project-card-category {
   letter-spacing: 0.5px;
 }
+
 .project-card-tag {
   background-color: #ffffff;
   color: #663399;
@@ -92,10 +100,13 @@
   letter-spacing: 0.02em;
   box-shadow: 0 2px 4px rgba(102, 51, 153, 0.1);
 }
+
 .project-card-description {
   color: #444;
   line-height: 1.6;
 }
+
+/* 專案卡片按鈕樣式 */
 .project-card-button {
   font-size: 0.9rem;
   padding: 0.5rem 1rem;
@@ -128,6 +139,7 @@
   border-color: #4B0082;
 }
 
+/* 標題裝飾效果 */
 .title-underline {
   height: 8px;
   width: 100%;

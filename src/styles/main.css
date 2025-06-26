@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
-/* 主題顏色變數（薰衣草紫色主題） */
-/* 主色調：#663399，亮色調：#F5F0FF，暗色調：#4B0082，強調色：#8A2BE2 */
+/* 主要樣式檔案 - 薰衣草紫色主題 */
 
-/* 全局布局樣式 */
+/* 全域變數 */
 :root {
   --navbar-height: 64px;
-  --footer-height: 80px;  /* 根據實際 footer 高度調整 */
+  --footer-height: 80px;
 }
 
+/* 布局樣式 */
 .layout-wrapper {
   min-height: 100vh;
   display: flex;
@@ -17,51 +17,92 @@
 
 .main-content {
   flex: 1 0 auto;
-  padding-top: calc(var(--navbar-height) + 1rem);
-  padding-bottom: 2rem;
   width: 100%;
   position: relative;
   overflow-x: hidden;
+  padding-top: var(--navbar-height);
+  min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 背景顏色類 */
+.main-content .container {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 內容滾動處理 */
+@media (max-height: 800px) {
+  .main-content {
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    align-items: flex-start;
+    min-height: calc(100vh - var(--navbar-height));
+    max-height: none;
+    overflow-y: visible;
+  }
+  
+  .main-content .container {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-content .container {
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* 主題顏色 - 背景 */
 .bg-lavender-light {
   background-color: #F5F0FF;
 }
+
 .bg-lavender,
 .navbar-lavender,
 .footer-lavender {
   background-color: #663399;
   background-image: linear-gradient(45deg, #663399, #4B0082);
 }
+
 .bg-lavender-dark {
   background-color: #4B0082;
 }
 
-/* 文字顏色類 */
+/* 主題顏色 - 文字 */
 .text-lavender {
   color: #663399;
   text-shadow: 0 0 1px rgba(138, 43, 226, 0.2);
 }
+
 .text-lavender-dark {
   color: #8A2BE2;
 }
 
-/* 移動端樣式覆蓋 */
+/* 行動裝置優化 */
 @media (max-width: 576px) {
-  /* 移除導航下劃線效果 */
   .navbar-lavender .nav-link:after {
     display: none !important;
   }
-  .navbar-lavender .nav-link:hover, .navbar-lavender .nav-link:focus {
+  
+  .navbar-lavender .nav-link:hover,
+  .navbar-lavender .nav-link:focus {
     color: rgba(255, 255, 255, 0.8);
   }
-  /* 移除按鈕輪廓與點擊高亮 */
-  .btn, a.btn {
+  
+  .btn,
+  a.btn {
     -webkit-tap-highlight-color: transparent !important;
     -webkit-touch-callout: none !important;
     outline: none !important;
   }
+  
   .btn:focus,
   .btn:active,
   a.btn:focus,
@@ -72,36 +113,40 @@
     -moz-appearance: none !important;
     appearance: none !important;
   }
-  /* 按鈕點擊時維持顏色 */
-  .btn-lavender:focus, .btn-lavender:active {
+  
+  .btn-lavender:focus,
+  .btn-lavender:active {
     background-color: #663399 !important;
     color: #ffffff !important;
   }
-  .btn-outline-lavender:focus, .btn-outline-lavender:active {
+  
+  .btn-outline-lavender:focus,
+  .btn-outline-lavender:active {
     color: #663399 !important;
     background-color: transparent !important;
   }
-  /* 移除所有元素的點擊高亮 */
+  
   * {
     -webkit-tap-highlight-color: transparent !important;
   }
 }
 
-/* 卡片樣式覆蓋（Bootstrap） */
+/* Bootstrap 元件覆蓋 */
 .card,
 .card:hover {
   border: none !important;
   transform: none !important;
   transition: none !important;
 }
-.card-img, 
-.card-img-top, 
+
+.card-img,
+.card-img-top,
 .card-img-bottom {
   transition: none !important;
   transform: none !important;
 }
 
-/* 作品卡片樣式 */
+/* 專案卡片樣式 */
 .project-card-card {
   height: 100%;
   border-radius: 12px;
@@ -109,11 +154,12 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+
 .project-card-card-back {
   background: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
 }
 
-/* 匯入其他元件樣式 */
+/* 樣式檔案匯入 */
 @import '_nav.css';
 @import '_footer.css';
 @import '_home.css';
@@ -122,5 +168,4 @@
 @import '_resume.css';
 @import '_loading.css';
 @import '_scrollToTop.css';
-@import '_button.css';
 @import '_button.css';

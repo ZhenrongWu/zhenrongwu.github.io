@@ -5,13 +5,13 @@ import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <Container>
-        <Row className="align-items-center justify-content-center">
-          <Col md={6} className="mb-4 mb-md-0">
+    <Container className="py-5">
+      <Row className="align-items-center gy-4">
+        <Col lg={6} md={12} className="order-2 order-lg-1">
+          <div className="text-center text-lg-start">
             <h1 className="fw-bold mb-3">
               Hi! 我是
-              <span className="text-lavender">吳振榮</span>
+              <span className="text-lavender ms-2">吳振榮</span>
             </h1>
             <div className="mb-4">
               <TypeAnimation
@@ -43,28 +43,34 @@ const Home = () => {
               這份熱情與堅持，讓我在每一次挑戰中都能全力以赴，並從中找到成就感與喜悅。
             </p>
 
-            <div className="d-flex gap-3">
-              <Button as={Link} to="/portfolio" className="btn btn-lavender">
+            <div className="home-button-container d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+              <Button
+                as={Link}
+                to="/portfolio"
+                className="btn btn-lavender home-main-button"
+              >
                 查看作品集
               </Button>
             </div>
-          </Col>
+          </div>
+        </Col>
 
-          <Col md={6} className="text-center">
+        <Col lg={6} md={12} className="order-1 order-lg-2">
+          <div className="home-image-section d-flex align-items-center justify-content-center">
             <div className="home-image-wrapper">
               <div className="home-image-container">
                 <Image
                   src="https://imgur.com/BEeKkLj.jpg"
-                  alt="個人照"
+                  alt="吳振榮個人照"
                   fluid
                   className="rounded"
                 />
               </div>
             </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

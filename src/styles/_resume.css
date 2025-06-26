@@ -1,3 +1,4 @@
+/* 履歷頁面樣式 */
 .resume-title {
   color: #663399;
   font-size: 1.5em;
@@ -28,7 +29,6 @@
   font-weight: 500;
 }
 
-/* 履歷頁面整體樣式 */
 .resume {
   background: #ffffff;
   padding: 30px;
@@ -53,7 +53,6 @@
 .meta-item {
   margin-bottom: 5px;
 }
-
 .contact-link {
   color: #663399;
   text-decoration: none;

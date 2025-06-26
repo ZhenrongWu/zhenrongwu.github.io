@@ -1,7 +1,29 @@
-.home-container {
-  min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
-  display: flex;
-  align-items: center;
+/* 首頁樣式 */
+
+/* 按鈕區域樣式 */
+.home-button-container {
+  margin-top: 1.5rem;
+}
+
+.home-main-button {
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: 140px;
+}
+
+.home-main-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 51, 153, 0.3);
+}
+
+/* 個人照片區域樣式 */
+.home-image-section {
+  min-height: 300px;
+  width: 100%;
 }
 
 .home-image-container {
@@ -22,7 +44,6 @@
 .home-image-container:hover img {
   transform: scale(1.2);
 }
-
 .home-image-wrapper {
   max-width: 500px;
   margin: 0 auto;
@@ -54,30 +75,75 @@
   pointer-events: none;
 }
 
+/* 響應式設計 */
+@media (max-width: 991.98px) {
+  .home-button-container {
+    margin-top: 2rem;
+  }
+  
+  .home-image-section {
+    min-height: 350px;
+  }
+}
+
 @media (max-width: 768px) {
+  .home-image-section {
+    min-height: 280px;
+  }
+  
   .home-image-wrapper {
     padding: 1rem;
     margin: 0 1rem;
     border-radius: 0.75rem;
   }
+  
   .home-image-wrapper::before {
     padding: 2px;
     border-radius: 0.75rem;
   }
+  
+  .home-button-container {
+    margin-top: 1.5rem;
+  }
+  
+  .home-main-button {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+  }
 }
 
+
 @media (max-width: 576px) {
+  .home-image-section {
+    min-height: 250px;
+  }
+  
   .home-image-wrapper {
     padding: 0.75rem;
     margin: 0 0.5rem;
     border-radius: 0.5rem;
   }
+  
   .home-image-wrapper::before {
     padding: 1.5px;
     border-radius: 0.5rem;
   }
+  
+  .home-button-container {
+    margin-top: 1.5rem;
+  }
+  
+  .home-main-button {
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.5rem;
+  }
 }
 
+/* 文字內容樣式 */
 .home-paragraph {
   text-align: justify;
   word-break: break-word;
