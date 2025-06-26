@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 import {
   // 程式語言和框架圖標
   FaHtml5,
@@ -457,7 +457,7 @@ const About = () => {
   return (
     <>
       <style>{cardHoverStyle}</style>
-      <Container className="py-5">
+      <div className="py-5">
         {/* 頁面標題與介紹 */}
         <ProfessionalIntro />
 
@@ -474,7 +474,7 @@ const About = () => {
             <QuoteSection />
           </Col>
         </Row>
-      </Container>
+      </div>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 const ProjectCard = ({ project, index }) => {
@@ -211,7 +211,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <Container className="py-5">
+    <div className="py-5">
       {/* 頁面標題 */}
       <Row className="mb-5">
         <Col className="text-center">
@@ -235,7 +235,7 @@ const Portfolio = () => {
           </Col>
         ))}
       </Row>
-    </Container>
+    </div>
   );
 };
 

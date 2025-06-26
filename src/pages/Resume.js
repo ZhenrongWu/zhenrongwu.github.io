@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import { usePDF } from "react-to-pdf";
 
@@ -215,7 +215,7 @@ const Resume = () => {
   };
 
   return (
-    <Container className="py-5">
+    <div className="py-5">
       {/* 頁面標題 */}
       <Row className="mb-5">
         <Col className="text-center">
@@ -392,7 +392,7 @@ const Resume = () => {
           </Row>
         </article>
       </div>
-    </Container>
+    </div>
   );
 };
 

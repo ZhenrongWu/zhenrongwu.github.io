@@ -1,14 +1,14 @@
 import React from "react";
-import { Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Row, Col, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
   return (
-    <Container className="py-5">
-      <Row className="align-items-center gy-4">
+    <div className="home-centered-container">
+      <Row className="align-items-center w-100 gy-4">
         <Col lg={6} md={12} className="order-2 order-lg-1">
-          <div className="text-center text-lg-start">
+          <div className="text-center text-lg-start px-5">
             <h1 className="fw-bold mb-3">
               Hi! 我是
               <span className="text-lavender ms-2">吳振榮</span>
@@ -44,11 +44,7 @@ const Home = () => {
             </p>
 
             <div className="home-button-container d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-              <Button
-                as={Link}
-                to="/portfolio"
-                className="btn btn-lavender home-main-button"
-              >
+              <Button as={Link} to="/portfolio" className="btn btn-lavender">
                 查看作品集
               </Button>
             </div>
@@ -58,19 +54,17 @@ const Home = () => {
         <Col lg={6} md={12} className="order-1 order-lg-2">
           <div className="home-image-section d-flex align-items-center justify-content-center">
             <div className="home-image-wrapper">
-              <div className="home-image-container">
-                <Image
-                  src="https://imgur.com/BEeKkLj.jpg"
-                  alt="吳振榮個人照"
-                  fluid
-                  className="rounded"
-                />
-              </div>
+              <Image
+                src="https://imgur.com/BEeKkLj.jpg"
+                alt="吳振榮個人照"
+                fluid
+                className="rounded"
+              />
             </div>
           </div>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 
