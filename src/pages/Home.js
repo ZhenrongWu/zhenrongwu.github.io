@@ -43,7 +43,7 @@ const Home = () => {
               這份熱情與堅持，讓我在每一次挑戰中都能全力以赴，並從中找到成就感與喜悅。
             </p>
 
-            <div className="home-button-container d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+            <div className="home-button-container d-flex flex-row gap-3 justify-content-center justify-content-lg-start">
               <Button as={Link} to="/portfolio" className="btn btn-lavender">
                 查看作品集
               </Button>
