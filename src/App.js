@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/main.css";
 
 const App = () => {

@@ -1,10 +1,10 @@
 /* 履歷頁面樣式 */
 .resume-title {
-  color: #663399;
+  color: var(--lavender-primary);
   font-size: 1.5em;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid rgba(102, 51, 153, 0.1);
+  border-bottom: var(--border-lavender);
 }
 
 .resume-item {
@@ -12,28 +12,28 @@
 }
 
 .resume-item h3 {
-  color: #663399;
+  color: var(--lavender-primary);
   font-size: 1.1em;
   margin-bottom: 5px;
 }
 
 .resume-item h4 {
   font-size: 0.9em;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 10px;
 }
 
 .resume-date {
   font-size: 0.9em;
-  color: #663399;
+  color: var(--lavender-primary);
   font-weight: 500;
 }
 
 .resume {
   background: #ffffff;
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .resume-header {
@@ -41,26 +41,27 @@
 }
 
 .heading-name {
-  color: #663399;
+  color: var(--lavender-primary);
   font-size: 2em;
   margin-bottom: 10px;
 }
 
 .heading-meta {
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .meta-item {
   margin-bottom: 5px;
 }
+
 .contact-link {
-  color: #663399;
+  color: var(--lavender-primary);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: var(--transition-base);
 }
 
 .contact-link:hover {
-  color: #4B0082;
+  color: var(--lavender-secondary);
 }
 
 .download-button {
@@ -77,7 +78,7 @@
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  transition: var(--transition-transform);
   z-index: -1;
 }
 
@@ -87,5 +88,5 @@
 
 .project-card-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
 }

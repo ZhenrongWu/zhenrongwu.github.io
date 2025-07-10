@@ -5,8 +5,8 @@
   right: clamp(20px, 5vw, 40px);
   width: clamp(40px, 12vw, 50px);
   height: clamp(40px, 12vw, 50px);
-  background-color: #663399;
-  background-image: linear-gradient(45deg, #663399, #4B0082);
+  background-color: var(--lavender-primary);
+  background-image: var(--lavender-gradient);
   color: white;
   border: none;
   border-radius: 50%;
@@ -17,9 +17,9 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: all 0.3s ease;
+  transition: var(--transition-base);
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
 }
 
 .top-button.show {
@@ -31,14 +31,14 @@
 .top-button:hover,
 .top-button:focus {
   opacity: 1;
-  background-image: linear-gradient(45deg, #7a46b3, #663399);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-image: var(--hover-gradient);
+  box-shadow: var(--shadow-hover);
   transform: translateY(-3px);
   outline: none;
 }
 
 .top-button:focus {
-  box-shadow: 0 0 0 3px rgba(102, 51, 153, 0.4);
+  box-shadow: var(--shadow-focus);
 }
 
 /* 響應式設計 */
