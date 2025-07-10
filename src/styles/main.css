@@ -6,6 +6,10 @@
 :root {
   --navbar-height: 64px;
   --footer-height: 80px;
+  --lavender: #8e44ad;
+  --lavender-dark: #6c3483;
+  --lavender-light: #9b59b6;
+  --lavender-lighter: #d2b4de;
 }
 
 /* 布局樣式 */
@@ -160,12 +164,71 @@
 }
 
 /* 樣式檔案匯入 */
-@import '_nav.css';
-@import '_footer.css';
-@import '_home.css';
-@import '_portfolio.css';
-@import '_timeline.css';
-@import '_resume.css';
-@import '_loading.css';
-@import '_scrollToTop.css';
-@import '_button.css';
+@import url("_nav.css");
+@import url("_home.css");
+@import url("_portfolio.css");
+@import url("_resume.css");
+@import url("_footer.css");
+@import url("_button.css");
+@import url("_timeline.css");
+@import url("_scrollToTop.css");
+
+/* 全局樣式 */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* 自定義按鈕樣式 */
+.btn-lavender {
+  background-color: var(--lavender);
+  border-color: var(--lavender);
+  color: white;
+}
+
+.btn-lavender:hover {
+  background-color: var(--lavender-dark);
+  border-color: var(--lavender-dark);
+  color: white;
+}
+
+.btn-outline-lavender {
+  color: var(--lavender);
+  border-color: var(--lavender);
+}
+
+.btn-outline-lavender:hover {
+  background-color: var(--lavender);
+  color: white;
+}
+
+/* 文字顏色 */
+.text-lavender {
+  color: var(--lavender) !important;
+}
+
+.text-lavender-dark {
+  color: var(--lavender-dark) !important;
+}
+
+.text-lavender-light {
+  color: var(--lavender-light) !important;
+}
+
+/* 背景顏色 */
+.bg-lavender {
+  background-color: var(--lavender) !important;
+}
+
+.bg-lavender-dark {
+  background-color: var(--lavender-dark) !important;
+}
+
+.bg-lavender-light {
+  background-color: var(--lavender-light) !important;
+}
+
+/* 邊框顏色 */
+.border-lavender {
+  border-color: var(--lavender) !important;
+}
