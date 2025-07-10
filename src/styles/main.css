@@ -4,8 +4,19 @@
 
 /* 全域變數 */
 :root {
+  /* 布局變數 */
   --navbar-height: 64px;
   --footer-height: 80px;
+
+  /* 主題顏色 */
+  --lavender-primary: #663399;
+  --lavender-secondary: #4B0082;
+  --lavender-light: #F5F0FF;
+  --lavender-dark: #8A2BE2;
+  --lavender-gradient: linear-gradient(45deg, var(--lavender-primary), var(--lavender-secondary));
+  --lavender-text-shadow: 0 0 1px rgba(138, 43, 226, 0.2);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --card-back-gradient: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
 }
 
 /* 布局樣式 */
@@ -61,28 +72,28 @@
 
 /* 主題顏色 - 背景 */
 .bg-lavender-light {
-  background-color: #F5F0FF;
+  background-color: var(--lavender-light);
 }
 
 .bg-lavender,
 .navbar-lavender,
 .footer-lavender {
-  background-color: #663399;
-  background-image: linear-gradient(45deg, #663399, #4B0082);
+  background-color: var(--lavender-primary);
+  background-image: var(--lavender-gradient);
 }
 
 .bg-lavender-dark {
-  background-color: #4B0082;
+  background-color: var(--lavender-secondary);
 }
 
 /* 主題顏色 - 文字 */
 .text-lavender {
-  color: #663399;
-  text-shadow: 0 0 1px rgba(138, 43, 226, 0.2);
+  color: var(--lavender-primary);
+  text-shadow: var(--lavender-text-shadow);
 }
 
 .text-lavender-dark {
-  color: #8A2BE2;
+  color: var(--lavender-dark);
 }
 
 /* 行動裝置優化 */
@@ -116,13 +127,13 @@
   
   .btn-lavender:focus,
   .btn-lavender:active {
-    background-color: #663399 !important;
+    background-color: var(--lavender-primary) !important;
     color: #ffffff !important;
   }
   
   .btn-outline-lavender:focus,
   .btn-outline-lavender:active {
-    color: #663399 !important;
+    color: var(--lavender-primary) !important;
     background-color: transparent !important;
   }
   
@@ -151,12 +162,12 @@
   height: 100%;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   cursor: pointer;
 }
 
 .project-card-card-back {
-  background: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
+  background: var(--card-back-gradient);
 }
 
 /* 樣式檔案匯入 */
