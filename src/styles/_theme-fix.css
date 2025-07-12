@@ -1,0 +1,9 @@
+html {
+  color-scheme: light only;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light only;
+  }
+} 

@@ -194,6 +194,7 @@
 }
 
 /* 樣式檔案匯入 */
+@import '_theme-fix.css';
 @import '_nav.css';
 @import '_footer.css';
 @import '_home.css';
