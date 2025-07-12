@@ -1,6 +1,6 @@
-/* 按鈕樣式 */
+/* 按鈕 */
 
-/* 實心按鈕 */
+/* 實心 */
 .btn.btn-lavender {
   background-color: var(--lavender-primary);
   border-color: var(--lavender-primary);
@@ -18,7 +18,7 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* 外框按鈕 */
+/* 外框 */
 .btn-outline-lavender {
   background-color: transparent;
   border-color: var(--lavender-primary);

@@ -1,6 +1,6 @@
-/* 首頁樣式 */
+/* 首頁 */
 
-/* Home 頁面專用的垂直置中容器 */
+/* 容器 */
 .home-centered-container {
   min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
   display: flex;
@@ -10,12 +10,12 @@
   padding: 2rem 0;
 }
 
-/* 按鈕區域樣式 */
+/* 按鈕 */
 .home-button-container {
   margin-top: 1.5rem;
 }
 
-/* 個人照片區域樣式 */
+/* 照片 */
 .home-image-section {
   min-height: 300px;
   width: 100%;
@@ -68,14 +68,14 @@
   z-index: 2;
 }
 
-/* 文字內容樣式 */
+/* 文字 */
 .home-paragraph {
   text-align: justify;
   word-break: break-word;
   text-justify: inter-ideograph;
 }
 
-/* 響應式設計 */
+/* 響應式 */
 @media (max-width: 991.98px) {
   .home-button-container {
     margin-top: 2rem;

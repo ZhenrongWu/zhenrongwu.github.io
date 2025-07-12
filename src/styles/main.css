@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-/* 主要樣式檔案 - 薰衣草紫色主題 */
+/* 薰衣草紫色主題 */
 
 /* 全域變數 */
 :root {
-  /* 布局變數 */
+  /* 布局 */
   --navbar-height: 64px;
   --footer-height: 80px;
 
@@ -16,33 +16,33 @@
   --lavender-gradient: linear-gradient(45deg, var(--lavender-primary), var(--lavender-secondary));
   --lavender-text-shadow: 0 0 1px rgba(138, 43, 226, 0.2);
   
-  /* 陰影效果 */
+  /* 陰影 */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);
   --shadow-focus: 0 0 0 3px rgba(102, 51, 153, 0.4);
   
-  /* 邊框和背景 */
+  /* 邊框 */
   --border-lavender: 1px solid rgba(102, 51, 153, 0.1);
   --border-radius-sm: 0.5rem;
   --border-radius-md: 0.75rem;
   --border-radius-lg: 1rem;
   
-  /* 漸變背景 */
+  /* 漸變 */
   --card-back-gradient: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
   --hover-gradient: linear-gradient(45deg, #7a46b3, var(--lavender-primary));
   
-  /* 文字顏色 */
+  /* 文字 */
   --text-primary: #444;
   --text-secondary: #666;
   
-  /* 過渡效果 */
+  /* 過渡 */
   --transition-base: all 0.3s ease;
   --transition-transform: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 布局樣式 */
+/* 布局 */
 .layout-wrapper {
   min-height: 100vh;
   display: flex;
@@ -66,7 +66,7 @@
   max-width: 100%;
 }
 
-/* 內容滾動處理 */
+/* 響應式 */
 @media (max-height: 800px) {
   .main-content {
     align-items: flex-start;
@@ -93,7 +93,7 @@
   }
 }
 
-/* 主題顏色 - 背景 */
+/* 主題顏色 */
 .bg-lavender-light {
   background-color: var(--lavender-light);
 }
@@ -109,7 +109,6 @@
   background-color: var(--lavender-secondary);
 }
 
-/* 主題顏色 - 文字 */
 .text-lavender {
   color: var(--lavender-primary);
   text-shadow: var(--lavender-text-shadow);
@@ -165,7 +164,7 @@
   }
 }
 
-/* Bootstrap 元件覆蓋 */
+/* Bootstrap 覆蓋 */
 .card,
 .card:hover {
   border: none !important;
@@ -180,7 +179,7 @@
   transform: none !important;
 }
 
-/* 專案卡片樣式 */
+/* 專案卡片 */
 .project-card-card {
   height: 100%;
   border-radius: 12px;
