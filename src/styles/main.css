@@ -67,17 +67,10 @@
 }
 
 /* 響應式 */
-@media (max-height: 800px) {
-  .main-content {
-    align-items: flex-start;
-    overflow-y: auto;
-  }
-}
-
 @media (max-width: 768px) {
   .main-content {
-    align-items: flex-start;
-    min-height: calc(100vh - var(--navbar-height));
+    align-items: center;
+    min-height: auto;
     max-height: none;
     overflow-y: visible;
   }
