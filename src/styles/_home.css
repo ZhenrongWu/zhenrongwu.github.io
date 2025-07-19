@@ -75,6 +75,12 @@
   text-justify: inter-ideograph;
 }
 
+/* 解決 TypeAnimation 顏色覆蓋問題 */
+.h4.text-lavender-dark {
+  color: var(--lavender-dark) !important;
+  text-shadow: var(--lavender-text-shadow);
+}
+
 /* 響應式 */
 @media (max-width: 991.98px) {
   .home-button-container {

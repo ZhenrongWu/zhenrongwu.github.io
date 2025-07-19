@@ -11,7 +11,7 @@ const Home = () => {
           <div className="text-center text-lg-start px-5">
             <h1 className="fw-bold mb-3">
               Hi! 我是
-              <span className="text-lavender ms-2">吳振榮</span>
+              <span className="text-lavender">吳振榮</span>
             </h1>
             <div className="mb-4">
               <TypeAnimation
@@ -28,7 +28,7 @@ const Home = () => {
                   2000,
                 ]}
                 speed={10}
-                className="h4 text-lavender-dark type-animation-inline"
+                className="h4 text-lavender-dark"
                 wrapper="h2"
                 repeat={Infinity}
               />
