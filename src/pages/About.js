@@ -262,7 +262,7 @@ const SkillCard = memo(({ item }) => (
 
 // 技能區塊組件
 const SkillSection = memo(({ title, items }) => (
-  <Row className="mb-5">
+  <Row>
     <Col lg={10} className="mx-auto">
       <div className="d-flex align-items-center justify-content-center mb-4">
         <h2 className="h3 mb-0">{title}</h2>
@@ -312,7 +312,7 @@ const HobbySection = memo(({ hobbies }) => (
 
 // 引言區塊組件
 const QuoteSection = memo(() => (
-  <div className="text-center mb-4 p-4 bg-lavender-light rounded-3 shadow-sm hover-lift">
+  <div className="text-center p-4 bg-lavender-light rounded-3 shadow-sm hover-lift">
     <FaQuoteLeft className="text-lavender fs-1 mb-3" />
     <p className="lead fst-italic mb-0">
       「努力創造能夠改變世界的數位產品！」
