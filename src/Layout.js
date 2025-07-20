@@ -13,7 +13,7 @@ const Layout = () => {
       </header>
 
       <main className="main-content">
-        <Container className="px-3 px-sm-4">
+        <Container>
           <Outlet />
         </Container>
       </main>

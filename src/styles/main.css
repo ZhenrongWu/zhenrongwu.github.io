@@ -69,20 +69,7 @@
 /* 響應式 */
 @media (max-width: 768px) {
   .main-content {
-    align-items: center;
-    min-height: auto;
-    max-height: none;
     overflow-y: visible;
-  }
-  
-  .main-content .container {
-    padding-bottom: 2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .main-content .container {
-    padding-bottom: 1.5rem;
   }
 }
 

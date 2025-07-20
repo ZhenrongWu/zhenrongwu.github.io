@@ -2,7 +2,6 @@
 
 /* 容器 */
 .home-centered-container {
-  min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,8 +83,6 @@
 /* 響應式 */
 @media (max-width: 768px) {
   .home-centered-container {
-    align-items: center;
-    min-height: auto;
     padding: 1.5rem 0;
   }
   
