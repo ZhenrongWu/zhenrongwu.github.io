@@ -29,7 +29,7 @@ const Footer = () => {
   return (
     <footer className="footer-lavender py-3">
       <Container>
-        <Row className="align-items-center gy-3">
+        <Row className="align-items-center gy-2">
           <Col lg={4} sm={12} className="text-center text-lg-start">
             <h3 className="h6 mb-0">Designed and Developed by Zhenrong Wu</h3>
           </Col>
