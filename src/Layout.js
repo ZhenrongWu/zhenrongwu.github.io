@@ -9,7 +9,7 @@ const Layout = () => {
   return (
     <div className="layout-wrapper">
       <header className="fixed-top">
-        <Navigation />
+        <Navigation className="py-3 py-sm-4" />
       </header>
 
       <main className="main-content">
@@ -19,7 +19,7 @@ const Layout = () => {
       </main>
 
       <ScrollToTop />
-      <Footer />
+      <Footer className="py-3 py-sm-4" />
     </div>
   );
 };
