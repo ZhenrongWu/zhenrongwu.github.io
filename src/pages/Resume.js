@@ -246,7 +246,6 @@ const Resume = () => {
       <Row className="justify-content-center mb-5">
         <Col xs={12} className="text-center">
           <Button
-            variant="primary"
             onClick={() => {
               // 添加下載提示
               const button = document.querySelector(".download-button");

@@ -2,9 +2,9 @@
 
 /* 實心 */
 .btn.btn-lavender {
-  background-color: var(--lavender-primary);
-  border-color: var(--lavender-primary);
-  color: #ffffff;
+  background-color: var(--lavender-primary) !important;
+  border-color: var(--lavender-primary) !important;
+  color: #ffffff !important;
   box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
 }
@@ -12,9 +12,9 @@
 .btn.btn-lavender:hover,
 .btn.btn-lavender:focus,
 .btn.btn-lavender:active {
-  background-color: var(--lavender-secondary);
-  color: #ffffff;
-  border-color: var(--lavender-secondary);
+  background-color: var(--lavender-secondary) !important;
+  color: #ffffff !important;
+  border-color: var(--lavender-secondary) !important;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 

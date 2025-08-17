@@ -5,16 +5,9 @@ import { AiOutlineDownload } from "react-icons/ai";
 const DownloadButton = ({ onClick, className = "", ...props }) => {
   return (
     <Button
-      variant="primary"
       onClick={onClick}
-      className={`download-button ${className}`}
+      className={`download-button btn-lavender ${className}`}
       aria-label="下載履歷 PDF 檔案"
-      style={{
-        backgroundColor: "var(--color-primary)",
-        border: "none",
-        position: "relative",
-        overflow: "hidden",
-      }}
       {...props}
     >
       <AiOutlineDownload aria-hidden="true" style={{ marginRight: "8px" }} />
