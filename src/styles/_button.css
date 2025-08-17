@@ -34,3 +34,61 @@
   color: #ffffff;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
+
+/* 下載按鈕載入狀態 */
+.download-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.download-button:disabled {
+  background-color: var(--lavender-secondary) !important;
+  border-color: var(--lavender-secondary) !important;
+  color: #ffffff !important;
+  cursor: not-allowed;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.download-button:disabled:hover {
+  background-color: var(--lavender-secondary) !important;
+  border-color: var(--lavender-secondary) !important;
+  transform: none !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+/* 載入狀態下的文字隱藏 */
+.download-button:disabled span:not(.loading-text) {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* 載入狀態文字樣式 */
+.download-button:disabled .loading-text {
+  opacity: 1 !important;
+  color: #ffffff !important;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+/* 載入狀態下的圖標隱藏 */
+.download-button:disabled svg {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* 載入完成後的恢復動畫 */
+.download-button:not(:disabled) span,
+.download-button:not(:disabled) svg {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* 載入狀態下的背景效果 */
+.download-button:disabled .button-background {
+  background: linear-gradient(45deg, var(--lavender-primary), var(--lavender-secondary));
+  transform: translateX(0);
+  opacity: 0.15;
+}
+

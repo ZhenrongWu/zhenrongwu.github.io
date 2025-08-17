@@ -238,12 +238,12 @@ const Resume = () => {
               履<span className="text-lavender">歷</span>
             </h1>
           </div>
-          <p className="lead text-muted">歡迎了解我的經歷和個人成就</p>
+          <p className="lead text-muted mb-4">歡迎了解我的經歷和個人成就</p>
         </Col>
       </Row>
 
       {/* 下載按鈕 */}
-      <Row className="justify-content-center mb-4">
+      <Row className="justify-content-center mb-5">
         <Col xs={12} className="text-center">
           <Button
             variant="primary"
@@ -251,15 +251,18 @@ const Resume = () => {
               // 添加下載提示
               const button = document.querySelector(".download-button");
               const originalText = button.innerHTML;
-              button.innerHTML = "<span>正在生成 PDF...</span>";
+              button.innerHTML =
+                "<span class='loading-text'>正在生成 PDF...</span>";
               button.disabled = true;
 
               // 執行 PDF 下載
               toPDF()
                 .then(() => {
                   // 下載完成後恢復按鈕
-                  button.innerHTML = originalText;
-                  button.disabled = false;
+                  setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                  }, 500); // 延遲 500ms 讓使用者看到完成狀態
                 })
                 .catch((error) => {
                   console.error("PDF 生成失敗:", error);
@@ -274,6 +277,7 @@ const Resume = () => {
               fontSize: "1.1em",
               borderRadius: "30px",
               transition: "all 0.3s ease",
+              position: "relative",
             }}
           >
             <AiOutlineDownload
@@ -300,7 +304,7 @@ const Resume = () => {
         }}
       >
         <article className="resume">
-          <Row>
+          <Row className="g-4">
             <Col lg={6} className="resume-left">
               {/* 個人資訊 */}
               <header className="resume-header mb-5">

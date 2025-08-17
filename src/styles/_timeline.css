@@ -6,7 +6,7 @@
 
 .timeline {
   position: relative;
-  padding-left: 30px;
+  padding-left: 35px;
 }
 
 .timeline::before {
@@ -15,53 +15,80 @@
   left: 0;
   top: 0;
   height: 100%;
-  width: 2px;
+  width: 3px;
   background: var(--lavender-primary);
-  opacity: 0.3;
+  opacity: 0.4;
+  border-radius: 2px;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
 }
 
 .timeline-dot {
   position: absolute;
-  left: -34px;
-  top: 0;
-  width: 10px;
-  height: 10px;
+  left: -38px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: var(--lavender-primary);
-  border: 2px solid #ffffff;
-  box-shadow: 0 0 0 2px var(--lavender-primary);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 3px var(--lavender-primary);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 4px var(--lavender-primary);
 }
 
 .timeline-date {
-  font-size: 0.9em;
+  font-size: 0.95em;
   color: var(--lavender-primary);
-  margin-bottom: 5px;
-  font-weight: 500;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .timeline-content {
   background: #ffffff;
-  padding: 15px;
+  padding: 20px;
   border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-sm);
   border: var(--border-lavender);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.timeline-content:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .timeline-content h3 {
   color: var(--lavender-primary);
-  font-size: 1.1em;
-  margin-bottom: 5px;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .timeline-content h4 {
-  font-size: 0.9em;
+  font-size: 1em;
   color: var(--text-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: var(--text-primary);
 }
 
 .timeline-content ul {
@@ -70,6 +97,34 @@
 }
 
 .timeline-content li {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.timeline-content li:last-child {
+  margin-bottom: 0;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 25px;
+  }
+  
+  .timeline-dot {
+    left: -28px;
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+    box-shadow: 0 0 0 2px var(--lavender-primary);
+  }
+  
+  .timeline-content {
+    padding: 15px;
+  }
+  
+  .timeline-item {
+    margin-bottom: 30px;
+  }
 }

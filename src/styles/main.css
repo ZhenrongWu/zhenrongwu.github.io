@@ -22,6 +22,7 @@
   --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);
   --shadow-focus: 0 0 0 3px rgba(102, 51, 153, 0.4);
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   
   /* 邊框 */
   --border-lavender: 1px solid rgba(102, 51, 153, 0.1);

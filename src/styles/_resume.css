@@ -142,57 +142,66 @@
 
 .resume-title {
   color: var(--lavender-primary);
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  padding-bottom: 8px;
+  font-size: 1.6em;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
   border-bottom: var(--border-lavender);
+  font-weight: 600;
 }
 
 .resume-item {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .resume-item h3 {
   color: var(--lavender-primary);
-  font-size: 1.1em;
-  margin-bottom: 5px;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .resume-item h4 {
-  font-size: 0.9em;
+  font-size: 1em;
   color: var(--text-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-weight: 500;
 }
 
 .resume-date {
-  font-size: 0.9em;
+  font-size: 0.95em;
   color: var(--lavender-primary);
   font-weight: 500;
 }
 
 .resume {
   background: #ffffff;
-  padding: 15px;
+  padding: 30px;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-sm);
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .resume-header {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .heading-name {
   color: var(--lavender-primary);
-  font-size: 2em;
-  margin-bottom: 8px;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  font-weight: 700;
 }
 
 .heading-meta {
   color: var(--text-secondary);
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
 .meta-item {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .contact-link {
@@ -230,4 +239,52 @@
 .project-card-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
+}
+
+/* 新增：改善履歷內容的整體排版 */
+.resume-content {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.resume-left,
+.resume-right {
+  padding: 0 20px;
+}
+
+/* 改善區段間距 */
+.resume-section {
+  margin-bottom: 40px;
+}
+
+/* 改善教育背景區塊 */
+.resume-section:last-child {
+  margin-bottom: 0;
+}
+
+/* 響應式設計改善 */
+@media (max-width: 768px) {
+  .resume {
+    padding: 20px;
+  }
+  
+  .resume-content {
+    padding: 20px 10px;
+  }
+  
+  .resume-left,
+  .resume-right {
+    padding: 0 10px;
+  }
+  
+  .heading-name {
+    font-size: 2em;
+  }
+  
+  .resume-title {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+  }
 }
