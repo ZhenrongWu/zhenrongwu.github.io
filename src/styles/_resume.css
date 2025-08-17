@@ -1,15 +1,155 @@
 /* 履歷 */
 
+/* PDF 輸出優化 - 最大化 A4 空間利用 */
+@media print {
+  .resume-content {
+    background: white !important;
+    color: black !important;
+    font-family: Arial, sans-serif !important;
+    padding: 0px !important;
+    line-height: 0.85 !important;
+    min-height: auto !important;
+  }
+  
+  .resume {
+    background: white !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 1px !important;
+    min-height: auto !important;
+  }
+  
+  .resume-header {
+    margin-bottom: 6px !important;
+  }
+  
+  .heading-name {
+    font-size: 1.5em !important;
+    margin-bottom: 2px !important;
+  }
+  
+  .heading-meta p {
+    margin-bottom: 1px !important;
+    font-size: 0.85em !important;
+  }
+  
+  .resume-title {
+    font-size: 1.0em !important;
+    margin-bottom: 4px !important;
+    padding-bottom: 1px !important;
+  }
+  
+  .timeline::before,
+  .timeline-dot {
+    display: none !important;
+  }
+  
+  .timeline {
+    padding-left: 0 !important;
+  }
+  
+  .timeline-item {
+    margin-bottom: 1px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  .timeline-content {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    margin-bottom: 0px !important;
+    padding: 1px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  .timeline-date {
+    font-weight: bold !important;
+    color: #333 !important;
+    font-size: 0.85em !important;
+    margin-bottom: 2px !important;
+  }
+  
+  .resume-item h3 {
+    font-size: 0.9em !important;
+    margin-bottom: 1px !important;
+  }
+  
+  .resume-item h4 {
+    font-size: 0.75em !important;
+    margin-bottom: 2px !important;
+  }
+  
+  .resume-item p {
+    font-size: 0.7em !important;
+    margin-bottom: 1px !important;
+  }
+  
+  .resume-item ul {
+    padding-left: 12px !important;
+    margin-bottom: 3px !important;
+  }
+  
+  .resume-item li {
+    font-size: 0.7em !important;
+    margin-bottom: 0px !important;
+    line-height: 0.95 !important;
+  }
+  
+  .resume-section {
+    margin-bottom: 6px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  /* 特別針對個人成就區塊的分頁控制 */
+  .resume-section[aria-labelledby="achievements"] {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-before: auto !important;
+    page-break-after: auto !important;
+  }
+  
+  .resume-section[aria-labelledby="achievements"] .timeline-item {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    orphans: 5 !important;
+    widows: 5 !important;
+    page-break-before: auto !important;
+    page-break-after: auto !important;
+  }
+  
+  /* 特別針對徒步環島項目的分頁控制 */
+  .resume-section[aria-labelledby="achievements"] .timeline-item:nth-child(2) {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    orphans: 10 !important;
+    widows: 10 !important;
+    page-break-before: auto !important;
+    page-break-after: auto !important;
+  }
+  
+  /* 確保內容不被截斷 */
+  * {
+    page-break-inside: auto !important;
+  }
+  
+  .resume-item {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
 .resume-title {
   color: var(--lavender-primary);
   font-size: 1.5em;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
   border-bottom: var(--border-lavender);
 }
 
 .resume-item {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .resume-item h3 {
@@ -32,7 +172,7 @@
 
 .resume {
   background: #ffffff;
-  padding: 30px;
+  padding: 15px;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-sm);
 }
@@ -44,7 +184,7 @@
 .heading-name {
   color: var(--lavender-primary);
   font-size: 2em;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .heading-meta {

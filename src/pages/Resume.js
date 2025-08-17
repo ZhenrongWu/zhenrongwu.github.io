@@ -8,12 +8,25 @@ const Resume = () => {
     filename: "吳振榮履歷.pdf",
     page: {
       format: "A4",
-      margin: 20,
+      margin: 2,
+    },
+    canvas: {
+      mimeType: "image/png",
+      qualityRatio: 1,
+      useCORS: true,
     },
     options: {
       unit: "px",
       hotfixes: ["px_scaling"],
       windowWidth: 1200,
+      windowHeight: 4000,
+      scrollX: 0,
+      scrollY: 0,
+      usePrintMedia: true,
+      backgroundColor: "#ffffff",
+      waitForFonts: true,
+      allowTaint: true,
+      foreignObjectRendering: true,
     },
   });
 
@@ -234,9 +247,34 @@ const Resume = () => {
         <Col xs={12} className="text-center">
           <Button
             variant="primary"
-            onClick={() => toPDF()}
+            onClick={() => {
+              // 添加下載提示
+              const button = document.querySelector(".download-button");
+              const originalText = button.innerHTML;
+              button.innerHTML = "<span>正在生成 PDF...</span>";
+              button.disabled = true;
+
+              // 執行 PDF 下載
+              toPDF()
+                .then(() => {
+                  // 下載完成後恢復按鈕
+                  button.innerHTML = originalText;
+                  button.disabled = false;
+                })
+                .catch((error) => {
+                  console.error("PDF 生成失敗:", error);
+                  button.innerHTML = originalText;
+                  button.disabled = false;
+                });
+            }}
             className="download-button btn-lavender"
             aria-label="下載履歷 PDF 檔案"
+            style={{
+              padding: "12px 30px",
+              fontSize: "1.1em",
+              borderRadius: "30px",
+              transition: "all 0.3s ease",
+            }}
           >
             <AiOutlineDownload
               aria-hidden="true"
@@ -249,7 +287,18 @@ const Resume = () => {
       </Row>
 
       {/* 履歷內容 */}
-      <div ref={targetRef} className="resume-content">
+      <div
+        ref={targetRef}
+        className="resume-content"
+        style={{
+          backgroundColor: "#ffffff",
+          padding: "1px",
+          maxWidth: "100%",
+          fontFamily: "Arial, sans-serif",
+          lineHeight: "0.9",
+          minHeight: "auto",
+        }}
+      >
         <article className="resume">
           <Row>
             <Col lg={6} className="resume-left">
