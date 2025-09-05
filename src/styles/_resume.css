@@ -1,6 +1,3 @@
-/* 履歷 */
-
-/* PDF 輸出優化 - 最大化 A4 空間利用 */
 @media print {
   .resume-content {
     background: white !important;
@@ -102,7 +99,6 @@
     break-inside: avoid !important;
   }
   
-  /* 特別針對個人成就區塊的分頁控制 */
   .resume-section[aria-labelledby="achievements"] {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
@@ -119,7 +115,6 @@
     page-break-after: auto !important;
   }
   
-  /* 特別針對徒步環島項目的分頁控制 */
   .resume-section[aria-labelledby="achievements"] .timeline-item:nth-child(2) {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
@@ -129,7 +124,6 @@
     page-break-after: auto !important;
   }
   
-  /* 確保內容不被截斷 */
   * {
     page-break-inside: auto !important;
   }
@@ -241,7 +235,6 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* 新增：改善履歷內容的整體排版 */
 .resume-content {
   background-color: #f8f9fa;
   padding: 40px 20px;
@@ -254,17 +247,14 @@
   padding: 0 20px;
 }
 
-/* 改善區段間距 */
 .resume-section {
   margin-bottom: 40px;
 }
 
-/* 改善教育背景區塊 */
 .resume-section:last-child {
   margin-bottom: 0;
 }
 
-/* 響應式設計改善 */
 @media (max-width: 768px) {
   .resume {
     padding: 20px;

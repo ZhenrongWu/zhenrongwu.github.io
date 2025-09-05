@@ -1,6 +1,3 @@
-/* 首頁 */
-
-/* 容器 */
 .home-centered-container {
   display: flex;
   align-items: center;
@@ -9,12 +6,10 @@
   padding: 2rem 0;
 }
 
-/* 按鈕 */
 .home-button-container {
   margin-top: 1.5rem;
 }
 
-/* 照片 */
 .home-image-section {
   min-height: 300px;
   width: 100%;
@@ -23,9 +18,7 @@
 .home-image-wrapper {
   max-width: 500px;
   margin: 0 auto;
-  padding: 0.5rem;
-  background-color: #ffffff;
-  border-radius: 1rem;
+  border-radius: var(--border-radius-lg);
   position: relative;
   box-shadow: 0 8px 24px rgba(102, 51, 153, 0.15);
   overflow: hidden;
@@ -36,7 +29,7 @@
   width: 100%;
   height: 100%;
   display: block;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-transform);
   position: relative;
   z-index: 1;
 }
@@ -45,42 +38,17 @@
   transform: scale(1.2);
 }
 
-.home-image-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 1rem;
-  padding: 3px;
-  background: linear-gradient(45deg, #663399, #4B0082);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: 2;
-}
-
-/* 文字 */
 .home-paragraph {
   text-align: justify;
   word-break: break-word;
   text-justify: inter-ideograph;
 }
 
-/* 解決 TypeAnimation 顏色覆蓋問題 */
 .h4.text-lavender-dark {
   color: var(--lavender-dark) !important;
   text-shadow: var(--lavender-text-shadow);
 }
 
-/* 響應式 */
 @media (max-width: 768px) {
   .home-centered-container {
     padding: 1.5rem 0;
@@ -92,14 +60,8 @@
   }
   
   .home-image-wrapper {
-    padding: 1rem;
     margin: 0 1rem;
-    border-radius: 0.75rem;
-  }
-  
-  .home-image-wrapper::before {
-    padding: 2px;
-    border-radius: 0.75rem;
+    border-radius: var(--border-radius-md);
   }
 }
 
@@ -118,13 +80,7 @@
   }
   
   .home-image-wrapper {
-    padding: 0.75rem;
     margin: 0 0.5rem;
-    border-radius: 0.5rem;
-  }
-  
-  .home-image-wrapper::before {
-    padding: 1.5px;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-sm);
   }
 }

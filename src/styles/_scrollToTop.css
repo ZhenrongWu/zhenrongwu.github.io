@@ -1,5 +1,3 @@
-/* 回到頂部 */
-
 .top-button {
   position: fixed;
   bottom: clamp(20px, 5vh, 40px);
@@ -42,7 +40,6 @@
   box-shadow: var(--shadow-focus);
 }
 
-/* 響應式 */
 @media (hover: hover) {
   .top-button:hover {
     transform: translateY(-3px);

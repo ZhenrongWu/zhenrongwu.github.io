@@ -1,5 +1,3 @@
-/* 時間軸 */
-
 .timeline-section {
   position: relative;
 }
@@ -40,7 +38,7 @@
   background: var(--lavender-primary);
   border: 3px solid #ffffff;
   box-shadow: 0 0 0 3px var(--lavender-primary);
-  transition: all 0.3s ease;
+  transition: var(--transition-base);
 }
 
 .timeline-item:hover .timeline-dot {
@@ -62,7 +60,7 @@
   border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-sm);
   border: var(--border-lavender);
-  transition: all 0.3s ease;
+  transition: var(--transition-base);
   position: relative;
 }
 
@@ -106,7 +104,6 @@
   margin-bottom: 0;
 }
 
-/* 響應式設計 */
 @media (max-width: 768px) {
   .timeline {
     padding-left: 25px;
