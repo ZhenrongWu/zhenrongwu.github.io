@@ -44,8 +44,7 @@
 }
 
 .navbar-lavender .nav-link.active:after {
-  width: 100%;
-  background-color: #ffffff;
+  display: none;
 }
 
 .navbar-glass {
