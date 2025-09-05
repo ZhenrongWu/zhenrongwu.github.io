@@ -19,10 +19,13 @@
   max-width: 500px;
   margin: 0 auto;
   border-radius: var(--border-radius-lg);
+  border: 3px solid var(--lavender-primary);
   position: relative;
   box-shadow: var(--shadow-lg);
   overflow: hidden;
   cursor: pointer;
+  min-height: 400px;
+  aspect-ratio: 5/4;
 }
 
 .home-image-wrapper img {
@@ -98,6 +101,7 @@
   .home-image-wrapper {
     margin: 0 1rem;
     border-radius: var(--border-radius-md);
+    min-height: 300px;
   }
   
   .loading-spinner {
@@ -124,6 +128,7 @@
   .home-image-wrapper {
     margin: 0 0.5rem;
     border-radius: var(--border-radius-sm);
+    min-height: 260px;
   }
   
   .loading-spinner {
