@@ -5,14 +5,6 @@ import { Link, useLocation } from "react-router-dom";
 const Navigation = () => {
   const location = useLocation();
 
-  const navbarStyle = {
-    backdropFilter: "blur(8px)",
-    backgroundColor: "rgba(255, 255, 255, 0.95)",
-    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.15)",
-    transition: "box-shadow 0.3s ease",
-    padding: "0.8rem 0",
-  };
-
   const isActive = (path) => {
     if (path === "/" && location.pathname === "/") {
       return true;
@@ -29,10 +21,9 @@ const Navigation = () => {
 
   return (
     <Navbar
-      className="navbar-lavender navbar-dark"
+      className="navbar-lavender navbar-dark navbar-glass"
       expand="lg"
       fixed="top"
-      style={navbarStyle}
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="me-4">
