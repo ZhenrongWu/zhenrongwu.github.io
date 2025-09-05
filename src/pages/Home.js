@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
+  const [imageLoading, setImageLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+
   return (
     <div className="home-centered-container">
       <Row className="align-items-center w-100 gy-4">
@@ -54,11 +60,19 @@ const Home = () => {
         <Col lg={6} md={12} className="order-1 order-lg-2">
           <div className="home-image-section d-flex align-items-center justify-content-center">
             <div className="home-image-wrapper">
+              {imageLoading && (
+                <div className="image-loading-overlay">
+                  <div className="loading-spinner"></div>
+                </div>
+              )}
               <Image
                 src="https://imgur.com/BEeKkLj.jpg"
                 alt="吳振榮個人照"
                 fluid
-                className="rounded"
+                className={`rounded ${
+                  imageLoading ? "image-loading" : "image-loaded"
+                }`}
+                onLoad={handleImageLoad}
               />
             </div>
           </div>
