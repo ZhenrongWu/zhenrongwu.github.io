@@ -24,8 +24,8 @@
   box-shadow: var(--shadow-lg);
   overflow: hidden;
   cursor: pointer;
-  min-height: 400px;
   aspect-ratio: 5/4;
+  width: 100%;
 }
 
 .home-image-wrapper img {
@@ -101,8 +101,8 @@
   .home-image-wrapper {
     margin: 0 1rem;
     border-radius: var(--border-radius-md);
-    min-height: 300px;
     aspect-ratio: 5/4;
+    width: calc(100% - 2rem);
   }
   
   .loading-spinner {
@@ -129,8 +129,8 @@
   .home-image-wrapper {
     margin: 0 0.5rem;
     border-radius: var(--border-radius-sm);
-    min-height: 260px;
-    aspect-ratio: 5/4; /* 確保維持 5:4 比例 */
+    aspect-ratio: 5/4;
+    width: calc(100% - 1rem);
   }
   
   .loading-spinner {
