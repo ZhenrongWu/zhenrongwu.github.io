@@ -62,7 +62,17 @@ const Resume = () => {
       },
       {
         position: "授課講師",
-        company: "網頁前端設計師養成班",
+        company: "產業新尖兵計畫-網頁前端設計師養成班",
+        location: "台中市",
+        period: "2025.07 - 2025.08",
+        responsibilities: [
+          "教授 Bootstrap、JavaScript、jQuery、React、PHP、Git、GitHub",
+          "協助專題指導",
+        ],
+      },
+      {
+        position: "授課講師",
+        company: "產業新尖兵計畫-網頁前端設計師養成班",
         location: "台中市",
         period: "2025.01 - 2025.03",
         responsibilities: [
