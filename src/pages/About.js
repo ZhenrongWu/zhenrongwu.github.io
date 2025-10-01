@@ -346,13 +346,13 @@ const ProfessionalIntro = memo(() => (
 
       <div className="bg-lavender-light p-4 rounded-3 shadow-sm mb-4">
         <h4 className="mb-3">專業簡介</h4>
-        <p className="lead mb-3">
+        <p className="lead mb-3 text-justify">
           大家好，我來自台灣，目前是一位自由接案者。
           專注於遊戲開發和網頁應用程式設計，致力於帶給用戶良好的體驗。
         </p>
       </div>
 
-      <div className="text-muted mb-0">
+      <div className="text-muted mb-0 text-justify text-md-center">
         擁有 <span className="badge bg-lavender">六年以上</span>{" "}
         的軟體開發經驗， 以及 <span className="badge bg-lavender">半年</span>{" "}
         程式教學經驗。 主要專精於遊戲開發和網頁前端技術。
