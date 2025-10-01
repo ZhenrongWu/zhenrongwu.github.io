@@ -14,7 +14,7 @@ const Home = () => {
     <div className="home-centered-container">
       <Row className="align-items-center w-100 gy-4">
         <Col lg={6} md={12} className="order-2 order-lg-1">
-          <div className="text-center text-lg-start px-5">
+          <div className="text-center text-lg-start px-3 px-md-5">
             <h1 className="fw-bold mb-3">
               Hi! 我是
               <span className="text-lavender">吳振榮</span>
