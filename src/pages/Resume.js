@@ -48,7 +48,7 @@ const Resume = () => {
     ],
     workExperience: [
       {
-        position: "自由接案者",
+        position: "自由接案者 (兼職)",
         company: "",
         location: "",
         period: "2024.06 - 現在",
@@ -61,9 +61,31 @@ const Resume = () => {
         ],
       },
       {
+        position: "軟體工程師",
+        company: "宗偉科技有限公司",
+        location: "台灣, 高雄市",
+        period: "2025.11 - 現在",
+        responsibilities: [
+          "修正 ERP 系統原有功能 (C#、WPF、ADO.NET、SQL Server)",
+          "新增 ERP 系統欠缺的功能 (C#、WPF、ADO.NET、SQL Server)",
+        ],
+      },
+      {
+        position: "前端工程師（遠端工作）",
+        company: "遠山創品有限公司",
+        location: "台灣, 高雄市",
+        period: "2025.05 - 現在",
+        responsibilities: [
+          "主要開發 LINE OA 系統 (React、Next.js 等前端技術)",
+          "前端切版與介面設計",
+          "串接後端 API",
+          "廣告分析與標籤管理",
+        ],
+      },
+      {
         position: "授課講師",
         company: "產業新尖兵計畫-網頁前端設計師養成班",
-        location: "台中市",
+        location: "台灣, 台中市",
         period: "2025.07 - 2025.08",
         responsibilities: [
           "教授 Bootstrap、JavaScript、jQuery、React、PHP、Git、GitHub",
@@ -73,7 +95,7 @@ const Resume = () => {
       {
         position: "授課講師",
         company: "產業新尖兵計畫-網頁前端設計師養成班",
-        location: "台中市",
+        location: "台灣, 台中市",
         period: "2025.01 - 2025.03",
         responsibilities: [
           "教授 JavaScript、jQuery、PHP、MySQL、Git、GitHub",
@@ -81,9 +103,9 @@ const Resume = () => {
         ],
       },
       {
-        position: "Unity 工程師",
+        position: "Unity 工程師 (遠端工作)",
         company: "Nobollel Inc.",
-        location: "日本, 台灣",
+        location: "台灣, 高雄市",
         period: "2022.08 - 2024.01",
         responsibilities: [
           "使用 C# 串接後端 API",
@@ -96,7 +118,7 @@ const Resume = () => {
       {
         position: "實習生",
         company: "弘遠數位娛樂股份有限公司",
-        location: "高雄市",
+        location: "台灣, 高雄市",
         period: "2020.07 - 2020.12",
         responsibilities: [
           "獨自發想遊戲玩法",
