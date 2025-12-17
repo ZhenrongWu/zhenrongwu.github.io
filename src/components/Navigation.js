@@ -56,7 +56,7 @@ const Navigation = () => {
       expanded={isExpanded}
       onToggle={handleToggle}
     >
-      <Container>
+      <Container fluid className="px-4">
         <Navbar.Brand as={Link} to="/" className="me-4">
           我的網站
         </Navbar.Brand>
