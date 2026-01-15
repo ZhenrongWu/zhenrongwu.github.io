@@ -5,6 +5,12 @@ import { motion } from "framer-motion";
 const ProjectCard = ({ project, index }) => {
   // 使用 useState 來追蹤卡片是否被翻轉
   const [isFlipped, setIsFlipped] = useState(false);
+  // 追蹤圖片載入狀態
+  const [imageLoading, setImageLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
 
   return (
     <motion.div
@@ -26,12 +32,20 @@ const ProjectCard = ({ project, index }) => {
               onClick={() => setIsFlipped(true)}
             >
               <div className="project-card-img-container position-relative overflow-hidden">
+                {imageLoading && (
+                  <div className="image-loading-overlay">
+                    <div className="loading-spinner"></div>
+                  </div>
+                )}
                 <Card.Img
                   variant="top"
                   src={project.image}
                   alt={project.title}
-                  className="h-100 w-100"
+                  className={`h-100 w-100 ${
+                    imageLoading ? "image-loading" : "image-loaded"
+                  }`}
                   style={{ objectFit: "cover" }}
+                  onLoad={handleImageLoad}
                 />
               </div>
               <Card.Body className="p-4 d-flex flex-column text-center">
