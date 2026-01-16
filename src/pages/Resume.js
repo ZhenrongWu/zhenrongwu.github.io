@@ -77,7 +77,7 @@ const Resume = () => {
         position: "前端工程師（遠端工作）",
         company: "遠山創品有限公司",
         location: "台灣, 高雄市",
-        period: "2025.05 - 2025.12",
+        period: "2025.05 - 現在",
         responsibilities: [
           "開發 LINE OA 前端功能（React、Next.js）",
           "實作 RWD 與元件化 UI（可重用元件、互動流程）",
