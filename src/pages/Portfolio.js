@@ -148,7 +148,7 @@ const Portfolio = () => {
       title: "圖像畫廊",
       category: "網頁開發",
       description: "整合 Pexels API 的圖像網站，瀏覽與下載精美圖片。",
-      image: "https://i.imgur.com/Fu5crtp.jpg",
+      image: "https://i.imgur.com/wtKhVEU.jpg",
       date: "2025年5月",
       tags: [
         "HTML",
