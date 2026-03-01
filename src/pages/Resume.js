@@ -140,7 +140,7 @@ const Resume = () => {
     competitions: [
       {
         name: "Global Game Jam 2026",
-        year: "2026/02",
+        year: "2026/01",
         result: "參加",
         description: "活動主題是 Mask，製作 2D 遊戲，主要負責專案管理和主程式",
       },
