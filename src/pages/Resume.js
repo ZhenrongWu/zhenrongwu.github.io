@@ -87,6 +87,13 @@ const Resume = () => {
       },
       {
         position: "授課講師",
+        company: "產業新尖兵計畫-AI前端工程師人才應用培訓班",
+        location: "台灣, 台北市",
+        period: "2026.01 - 2025.02",
+        responsibilities: ["教授 UI/UX", "協助專題指導"],
+      },
+      {
+        position: "授課講師",
         company: "產業新尖兵計畫-網頁前端設計師養成班",
         location: "台灣, 台中市",
         period: "2025.07 - 2025.08",
