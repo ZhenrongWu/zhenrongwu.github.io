@@ -32,24 +32,28 @@ sitemap.end();
 // 將流轉換為Buffer並寫入文件
 streamToPromise(sitemap)
   .then((buffer) => {
-    const sitemapXml = buffer.toString();
+    let sitemapXml = buffer.toString();
 
-    // 使用更清晰易讀的格式保存XML
+    // lastmod 改為 YYYY-MM-DD 格式（符合 sitemap 常見寫法）
+    sitemapXml = sitemapXml.replace(
+      /<lastmod>([^<]+)<\/lastmod>/g,
+      (_, dateStr) =>
+        `<lastmod>${dateStr.split("T")[0]}</lastmod>`
+    );
+
+    // 僅保留基本 xmlns，移除 news/xhtml/image/video 等未使用的 namespace
+    sitemapXml = sitemapXml.replace(
+      /<urlset[^>]*>/,
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    );
+
+    // 格式化成範例風格：標籤間單一換行，僅在 </url> 與 <url> 之間留一空行
     const formattedXml = sitemapXml
+      .replace(/\r\n/g, "\n")
       .replace(/></g, ">\n<")
-      .replace(/<urlset/g, "<urlset\n  ")
-      .replace(/xmlns:/g, "\n  xmlns:")
-      .replace(/<url>/g, "\n  <url>")
-      .replace(/<\/url>/g, "\n  </url>")
-      .replace(/<loc>/g, "\n    <loc>")
-      .replace(/<lastmod>/g, "\n    <lastmod>")
-      .replace(/<changefreq>/g, "\n    <changefreq>")
-      .replace(/<priority>/g, "\n    <priority>")
-      .replace(/<\/loc>/g, "</loc>")
-      .replace(/<\/lastmod>/g, "</lastmod>")
-      .replace(/<\/changefreq>/g, "</changefreq>")
-      .replace(/<\/priority>/g, "</priority>")
-      .replace(/<\/urlset>/g, "\n</urlset>");
+      .replace(/\n\s*\n/g, "\n") // 合併多餘空行
+      .replace(/<\/url>\n<url>/g, "</url>\n\n<url>") // url 區塊間加一空行
+      .trimStart();
 
     const sitemapPath = path.join(__dirname, "public", "sitemap.xml");
     fs.writeFileSync(sitemapPath, formattedXml);
