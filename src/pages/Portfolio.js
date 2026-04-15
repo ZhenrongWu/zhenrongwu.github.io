@@ -41,6 +41,8 @@ const ProjectCard = ({ project, index }) => {
                   variant="top"
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
                   className={`h-100 w-100 ${
                     imageLoading ? "image-loading" : "image-loaded"
                   }`}
