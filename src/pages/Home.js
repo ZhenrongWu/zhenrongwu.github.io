@@ -1,10 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Row, Col, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
   const [imageLoading, setImageLoading] = useState(true);
+  const heroTitles = [
+    "軟體設計師",
+    "遊戲開發者",
+    "網頁開發者",
+    "自由接案者",
+    "授課講師",
+  ];
+  const [activeTitleIndex, setActiveTitleIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setActiveTitleIndex((prev) => (prev + 1) % heroTitles.length);
+    }, 2200);
+
+    return () => clearInterval(intervalId);
+  }, [heroTitles.length]);
 
   const handleImageLoad = () => {
     setImageLoading(false);
@@ -19,25 +34,10 @@ const Home = () => {
               Hi! 我是
               <span className="text-lavender">吳振榮</span>
             </h1>
-            <div className="mb-4">
-              <TypeAnimation
-                sequence={[
-                  "軟體設計師",
-                  2000,
-                  "遊戲開發者",
-                  2000,
-                  "網頁開發者",
-                  2000,
-                  "自由接案者",
-                  2000,
-                  "授課講師",
-                  2000,
-                ]}
-                speed={10}
-                className="h4 text-lavender-dark"
-                wrapper="h2"
-                repeat={Infinity}
-              />
+            <div className="mb-4" aria-live="polite">
+              <h2 className="h4 text-lavender-dark mb-0">
+                {heroTitles[activeTitleIndex]}
+              </h2>
             </div>
 
             <p className="mb-4 home-paragraph">
@@ -66,9 +66,12 @@ const Home = () => {
                 </div>
               )}
               <Image
-                src="https://imgur.com/BEeKkLj.jpg"
+                src="https://i.imgur.com/BEeKkLjl.jpg"
                 alt="吳振榮個人照"
                 fluid
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className={`rounded ${
                   imageLoading ? "image-loading" : "image-loaded"
                 }`}
