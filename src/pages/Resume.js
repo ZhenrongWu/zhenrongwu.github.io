@@ -62,9 +62,16 @@ const Resume = () => {
       },
       {
         position: "軟體工程師",
+        company: "藏識科技有限公司",
+        location: "台灣, 高雄市",
+        period: "2026.05 - 現在",
+        responsibilities: ["待更新"],
+      },
+      {
+        position: "軟體專案工程師",
         company: "宗偉科技有限公司",
         location: "台灣, 高雄市",
-        period: "2025.11 - 現在",
+        period: "2025.11 - 2026.05",
         responsibilities: [
           "維護既有 ERP（C#／WPF），進行問題定位、除錯與修復",
           "補強例外處理與邊界情境，提升穩定性",
@@ -142,12 +149,14 @@ const Resume = () => {
         name: "Global Game Jam 2026",
         year: "2026/01",
         result: "參加",
+        url: "https://globalgamejam.org/games/2026/whos-cat-ching-naps-7",
         description: "活動主題是 Mask，製作 2D 遊戲，主要負責專案管理和主程式",
       },
       {
         name: "Global Game Jam 2025",
         year: "2025/01",
         result: "參加",
+        url: "https://globalgamejam.org/games/2025/disizu-2",
         description:
           "活動主題是 Bubble，製作 2D 遊戲，主要負責所有遊戲功能和帶領團隊",
       },
@@ -155,6 +164,7 @@ const Resume = () => {
         name: "Global Game Jam 2024",
         year: "2024/01",
         result: "參加",
+        url: "https://globalgamejam.org/games/2024/team3-8",
         description:
           "活動主題是 Make Me Laugh，製作 2D 遊戲，主要負責整合功能和帶領團隊",
       },
@@ -206,6 +216,7 @@ const Resume = () => {
         name: "Faust Game Jam 2020",
         year: "2020/08",
         result: "參加",
+        url: "https://wanderviewer.itch.io/ctrls",
         description:
           "活動主題是 Save Yourself, Not the World，製作 2D 遊戲，主要負責遊戲介面和功能整合",
       },
@@ -449,7 +460,20 @@ const Resume = () => {
                         {comp.year}
                       </div>
                       <div className="timeline-content resume-item">
-                        <h3 tabIndex="0">{comp.name}</h3>
+                        <h3 tabIndex="0">
+                          {comp.url ? (
+                            <a
+                              href={comp.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="competition-link"
+                            >
+                              {comp.name}
+                            </a>
+                          ) : (
+                            comp.name
+                          )}
+                        </h3>
                         <h4 tabIndex="0">{comp.result}</h4>
                         <p tabIndex="0">{comp.description}</p>
                       </div>
