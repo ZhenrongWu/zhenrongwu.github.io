@@ -53,11 +53,11 @@ const Resume = () => {
         location: "",
         period: "2024.06 - 現在",
         responsibilities: [
-          "網站前端開發與設計",
-          "一對一遊戲開發專業指導",
-          "教授兒童科學與資訊課程",
-          "大學生專題製作與技術輔導",
-          "數位短影音剪輯",
+          "開發與設計網站前端頁面",
+          "提供一對一遊戲開發指導",
+          "教授兒童科學與資訊相關課程",
+          "輔導大學生完成專題製作與技術實作",
+          "剪輯數位短影音內容",
         ],
       },
       {
@@ -65,7 +65,7 @@ const Resume = () => {
         company: "藏識科技有限公司",
         location: "台灣, 高雄市",
         period: "2026.05 - 現在",
-        responsibilities: ["待更新"],
+        responsibilities: ["工作內容整理中，近期補上詳細項目"],
       },
       {
         position: "軟體專案工程師",
@@ -73,11 +73,11 @@ const Resume = () => {
         location: "台灣, 高雄市",
         period: "2025.11 - 2026.05",
         responsibilities: [
-          "維護既有 ERP（C#／WPF），進行問題定位、除錯與修復",
-          "補強例外處理與邊界情境，提升穩定性",
-          "調整資料存取層（ADO.NET），封裝常用查詢/更新流程",
-          "優化 SQL Server 查詢與交易，降低資料不一致風險",
-          "依需求新增功能並完成上線",
+          "負責 ERP legacy code 分析、問題定位與缺陷修復",
+          "設計並開發會計模組 RDLC 報表，支援帳務資料呈現與輸出",
+          "針對舊模組高耦合問題，規劃生管新模組後端架構",
+          "主導生管新模組前半段核心功能開發與流程落地",
+          "執行 WPF 至 SQL Server 的端到端開發與資料串接",
         ],
       },
       {
@@ -86,10 +86,10 @@ const Resume = () => {
         location: "台灣, 高雄市",
         period: "2025.05 - 現在",
         responsibilities: [
-          "開發 LINE OA 前端功能（React、Next.js）",
-          "實作 RWD 與元件化 UI（可重用元件、互動流程）",
-          "整合後端 API，處理狀態與錯誤情境",
-          "導入 GA／GTM 事件埋點與標籤管理，支援成效分析",
+          "開發 LINE OA 前端功能，主要使用 React 與 Next.js",
+          "實作 RWD 與可重用元件化 UI",
+          "整合後端 API 並處理狀態與錯誤情境",
+          "導入 GA、GTM 事件埋點與標籤管理以支援成效分析",
         ],
       },
       {
@@ -97,7 +97,10 @@ const Resume = () => {
         company: "產業新尖兵計畫-AI前端工程師人才應用培訓班",
         location: "台灣, 台北市",
         period: "2026.01 - 2025.02",
-        responsibilities: ["教授 UI/UX", "協助專題指導"],
+        responsibilities: [
+          "教授 UI/UX 設計與前端實作觀念",
+          "協助學員完成專題製作與成果發表",
+        ],
       },
       {
         position: "授課講師",
@@ -106,7 +109,7 @@ const Resume = () => {
         period: "2025.07 - 2025.08",
         responsibilities: [
           "教授 Bootstrap、JavaScript、jQuery、React、PHP、Git、GitHub",
-          "協助專題指導",
+          "協助學員完成專題製作與成果發表",
         ],
       },
       {
@@ -116,7 +119,7 @@ const Resume = () => {
         period: "2025.01 - 2025.03",
         responsibilities: [
           "教授 JavaScript、jQuery、PHP、MySQL、Git、GitHub",
-          "協助專題指導",
+          "協助學員完成專題製作與成果發表",
         ],
       },
       {
@@ -126,10 +129,10 @@ const Resume = () => {
         period: "2022.08 - 2024.01",
         responsibilities: [
           "使用 C# 串接後端 API",
-          "實作遊戲選單",
-          "獨立開發 Hyper Casual Game",
-          "串接廣告 SDK",
-          "製作 Unity 專案內部工具",
+          "實作遊戲選單與操作流程",
+          "獨立開發 Hyper Casual Game 玩法與功能",
+          "串接廣告 SDK 並完成測試上線",
+          "製作 Unity 專案內部工具以提升開發效率",
         ],
       },
       {
@@ -138,9 +141,9 @@ const Resume = () => {
         location: "台灣, 高雄市",
         period: "2020.07 - 2020.12",
         responsibilities: [
-          "獨自發想遊戲玩法",
-          "與美術團隊合作，一起開發遊戲",
-          "開發遊戲功能",
+          "獨立發想遊戲玩法與核心機制",
+          "與美術團隊協作完成遊戲內容整合",
+          "開發遊戲功能並協助問題排除",
         ],
       },
     ],
