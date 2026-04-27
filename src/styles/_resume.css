@@ -208,6 +208,23 @@
   color: var(--lavender-secondary);
 }
 
+.competition-link {
+  color: var(--lavender-primary);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.competition-link:hover,
+.competition-link:focus-visible {
+  color: var(--lavender-secondary);
+  border-bottom-color: var(--lavender-secondary);
+}
+
+.competition-link:visited {
+  color: #7a46b3;
+}
+
 .download-button {
   position: relative;
   overflow: hidden;
