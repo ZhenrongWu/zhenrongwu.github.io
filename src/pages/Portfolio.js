@@ -147,6 +147,66 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
+      title: "嶺東科技大學 教學評量自動填寫",
+      category: "網頁應用",
+      description: "懶人小工具。",
+      image: "https://i.imgur.com/xRYzVtL.jpg",
+      date: "2021年12月",
+      tags: ["HTML", "CSS", "JavaScript", "VS Code", "Git"],
+      url: "https://chromewebstore.google.com/detail/dnkodhghfphabiopghdmpcmpojlchajg?utm_source=item-share-cb",
+    },
+    {
+      id: 2,
+      title: "迴魂",
+      category: "遊戲開發",
+      description:
+        "遊戲內所有功能皆一人完成，除此之外，還負責專案管理和部分關卡設計。",
+      image: "https://i.imgur.com/QcxxdDl.jpg",
+      date: "2022年9月",
+      tags: ["Unity", "C#", "Jetbrain Rider", "vim", "Git"],
+      url: "https://store.steampowered.com/app/2075110/Incarnation/?l=tchinese",
+    },
+    {
+      id: 3,
+      title: "Sandwich-Tycoon",
+      category: "遊戲開發",
+      description:
+        "前公司成功上架的專案，主要負責的內容是遊戲 AI、道具效果以及部分前端互動功能。",
+      image: "https://i.imgur.com/3Hbx6J9.jpg",
+      date: "2023年12月",
+      tags: ["Unity", "C#", "Jetbrain Rider", "vim", "Git"],
+      url: "https://play.google.com/store/apps/details?id=com.Nobollel.SandwichTycoon&hl=zh_TW",
+    },
+    {
+      id: 4,
+      title: "開發者英雄基地",
+      category: "網頁開發",
+      description: "個人電子商務平台，含有付款系統和訂單功能。",
+      image: "https://i.imgur.com/bLWrULF.jpg",
+      date: "2024年12月",
+      tags: ["WordPress", "Elementor", "WooCommerce", "Canva"],
+      url: "https://devherohub.com/",
+    },
+    {
+      id: 5,
+      title: "胖老爹食堂",
+      category: "網頁開發",
+      description: "專為小型商家設計的一頁式網站，提供簡潔的線上展示平台。",
+      image: "https://i.imgur.com/n81DUZp.jpg",
+      date: "2025年1月",
+      tags: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "VS Code",
+        "Photoshop",
+        "Git",
+      ],
+      url: "https://fat-dad-eatery.netlify.app/",
+    },
+    {
+      id: 6,
       title: "圖像畫廊",
       category: "網頁開發",
       description: "整合 Pexels API 的圖像網站，瀏覽與下載精美圖片。",
@@ -165,66 +225,30 @@ const Portfolio = () => {
       url: "https://image-gallery-2025.netlify.app/",
     },
     {
-      id: 2,
-      title: "胖老爹食堂",
+      id: 7,
+      title: "RPA-ERP",
       category: "網頁開發",
-      description: "專為小型商家設計的一頁式網站，提供簡潔的線上展示平台。",
-      image: "https://i.imgur.com/n81DUZp.jpg",
-      date: "2025年1月",
+      description: "RPA 與 ERP 整合系統，優化作業流程與資料處理效率。",
+      image: "https://i.meee.com.tw/duga1Gs.png",
+      date: "2026年4月",
       tags: [
         "HTML",
         "CSS",
         "JavaScript",
-        "Bootstrap",
-        "VS Code",
-        "Photoshop",
+        "React",
+        "Node.js",
+        "Express",
+        "REST API",
+        "SQL",
+        "RPA",
+        "ERP",
         "Git",
       ],
-      url: "https://fat-dad-eatery.netlify.app/",
-    },
-    {
-      id: 3,
-      title: "開發者英雄基地",
-      category: "網頁開發",
-      description: "個人電子商務平台，含有付款系統和訂單功能。",
-      image: "https://i.imgur.com/bLWrULF.jpg",
-      date: "2024年12月",
-      tags: ["WordPress", "Elementor", "WooCommerce", "Canva"],
-      url: "https://devherohub.com/",
-    },
-    {
-      id: 4,
-      title: "Sandwich-Tycoon",
-      category: "遊戲開發",
-      description:
-        "前公司成功上架的專案，主要負責的內容是遊戲 AI、道具效果以及部分前端互動功能。",
-      image: "https://i.imgur.com/3Hbx6J9.jpg",
-      date: "2023年12月",
-      tags: ["Unity", "C#", "Jetbrain Rider", "vim", "Git"],
-      url: "https://play.google.com/store/apps/details?id=com.Nobollel.SandwichTycoon&hl=zh_TW",
-    },
-    {
-      id: 5,
-      title: "迴魂",
-      category: "遊戲開發",
-      description:
-        "遊戲內所有功能皆一人完成，除此之外，還負責專案管理和部分關卡設計。",
-      image: "https://i.imgur.com/QcxxdDl.jpg",
-      date: "2022年9月",
-      tags: ["Unity", "C#", "Jetbrain Rider", "vim", "Git"],
-      url: "https://store.steampowered.com/app/2075110/Incarnation/?l=tchinese",
-    },
-    {
-      id: 6,
-      title: "嶺東科技大學 教學評量自動填寫",
-      category: "網頁應用",
-      description: "懶人小工具。",
-      image: "https://i.imgur.com/xRYzVtL.jpg",
-      date: "2021年12月",
-      tags: ["HTML", "CSS", "JavaScript", "VS Code", "Git"],
-      url: "https://chromewebstore.google.com/detail/dnkodhghfphabiopghdmpcmpojlchajg?utm_source=item-share-cb",
+      url: "https://rpa-erp-system.vercel.app",
     },
   ];
+  // id 小到大代表舊到新；畫面顯示改為新到舊
+  const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
 
   return (
     <div className="py-5">
@@ -245,7 +269,7 @@ const Portfolio = () => {
 
       {/* 作品集格線：3列×2行 */}
       <Row>
-        {projects.map((project, index) => (
+        {sortedProjects.map((project, index) => (
           <Col lg={4} md={6} key={project.id}>
             <ProjectCard project={project} index={index} />
           </Col>
