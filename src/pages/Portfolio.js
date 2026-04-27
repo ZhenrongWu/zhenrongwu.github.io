@@ -226,7 +226,7 @@ const Portfolio = () => {
     },
     {
       id: 7,
-      title: "RPA-ERP",
+      title: "RPA．ERP 系統",
       category: "網頁開發",
       description: "RPA 與 ERP 整合系統，優化作業流程與資料處理效率。",
       image: "https://i.meee.com.tw/duga1Gs.png",
