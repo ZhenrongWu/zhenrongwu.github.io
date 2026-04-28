@@ -160,7 +160,7 @@ const Portfolio = () => {
       title: "迴魂",
       category: "遊戲開發",
       description:
-        "遊戲內所有功能皆一人完成，除此之外，還負責專案管理和部分關卡設計。",
+        "此畢業專案，我主要負責遊戲系統與功能實作，另負責專案管理及部分關卡規劃。",
       image: "https://i.imgur.com/QcxxdDl.jpg",
       date: "2022年9月",
       tags: ["Unity", "C#", "Jetbrain Rider", "vim", "Git"],
@@ -171,7 +171,7 @@ const Portfolio = () => {
       title: "Sandwich-Tycoon",
       category: "遊戲開發",
       description:
-        "前公司成功上架的專案，主要負責的內容是遊戲 AI、道具效果以及部分前端互動功能。",
+        "於 Nobollel 前公司成功上架的專案，我主要負責遊戲內的 AI、道具效果與部分前端頁面互動功能開發。",
       image: "https://i.imgur.com/3Hbx6J9.jpg",
       date: "2023年12月",
       tags: ["Unity", "C#", "Jetbrain Rider", "vim", "Git"],
@@ -228,7 +228,7 @@ const Portfolio = () => {
       id: 7,
       title: "RPA．ERP 系統",
       category: "網頁開發",
-      description: "RPA 與 ERP 整合系統，優化作業流程與資料處理效率。",
+      description: "開發 RPA-ERP MVP 系統，完成進銷存、會計、生產與自動化模組之全端整合，支援登入授權、CRUD 與儀表板監控。",
       image: "https://i.meee.com.tw/duga1Gs.png",
       date: "2026年4月",
       tags: [
