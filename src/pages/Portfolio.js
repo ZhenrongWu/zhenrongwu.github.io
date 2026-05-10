@@ -228,7 +228,8 @@ const Portfolio = () => {
       id: 7,
       title: "RPA．ERP 系統",
       category: "網頁開發",
-      description: "開發 RPA-ERP MVP 系統，完成進銷存、會計、生產與自動化模組之全端整合，支援登入授權、CRUD 與儀表板監控。",
+      description:
+        "開發 RPA-ERP MVP 系統，完成進銷存、會計、生產與自動化模組之全端整合，支援登入授權、CRUD 與儀表板監控。",
       image: "https://i.meee.com.tw/duga1Gs.png",
       date: "2026年4月",
       tags: [
@@ -251,7 +252,7 @@ const Portfolio = () => {
       title: "墨池爭食",
       category: "遊戲開發",
       description:
-        "Google AI Studio 產出原型，本機以 TypeScript、React 調整後上架 Google Play，並提供網頁試玩。水墨風吞噬成長遊戲；熟悉 AI Studio 與 React 上架流程。",
+        "用 Google AI Studio 產出原型，下載至本機修正後上架到 Google Play，並提供兩種版本網頁跟 App。",
       image: "https://i.meee.com.tw/GiFbJxn.png",
       date: "2026年5月",
       tags: [
