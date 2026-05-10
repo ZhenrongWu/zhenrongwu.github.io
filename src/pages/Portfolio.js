@@ -246,6 +246,25 @@ const Portfolio = () => {
       ],
       url: "https://rpa-erp-system.vercel.app",
     },
+    {
+      id: 8,
+      title: "墨池爭食",
+      category: "遊戲開發",
+      description:
+        "Google AI Studio 產出原型，本機以 TypeScript、React 調整後上架 Google Play，並提供網頁試玩。水墨風吞噬成長遊戲；熟悉 AI Studio 與 React 上架流程。",
+      image: "https://i.meee.com.tw/GiFbJxn.png",
+      date: "2026年5月",
+      tags: [
+        "TypeScript",
+        "React",
+        "Canvas",
+        "Google AI Studio",
+        "Google Play",
+        "Netlify",
+        "Git",
+      ],
+      url: "https://ink-pool.netlify.app/",
+    },
   ];
   // id 小到大代表舊到新；畫面顯示改為新到舊
   const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
