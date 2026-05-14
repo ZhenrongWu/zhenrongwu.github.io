@@ -61,11 +61,21 @@ const Resume = () => {
         ],
       },
       {
-        position: "軟體工程師",
+        position: "Unity 工程師",
         company: "藏識科技有限公司",
         location: "台灣, 高雄市",
         period: "2026.05 - 現在",
-        responsibilities: ["工作內容整理中，近期補上詳細項目"],
+        responsibilities: [
+          "使用 Unity 與 C# 開發跨平台互動式應用程式，包含模擬器、VR/AR 與遊戲系統",
+          "負責系統架構設計、功能開發、效能優化與 Bug 修復，提升產品穩定性與使用者體驗",
+          "進行 iOS、Android 與 Steam 平台應用程式打包、上架與版本維護",
+          "與 PM、前後端工程師跨部門協作，完成需求分析、功能整合與產品落地",
+          "參與客戶需求訪談，提供技術建議並協助釐清產品規格",
+          "整合 Unity Asset Store 與第三方 Plugins／開源資源，加速開發流程並解決技術瓶頸",
+          "使用 Git／SVN 進行版本控制與團隊協作開發",
+          "具 VR/AR/MR 開發、Shader Graph 與渲染優化經驗",
+          "對 Digital Twin、GIS 與飛行模擬相關應用具開發興趣與基礎認識",
+        ],
       },
       {
         position: "軟體專案工程師",
