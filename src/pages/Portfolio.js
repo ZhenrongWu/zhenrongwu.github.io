@@ -264,7 +264,7 @@ const Portfolio = () => {
         "Netlify",
         "Git",
       ],
-      url: "https://ink-pool.netlify.app/",
+      url: "https://play.google.com/store/apps/details?id=com.Frank.InkPool",
     },
   ];
   // id 小到大代表舊到新；畫面顯示改為新到舊
