@@ -1,25 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Row, Col, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import TypingEffect from "../components/TypingEffect";
+
+const HERO_TITLES = [
+  "軟體設計師",
+  "遊戲開發者",
+  "網頁開發者",
+  "自由接案者",
+  "授課講師",
+];
+
+const HERO_TITLE_LABEL = `我是${HERO_TITLES.join("、")}`;
 
 const Home = () => {
   const [imageLoading, setImageLoading] = useState(true);
-  const heroTitles = [
-    "軟體設計師",
-    "遊戲開發者",
-    "網頁開發者",
-    "自由接案者",
-    "授課講師",
-  ];
-  const [activeTitleIndex, setActiveTitleIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setActiveTitleIndex((prev) => (prev + 1) % heroTitles.length);
-    }, 2200);
-
-    return () => clearInterval(intervalId);
-  }, [heroTitles.length]);
 
   const handleImageLoad = () => {
     setImageLoading(false);
@@ -34,9 +29,10 @@ const Home = () => {
               Hi! 我是
               <span className="text-lavender">吳振榮</span>
             </h1>
-            <div className="mb-4" aria-live="polite">
+            <div className="mb-4">
               <h2 className="h4 text-lavender-dark mb-0">
-                {heroTitles[activeTitleIndex]}
+                <span className="visually-hidden">{HERO_TITLE_LABEL}</span>
+                <TypingEffect sequence={HERO_TITLES} />
               </h2>
             </div>
 
