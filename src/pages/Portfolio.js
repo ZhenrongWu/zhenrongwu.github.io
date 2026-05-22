@@ -266,6 +266,25 @@ const Portfolio = () => {
       ],
       url: "https://play.google.com/store/apps/details?id=com.Frank.InkPool",
     },
+    {
+      id: 9,
+      title: "網頁版小畫家",
+      category: "網頁開發",
+      description:
+        "復刻 Windows 經典小畫家的網頁版應用程式。支援自由畫筆、多種幾何形狀繪製、線條粗細與顏色調整、油漆桶填色、橡皮擦、文字輸入，並具備完整的歷史紀錄（復原與重做）及畫布下載功能。",
+      image: "https://i.meee.com.tw/fN5fe09.jpg",
+      date: "2026年5月",
+      tags: [
+        "TypeScript",
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Canvas",
+        "Netlify",
+        "Git",
+      ],
+      url: "https://paint-devherohub.netlify.app/",
+    },
   ];
   // id 小到大代表舊到新；畫面顯示改為新到舊
   const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
