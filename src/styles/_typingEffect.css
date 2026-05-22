@@ -16,7 +16,7 @@
 
 .typing-effect-sizer-cursor {
   display: inline-block;
-  width: 6.5px;
+  width: 0.4em;
   vertical-align: middle;
 }
 
@@ -30,13 +30,20 @@
   white-space: nowrap;
   max-width: 100%;
   height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .typing-effect-overlay {
+    justify-content: center;
+  }
 }
 
 .typing-effect-cursor {
   flex-shrink: 0;
-  width: 2.5px;
-  height: 1em;
-  margin-left: 4px;
+  width: 0.15em;
+  height: 1.1em;
+  margin-left: 0.25em;
   background-color: var(--lavender-dark);
   animation: typing-effect-blink 0.75s step-end infinite;
 }
@@ -50,3 +57,4 @@
     background-color: var(--lavender-dark);
   }
 }
+
