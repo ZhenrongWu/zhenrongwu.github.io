@@ -1,5 +1,17 @@
 @charset "UTF-8";
 
+/* partials 必須緊接在 @charset 之後：CSS 規範要求 @import 先於所有其他規則，否則會被忽略 */
+@import '_theme-fix.css';
+@import '_nav.css';
+@import '_footer.css';
+@import '_home.css';
+@import '_portfolio.css';
+@import '_timeline.css';
+@import '_resume.css';
+@import '_scrollToTop.css';
+@import '_typingEffect.css';
+@import '_button.css';
+
 :root {
   --navbar-height: 64px;
   --footer-height: 80px;
@@ -157,16 +169,6 @@
   }
 }
 
-@import '_theme-fix.css';
-@import '_nav.css';
-@import '_footer.css';
-@import '_home.css';
-@import '_portfolio.css';
-@import '_timeline.css';
-@import '_resume.css';
-@import '_scrollToTop.css';
-@import '_typingEffect.css';
-@import '_button.css';
 
 /* utility: justify text like Word */
 .text-justify {
