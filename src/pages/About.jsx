@@ -33,17 +33,19 @@ import {
   SiPostman,
   SiDocker,
   SiUnrealengine,
-  SiAdobephotoshop,
-  SiAdobeillustrator,
-  SiAdobeaftereffects,
-  SiAdobepremierepro,
-  SiAdobeindesign,
-  SiAdobexd,
-  SiCanva,
   SiNotion,
   SiDotnet,
   SiRider,
 } from "react-icons/si";
+import {
+  SiPhotoshop,
+  SiIllustrator,
+  SiAfterEffects,
+  SiPremierePro,
+  SiInDesign,
+  SiAdobeXd,
+  SiCanva,
+} from "../components/BrandIcons";
 
 // Cursor 圖標組件
 const CursorIcon = ({ className, style }) => (
@@ -121,7 +123,7 @@ const VSCodeIcon = ({ className, style }) => (
     >
       <mask
         id="vscode-mask0"
-        maskType="alpha"
+        style={{ maskType: "alpha" }}
         maskUnits="userSpaceOnUse"
         x="0"
         y="0"
@@ -436,12 +438,12 @@ const About = () => {
     { name: "Docker", icon: <SiDocker />, color: "#2496ED" },
     { name: "Unity3D", icon: <FaUnity />, color: "#000000" },
     { name: "Unreal Engine", icon: <SiUnrealengine />, color: "#0E1128" },
-    { name: "Photoshop", icon: <SiAdobephotoshop />, color: "#31A8FF" },
-    { name: "Illustrator", icon: <SiAdobeillustrator />, color: "#FF9A00" },
-    { name: "After Effects", icon: <SiAdobeaftereffects />, color: "#9999FF" },
-    { name: "Premiere", icon: <SiAdobepremierepro />, color: "#9999FF" },
-    { name: "InDesign", icon: <SiAdobeindesign />, color: "#FF3366" },
-    { name: "Adobe XD", icon: <SiAdobexd />, color: "#FF61F6" },
+    { name: "Photoshop", icon: <SiPhotoshop />, color: "#31A8FF" },
+    { name: "Illustrator", icon: <SiIllustrator />, color: "#FF9A00" },
+    { name: "After Effects", icon: <SiAfterEffects />, color: "#9999FF" },
+    { name: "Premiere", icon: <SiPremierePro />, color: "#9999FF" },
+    { name: "InDesign", icon: <SiInDesign />, color: "#FF3366" },
+    { name: "Adobe XD", icon: <SiAdobeXd />, color: "#FF61F6" },
     { name: "Figma", icon: <FaFigma />, color: "#F24E1E" },
     { name: "Canva", icon: <SiCanva />, color: "#00C4CC" },
     { name: "Stable Diffusion", icon: <FaPalette />, color: "#0066CC" },
