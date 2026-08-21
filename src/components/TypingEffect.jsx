@@ -82,7 +82,11 @@ const TypingEffect = ({
   );
 
   const sequenceKey = createSequenceKey(sequence);
-  sequenceRef.current = sequence;
+
+  // 在 render 之外同步 ref；宣告於讀取它的 layout effect 之前以確保執行順序
+  useLayoutEffect(() => {
+    sequenceRef.current = sequence;
+  });
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");

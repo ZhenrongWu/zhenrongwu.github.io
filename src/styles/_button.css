@@ -81,3 +81,45 @@
   transform: translateX(0);
   opacity: 0.15;
 }
+/* 下載按鈕：原本內嵌於 DownloadButton.jsx 的樣式（styled-jsx 語法不受支援，移至此處） */
+.download-button {
+  padding: 10px 25px;
+  font-size: 1.1em;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover,
+.download-button:focus {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  outline: none;
+}
+
+.download-button:focus {
+  box-shadow: var(--shadow-focus);
+}
+
+.download-button .button-background {
+  left: -100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: none;
+  transition: 0.5s;
+}
+
+.download-button:hover .button-background {
+  left: 100%;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .download-button,
+  .download-button .button-background {
+    transition: none;
+  }
+}
