@@ -1,0 +1,35 @@
+# Lighthouse CI：部署完成後對線上網址量測效能 / 無障礙 / 最佳實務 / SEO。
+# 無障礙與 SEO 低於門檻視為失敗；效能分數在 CI 環境波動較大，僅警告。
+# 門檻設定在 lighthouserc.json。
+name: Lighthouse
+
+on:
+  workflow_run:
+    workflows: ["Deploy to GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: Audit live site
+    # 只在部署成功後執行（手動觸發時不受此限）
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://zhenrongwu.github.io/
+            https://zhenrongwu.github.io/about
+            https://zhenrongwu.github.io/portfolio
+            https://zhenrongwu.github.io/resume
+          configPath: ./lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true

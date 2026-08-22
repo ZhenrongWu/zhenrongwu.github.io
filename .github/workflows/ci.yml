@@ -1,12 +1,11 @@
-# CI：每次 push / PR 都跑 lint 與 build，作為合併與部署前的把關。
-# 這個 workflow 不做部署，只回答「這份程式碼是否健康」。
+# CI：Pull Request 的把關，回答「這份程式碼是否健康」，不做部署。
+# 直接 push 到 master 時由 deploy.yml 執行同樣的 lint / test / build，故此處不重複觸發。
 name: CI
 
 on:
-  push:
-    branches: [master]
   pull_request:
     branches: [master]
+  workflow_dispatch:
 
 # 同一分支有新的 push 時，取消還在跑的舊任務，節省執行時間
 concurrency:
@@ -25,12 +24,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
-          cache: npm   # 快取 ~/.npm，第二次之後安裝只需數秒
+          cache: npm # 快取 ~/.npm，第二次之後安裝只需數秒
 
       # npm ci：嚴格依 package-lock.json 安裝，lockfile 不一致會直接失敗
       # 這是 CI 與本機 `npm install` 最大的差別：結果可重現
       - name: Install dependencies
         run: npm ci
+
+      - name: Format check
+        run: npm run format:check
 
       - name: Lint
         run: npm run lint
