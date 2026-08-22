@@ -1,4 +1,4 @@
-/* 頁面懶載入的全視窗置中指示（Suspense fallback，渲染時 Layout 尚未掛載） */
+/* 頁面懶載入的全視窗置中讀條（由 SuspenseWithLoader 控制，位於 Suspense 之外） */
 .page-loader {
   position: fixed;
   inset: 0;
@@ -7,13 +7,51 @@
   justify-content: center;
   background: #ffffff;
   z-index: 1040;
+  opacity: 1;
+  transition: opacity 0.3s ease; /* 秒數需與 PageLoader.jsx 的 FADE_MS 一致 */
 }
 
-/* 使用者偏好減少動態時，以靜態圓環取代旋轉動畫 */
-@media (prefers-reduced-motion: reduce) {
-  .page-loader .loading-spinner {
-    animation: none;
-    border-top-color: rgba(102, 51, 153, 0.2);
-    border-color: var(--lavender-primary);
-  }
+.page-loader-fading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page-loader-panel {
+  width: min(360px, 80vw);
+}
+
+.page-loader-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--lavender-primary);
+}
+
+.page-loader-percent {
+  font-variant-numeric: tabular-nums; /* 數字等寬，百分比跳動時不會左右抖動 */
+  letter-spacing: 0.05em;
+}
+
+.page-loader-track {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(102, 51, 153, 0.12);
+  overflow: hidden;
+}
+
+.page-loader-bar {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--lavender-gradient);
+  transition: width 0.25s ease-out;
+}
+
+/* 使用者偏好減少動態：載入中不模擬進度，改為靜態的半滿讀條 */
+.page-loader-bar-static {
+  width: 50%;
+  transition: none;
 }
