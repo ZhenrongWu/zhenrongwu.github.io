@@ -1,0 +1,33 @@
+/* 關於我頁面：技能 / 興趣卡片的懸停效果（原為 About.jsx 內嵌 <style>） */
+.skill-card, .hobby-card {
+  position: relative;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+.skill-card::after, .hobby-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(108, 99, 255, 0.35);
+  border-radius: 0.3rem;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+.skill-card:hover, .hobby-card:hover {
+  transform: scale(1.1 );
+}
+.skill-card:hover::after, .hobby-card:hover::after {
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-card, .hobby-card, .skill-card::after, .hobby-card::after {
+    transition: none;
+  }
+  .skill-card:hover, .hobby-card:hover {
+    transform: none;
+  }
+}

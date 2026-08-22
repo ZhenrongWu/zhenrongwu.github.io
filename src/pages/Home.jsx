@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import { Row, Col, Button, Image } from "react-bootstrap";
+import React from "react";
+import { Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import TypingEffect from "../components/TypingEffect";
 import Seo from "../components/Seo";
+import LazyImage from "../components/LazyImage";
+import heroImg from "../assets/images/hero.jpg";
 
 const HERO_TITLES = [
   "軟體設計師",
@@ -15,12 +17,6 @@ const HERO_TITLES = [
 const HERO_TITLE_LABEL = `我是${HERO_TITLES.join("、")}`;
 
 const Home = () => {
-  const [imageLoading, setImageLoading] = useState(true);
-
-  const handleImageLoad = () => {
-    setImageLoading(false);
-  };
-
   return (
     <div className="home-centered-container">
       <Seo />
@@ -58,22 +54,13 @@ const Home = () => {
         <Col lg={6} md={12} className="order-1 order-lg-2">
           <div className="home-image-section d-flex align-items-center justify-content-center">
             <div className="home-image-wrapper">
-              {imageLoading && (
-                <div className="image-loading-overlay">
-                  <div className="loading-spinner"></div>
-                </div>
-              )}
-              <Image
-                src="https://i.imgur.com/BEeKkLjl.jpg"
+              <LazyImage
+                src={heroImg}
                 alt="吳振榮個人照"
-                fluid
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-                className={`rounded ${
-                  imageLoading ? "image-loading" : "image-loaded"
-                }`}
-                onLoad={handleImageLoad}
+                width={640}
+                height={512}
+                eager
+                className="img-fluid rounded"
               />
             </div>
           </div>

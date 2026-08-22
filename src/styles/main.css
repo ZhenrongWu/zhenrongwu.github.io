@@ -11,6 +11,7 @@
 @import '_scrollToTop.css';
 @import '_typingEffect.css';
 @import '_button.css';
+@import '_about.css';
 
 :root {
   --navbar-height: 64px;

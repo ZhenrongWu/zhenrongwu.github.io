@@ -2,16 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
 import Seo from "../components/Seo";
+import LazyImage from "../components/LazyImage";
+import { projects } from "../data/projects";
 
 const ProjectCard = ({ project, index }) => {
   // 使用 useState 來追蹤卡片是否被翻轉
   const [isFlipped, setIsFlipped] = useState(false);
-  // 追蹤圖片載入狀態
-  const [imageLoading, setImageLoading] = useState(true);
-
-  const handleImageLoad = () => {
-    setImageLoading(false);
-  };
 
   // 翻面後把焦點移到對應面，讓鍵盤與螢幕閱讀器使用者不會「遺失」在隱藏面上
   const frontCardRef = useRef(null);
@@ -75,22 +71,13 @@ const ProjectCard = ({ project, index }) => {
               onKeyDown={handleFrontKeyDown}
             >
               <div className="project-card-img-container position-relative overflow-hidden">
-                {imageLoading && (
-                  <div className="image-loading-overlay">
-                    <div className="loading-spinner"></div>
-                  </div>
-                )}
-                <Card.Img
-                  variant="top"
-                  src={project.image}
+                <LazyImage
+                  src={project.image.src}
                   alt={project.title}
-                  loading="lazy"
-                  decoding="async"
-                  className={`h-100 w-100 ${
-                    imageLoading ? "image-loading" : "image-loaded"
-                  }`}
-                  style={{ objectFit: "cover" }}
-                  onLoad={handleImageLoad}
+                  width={project.image.width}
+                  height={project.image.height}
+                  wrapperClassName="h-100"
+                  className="card-img-top h-100 w-100 object-fit-cover"
                 />
               </div>
               <Card.Body className="p-4 d-flex flex-column text-center">
@@ -198,149 +185,6 @@ const ProjectCard = ({ project, index }) => {
 };
 
 const Portfolio = () => {
-  // 示例作品數據
-  const projects = [
-    {
-      id: 1,
-      title: "嶺東科技大學 教學評量自動填寫",
-      category: "網頁應用",
-      description: "懶人小工具。",
-      image: "https://i.imgur.com/xRYzVtL.jpg",
-      date: "2021年12月",
-      tags: ["HTML", "CSS", "JavaScript", "VS Code", "Git"],
-      url: "https://chromewebstore.google.com/detail/dnkodhghfphabiopghdmpcmpojlchajg?utm_source=item-share-cb",
-    },
-    {
-      id: 2,
-      title: "迴魂",
-      category: "遊戲開發",
-      description:
-        "此畢業專案，我主要負責遊戲系統與功能實作，另負責專案管理及部分關卡規劃。",
-      image: "https://i.imgur.com/QcxxdDl.jpg",
-      date: "2022年9月",
-      tags: ["Unity", "C#", "Jetbrain Rider", "vim", "Git"],
-      url: "https://store.steampowered.com/app/2075110/Incarnation/?l=tchinese",
-    },
-    {
-      id: 3,
-      title: "Sandwich-Tycoon",
-      category: "遊戲開發",
-      description:
-        "於 Nobollel 前公司成功上架的專案，我主要負責遊戲內的 AI、道具效果與部分前端頁面互動功能開發。",
-      image: "https://i.imgur.com/3Hbx6J9.jpg",
-      date: "2023年12月",
-      tags: ["Unity", "C#", "Jetbrain Rider", "vim", "Git"],
-      url: "https://play.google.com/store/apps/details?id=com.Nobollel.SandwichTycoon&hl=zh_TW",
-    },
-    {
-      id: 4,
-      title: "開發者英雄基地",
-      category: "網頁開發",
-      description: "個人電子商務平台，含有付款系統和訂單功能。",
-      image: "https://i.imgur.com/bLWrULF.jpg",
-      date: "2024年12月",
-      tags: ["WordPress", "Elementor", "WooCommerce", "Canva"],
-      url: "https://devherohub.com/",
-    },
-    {
-      id: 5,
-      title: "胖老爹食堂",
-      category: "網頁開發",
-      description: "專為小型商家設計的一頁式網站，提供簡潔的線上展示平台。",
-      image: "https://i.imgur.com/n81DUZp.jpg",
-      date: "2025年1月",
-      tags: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Bootstrap",
-        "VS Code",
-        "Photoshop",
-        "Git",
-      ],
-      url: "https://fat-dad-eatery.netlify.app/",
-    },
-    {
-      id: 6,
-      title: "圖像畫廊",
-      category: "網頁開發",
-      description: "整合 Pexels API 的圖像網站，瀏覽與下載精美圖片。",
-      image: "https://i.imgur.com/wtKhVEU.jpg",
-      date: "2025年5月",
-      tags: [
-        "HTML",
-        "CSS",
-        "Sass",
-        "JavaScript",
-        "React",
-        "Ajax",
-        "VS Code",
-        "Git",
-      ],
-      url: "https://image-gallery-2025.netlify.app/",
-    },
-    {
-      id: 7,
-      title: "RPA．ERP 系統",
-      category: "網頁開發",
-      description:
-        "開發 RPA-ERP MVP 系統，完成進銷存、會計、生產與自動化模組之全端整合，支援登入授權、CRUD 與儀表板監控。",
-      image: "https://i.meee.com.tw/duga1Gs.png",
-      date: "2026年4月",
-      tags: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "Node.js",
-        "Express",
-        "REST API",
-        "SQL",
-        "RPA",
-        "ERP",
-        "Git",
-      ],
-      url: "https://rpa-erp-system.vercel.app",
-    },
-    {
-      id: 8,
-      title: "墨池爭食",
-      category: "遊戲開發",
-      description:
-        "用 Google AI Studio 產出原型，下載至本機修正後上架到 Google Play，並提供兩種版本網頁跟 App。",
-      image: "https://i.meee.com.tw/GiFbJxn.png",
-      date: "2026年5月",
-      tags: [
-        "TypeScript",
-        "React",
-        "Canvas",
-        "Google AI Studio",
-        "Google Play",
-        "Netlify",
-        "Git",
-      ],
-      url: "https://play.google.com/store/apps/details?id=com.Frank.InkPool",
-    },
-    {
-      id: 9,
-      title: "網頁版小畫家",
-      category: "網頁開發",
-      description:
-        "復刻 Windows 經典小畫家。支援自由畫筆、多種幾何形狀繪製、線條粗細與顏色調整、油漆桶填色、橡皮擦、文字輸入，並具備完整的歷史紀錄（復原與重做）及畫布下載功能。",
-      image: "https://i.meee.com.tw/fN5fe09.png",
-      date: "2026年5月",
-      tags: [
-        "TypeScript",
-        "React",
-        "Vite",
-        "Tailwind CSS",
-        "Canvas",
-        "Netlify",
-        "Git",
-      ],
-      url: "https://paint-devherohub.netlify.app/",
-    },
-  ];
   // id 小到大代表舊到新；畫面顯示改為新到舊
   const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
 
