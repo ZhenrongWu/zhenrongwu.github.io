@@ -1,11 +1,11 @@
 // 作品集資料。圖片放在 src/assets/images/，由 Vite 處理 hash 與打包。
 // width/height 供 <LazyImage> 預留版面，避免載入時版面跳動（CLS）。
-import p1Img from "../assets/images/p1.jpg";
-import p2Img from "../assets/images/p2.jpg";
-import p3Img from "../assets/images/p3.jpg";
-import p4Img from "../assets/images/p4.jpg";
-import p5Img from "../assets/images/p5.jpg";
-import p6Img from "../assets/images/p6.jpg";
+import p1Img from "../assets/images/p1.webp";
+import p2Img from "../assets/images/p2.webp";
+import p3Img from "../assets/images/p3.webp";
+import p4Img from "../assets/images/p4.webp";
+import p5Img from "../assets/images/p5.webp";
+import p6Img from "../assets/images/p6.webp";
 import p7Img from "../assets/images/p7.webp";
 import p8Img from "../assets/images/p8.webp";
 import p9Img from "../assets/images/p9.webp";

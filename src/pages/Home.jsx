@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import TypingEffect from "../components/TypingEffect";
 import Seo from "../components/Seo";
 import LazyImage from "../components/LazyImage";
-import heroImg from "../assets/images/hero.jpg";
+import avatarImg from "../assets/images/avatar.webp";
 
 const HERO_TITLES = [
   "軟體設計師",
@@ -55,7 +55,7 @@ const Home = () => {
           <div className="home-image-section d-flex align-items-center justify-content-center">
             <div className="home-image-wrapper">
               <LazyImage
-                src={heroImg}
+                src={avatarImg}
                 alt="吳振榮個人照"
                 width={640}
                 height={512}
