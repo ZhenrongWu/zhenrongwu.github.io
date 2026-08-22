@@ -6,28 +6,8 @@ const path = require("path");
 // 網站的基本URL
 const hostname = "https://zhenrongwu.github.io";
 
-// 所有頁面路徑；sources 列出會影響該頁內容的檔案，lastmod 取其最後一次 commit 日期
-const routes = [
-  { url: "/", changefreq: "monthly", priority: 1.0, sources: ["src/pages/Home.jsx"] },
-  {
-    url: "/about",
-    changefreq: "monthly",
-    priority: 0.8,
-    sources: ["src/pages/About.jsx", "src/data/about.js"],
-  },
-  {
-    url: "/portfolio",
-    changefreq: "monthly",
-    priority: 0.9,
-    sources: ["src/pages/Portfolio.jsx", "src/data/projects.js"],
-  },
-  {
-    url: "/resume",
-    changefreq: "monthly",
-    priority: 0.8,
-    sources: ["src/pages/Resume.jsx", "src/data/resume.js"],
-  },
-];
+// 所有頁面路徑（與 fix-404.js 共用同一份設定）
+const routes = require("./routes.config");
 
 // 從 git 取得檔案最後修改日期（YYYY-MM-DD）；非 git 環境或查無紀錄時退回今天
 const today = new Date().toISOString().split("T")[0];
