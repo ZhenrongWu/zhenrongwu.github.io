@@ -13,7 +13,29 @@
 @import "_about.css";
 @import "_pageLoader.css";
 
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("../assets/fonts/NotoSansTC-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("../assets/fonts/NotoSansTC-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("../assets/fonts/NotoSansTC-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
+  --bs-font-sans-serif: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
   --navbar-height: 64px;
   --footer-height: 80px;
 
