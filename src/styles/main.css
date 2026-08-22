@@ -12,6 +12,7 @@
 @import "_typingEffect.css";
 @import "_button.css";
 @import "_about.css";
+@import "_pageLoader.css";
 
 :root {
   --navbar-height: 64px;

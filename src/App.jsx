@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
 import Layout from "./Layout";
+import PageLoader from "./components/PageLoader";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -14,7 +15,7 @@ const App = () => {
     // reducedMotion="user"：使用者開啟「減少動態效果」時，framer-motion 自動停用位移/縮放/旋轉動畫
     <MotionConfig reducedMotion="user">
       <Router>
-        <Suspense fallback={<div className="py-5 text-center">載入中...</div>}>
+        <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
