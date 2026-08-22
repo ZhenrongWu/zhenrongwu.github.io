@@ -1,0 +1,51 @@
+# CI：每次 push / PR 都跑 lint 與 build，作為合併與部署前的把關。
+# 這個 workflow 不做部署，只回答「這份程式碼是否健康」。
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+# 同一分支有新的 push 時，取消還在跑的舊任務，節省執行時間
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Lint & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm   # 快取 ~/.npm，第二次之後安裝只需數秒
+
+      # npm ci：嚴格依 package-lock.json 安裝，lockfile 不一致會直接失敗
+      # 這是 CI 與本機 `npm install` 最大的差別：結果可重現
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      # 驗證 SPA fallback 有被產生（fix-404.js 若失效，深層連結在正式環境會 404）
+      - name: Verify SPA fallback
+        run: cmp build/index.html build/404.html
+
+      # 把 build 產物上傳，方便在 Actions 頁面下載檢查；保留 7 天即可
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: build
+          retention-days: 7
