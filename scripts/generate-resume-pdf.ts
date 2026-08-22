@@ -31,7 +31,7 @@ export async function renderResumePdf(origin: string): Promise<Buffer> {
 
 export async function generateResumePdf(buildDir: string): Promise<string> {
   if (!fs.existsSync(path.join(buildDir, "resume.html"))) {
-    throw new Error(`找不到 ${buildDir}/resume.html，請先執行 vite build 與 fix-404`);
+    throw new Error(`找不到 ${buildDir}/resume.html，請先執行 vite build 與 generate-spa-fallback`);
   }
 
   const server = await preview({
@@ -56,7 +56,7 @@ const isDirectRun =
   process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1]);
 
 if (isDirectRun) {
-  const rootDir = path.dirname(fileURLToPath(import.meta.url));
+  const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
   const file = await generateResumePdf(path.join(rootDir, "build"));
   console.log(`✓ 已產生履歷 PDF：${path.relative(rootDir, file)}`);
 }

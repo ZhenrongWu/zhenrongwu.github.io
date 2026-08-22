@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import subsetFont from "subset-font";
 
-const rootDir = path.dirname(fileURLToPath(import.meta.url));
+const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourceUrl =
   "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstc/NotoSansTC%5Bwght%5D.ttf";
 const fontDir = path.join(rootDir, "src/assets/fonts");

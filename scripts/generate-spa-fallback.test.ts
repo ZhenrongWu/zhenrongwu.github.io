@@ -2,14 +2,14 @@ import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { createSpaFallback } from "./fix-404.ts";
-import { routes } from "./routes.config.ts";
+import { createSpaFallback } from "./generate-spa-fallback.ts";
+import { routes } from "../routes.config.ts";
 
 let tmpDir: string;
 const html = "<!doctype html><title>test</title>";
 
 beforeEach(() => {
-  tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "fix-404-"));
+  tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "spa-fallback-"));
 });
 
 afterEach(() => {
@@ -31,7 +31,7 @@ describe("createSpaFallback", () => {
     expect(written).toHaveLength(3); // 404.html + 2 routes
   });
 
-  it("預設使用 routes.config.js 的路由清單", () => {
+  it("預設使用 routes.config.ts 的路由清單", () => {
     fs.writeFileSync(path.join(tmpDir, "index.html"), html);
     createSpaFallback(tmpDir);
     for (const { url } of routes) {

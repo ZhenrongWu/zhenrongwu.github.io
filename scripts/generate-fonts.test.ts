@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import fs from "node:fs";
 import * as fontkit from "fontkit";
-import { collectSiteText, fontOutput, fontWeights } from "../../../generate-fonts.ts";
+import { collectSiteText, fontOutput, fontWeights } from "./generate-fonts.ts";
 
 describe("Noto Sans TC 字型子集", () => {
   it.each(fontWeights)(

@@ -1,7 +1,7 @@
 import { defineConfig } from "vitest/config";
 import type { Plugin } from "vite";
 import react from "@vitejs/plugin-react";
-import { renderResumePdf, resumePdfName } from "./generate-resume-pdf.ts";
+import { renderResumePdf, resumePdfName } from "./scripts/generate-resume-pdf.ts";
 
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -64,8 +64,8 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       reporter: ["text", "html"],
-      include: ["src/**/*.{ts,tsx}", "fix-404.ts"],
-      exclude: ["src/index.tsx", "src/test/**", "src/**/*.d.ts"],
+      include: ["src/**/*.{ts,tsx}", "scripts/**/*.ts"],
+      exclude: ["src/index.tsx", "src/test/**", "src/**/*.d.ts", "**/*.test.ts"],
     },
   },
 });

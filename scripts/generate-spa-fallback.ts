@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { routes } from "./routes.config.ts";
+import { routes } from "../routes.config.ts";
 
 export function createSpaFallback(
   buildDir: string,
@@ -31,7 +31,7 @@ const isDirectRun =
   process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1]);
 
 if (isDirectRun) {
-  const rootDir = path.dirname(fileURLToPath(import.meta.url));
+  const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
   const files = createSpaFallback(path.join(rootDir, "build"));
   console.log(`✓ 已產生 SPA fallback：${files.map((f) => path.relative(rootDir, f)).join(", ")}`);
 }

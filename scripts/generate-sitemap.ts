@@ -3,9 +3,9 @@ import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { routes } from "./routes.config.ts";
+import { routes } from "../routes.config.ts";
 
-const rootDir = path.dirname(fileURLToPath(import.meta.url));
+const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const hostname = "https://zhenrongwu.github.io";
 const today = new Date().toISOString().slice(0, 10);
 
