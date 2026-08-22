@@ -1,17 +1,47 @@
 const { SitemapStream, streamToPromise } = require("sitemap");
+const { execFileSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
 // 網站的基本URL
 const hostname = "https://zhenrongwu.github.io";
 
-// 所有頁面路徑
+// 所有頁面路徑；sources 列出會影響該頁內容的檔案，lastmod 取其最後一次 commit 日期
 const routes = [
-  { url: "/", changefreq: "monthly", priority: 1.0 },
-  { url: "/about", changefreq: "monthly", priority: 0.8 },
-  { url: "/portfolio", changefreq: "monthly", priority: 0.9 },
-  { url: "/resume", changefreq: "monthly", priority: 0.8 },
+  { url: "/", changefreq: "monthly", priority: 1.0, sources: ["src/pages/Home.jsx"] },
+  {
+    url: "/about",
+    changefreq: "monthly",
+    priority: 0.8,
+    sources: ["src/pages/About.jsx", "src/data/about.js"],
+  },
+  {
+    url: "/portfolio",
+    changefreq: "monthly",
+    priority: 0.9,
+    sources: ["src/pages/Portfolio.jsx", "src/data/projects.js"],
+  },
+  {
+    url: "/resume",
+    changefreq: "monthly",
+    priority: 0.8,
+    sources: ["src/pages/Resume.jsx", "src/data/resume.js"],
+  },
 ];
+
+// 從 git 取得檔案最後修改日期（YYYY-MM-DD）；非 git 環境或查無紀錄時退回今天
+const today = new Date().toISOString().split("T")[0];
+const lastModified = (files) => {
+  try {
+    const out = execFileSync("git", ["log", "-1", "--format=%cs", "--", ...files], {
+      cwd: __dirname,
+      encoding: "utf8",
+    }).trim();
+    return out || today;
+  } catch {
+    return today;
+  }
+};
 
 // 創建sitemap
 const sitemap = new SitemapStream({ hostname });
@@ -22,7 +52,7 @@ routes.forEach((route) => {
     url: route.url,
     changefreq: route.changefreq,
     priority: route.priority,
-    lastmod: new Date().toISOString().split("T")[0], // 今天的日期作為最後修改日期
+    lastmod: lastModified(route.sources),
   });
 });
 
@@ -37,8 +67,7 @@ streamToPromise(sitemap)
     // lastmod 改為 YYYY-MM-DD 格式（符合 sitemap 常見寫法）
     sitemapXml = sitemapXml.replace(
       /<lastmod>([^<]+)<\/lastmod>/g,
-      (_, dateStr) =>
-        `<lastmod>${dateStr.split("T")[0]}</lastmod>`
+      (_, dateStr) => `<lastmod>${dateStr.split("T")[0]}</lastmod>`
     );
 
     // 僅保留基本 xmlns，移除 news/xhtml/image/video 等未使用的 namespace
