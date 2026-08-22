@@ -1,51 +1,19 @@
-import { useRef, useState } from "react";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import Seo from "../components/Seo";
 import { resumeData } from "../data/resume";
-import type { Options } from "react-to-pdf";
 
-const PDF_OPTIONS: Options = {
-  filename: "吳振榮履歷.pdf",
-  page: { format: "a4", margin: 2 },
-  canvas: { mimeType: "image/png", qualityRatio: 1, useCORS: true },
-  overrides: {
-    pdf: { unit: "px", hotfixes: ["px_scaling"] },
-    canvas: {
-      windowWidth: 1200,
-      windowHeight: 4000,
-      scrollX: 0,
-      scrollY: 0,
-      backgroundColor: "#ffffff",
-      allowTaint: true,
-      foreignObjectRendering: true,
-    },
-  },
-};
+const resumePdfUrl = "/resume.pdf";
+const resumePdfFileName = "吳振榮履歷.pdf";
 
 const Resume = () => {
-  const targetRef = useRef<HTMLDivElement>(null);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const handleDownload = async () => {
-    if (isGenerating) return;
-    setIsGenerating(true);
-    try {
-      const { default: generatePDF } = await import("react-to-pdf");
-      await generatePDF(targetRef, PDF_OPTIONS);
-    } catch (error) {
-      console.error("PDF 生成失敗:", error);
-    } finally {
-      setIsGenerating(false);
-    }
-  };
-
   return (
     <div className="py-5">
       <Seo
         title="履歷"
         description="吳振榮的履歷：學歷、工作經歷、專案經驗與技能，並可下載 PDF 版本。"
       />
-      <Row className="mb-5">
+      <Row className="mb-5 d-print-none">
         <Col className="text-center">
           <div className="position-relative d-inline-block mb-4">
             <span className="title-underline bg-lavender position-absolute"></span>
@@ -56,13 +24,12 @@ const Resume = () => {
           <p className="lead text-muted mb-4">歡迎了解我的經歷和個人成就</p>
         </Col>
       </Row>
-      <Row className="justify-content-center mb-5">
+      <Row className="justify-content-center mb-5 d-print-none">
         <Col xs={12} className="text-center">
-          <Button
-            onClick={handleDownload}
-            disabled={isGenerating}
-            aria-busy={isGenerating}
-            className="download-button btn-lavender"
+          <a
+            href={resumePdfUrl}
+            download={resumePdfFileName}
+            className="btn download-button btn-lavender"
             aria-label="下載履歷 PDF 檔案"
             style={{
               padding: "12px 30px",
@@ -72,30 +39,13 @@ const Resume = () => {
               position: "relative",
             }}
           >
-            {isGenerating ? (
-              <span className="loading-text">正在生成 PDF...</span>
-            ) : (
-              <>
-                <AiOutlineDownload aria-hidden="true" style={{ marginRight: "8px" }} />
-                <span>下載履歷</span>
-              </>
-            )}
+            <AiOutlineDownload aria-hidden="true" style={{ marginRight: "8px" }} />
+            <span>下載履歷</span>
             <div className="button-background" aria-hidden="true"></div>
-          </Button>
+          </a>
         </Col>
       </Row>
-      <div
-        ref={targetRef}
-        className="resume-content"
-        style={{
-          backgroundColor: "#ffffff",
-          padding: "1px",
-          maxWidth: "100%",
-          fontFamily: "Arial, sans-serif",
-          lineHeight: "0.9",
-          minHeight: "auto",
-        }}
-      >
+      <div className="resume-content">
         <article className="resume">
           <Row className="g-4">
             <Col lg={6} className="resume-left">

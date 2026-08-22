@@ -6,7 +6,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build && node fix-404.ts",
+    "build": "vite build && node fix-404.ts && node generate-resume-pdf.ts",
     "preview": "vite preview",
     "lint": "eslint .",
     "generate-sitemap": "node sitemap-generator.ts",
@@ -24,8 +24,7 @@
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.18.2",
-    "react-to-pdf": "^3.2.2"
+    "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
@@ -44,6 +43,7 @@
     "eslint-plugin-react-refresh": "^0.5.4",
     "globals": "^17.11.0",
     "jsdom": "^29.1.1",
+    "playwright-core": "^1.62.1",
     "prettier": "^3.9.6",
     "sitemap": "^8.0.0",
     "typescript": "^6.0.3",

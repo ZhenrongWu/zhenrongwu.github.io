@@ -45,6 +45,7 @@ jobs:
           for f in build/404.html build/about.html build/portfolio.html build/resume.html; do
             cmp build/index.html "$f" || exit 1
           done
+          test -s build/resume.pdf || exit 1
       - name: Upload build artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
