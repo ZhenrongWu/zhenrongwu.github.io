@@ -81,12 +81,8 @@ const ProjectCard = ({ project, index }) => {
                 />
               </div>
               <Card.Body className="p-4 d-flex flex-column text-center">
-                <Card.Title className="fw-bold mb-2">
-                  {project.title}
-                </Card.Title>
-                <Card.Text className="text-muted small mb-3">
-                  {project.category}
-                </Card.Text>
+                <Card.Title className="fw-bold mb-2">{project.title}</Card.Title>
+                <Card.Text className="text-muted small mb-3">{project.category}</Card.Text>
 
                 <div className="mt-auto">
                   <button
@@ -122,18 +118,12 @@ const ProjectCard = ({ project, index }) => {
             >
               <Card.Body className="d-flex flex-column h-100 p-4">
                 <div className="text-center mb-3 pt-2">
-                  <h4 className="text-lavender fw-bold mb-1">
-                    {project.title}
-                  </h4>
-                  <p className="project-card-category text-muted small mb-0">
-                    {project.category}
-                  </p>
+                  <h4 className="text-lavender fw-bold mb-1">{project.title}</h4>
+                  <p className="project-card-category text-muted small mb-0">{project.category}</p>
                 </div>
 
                 <div className="card-back-content my-3">
-                  <p className="project-card-description mb-4">
-                    {project.description}
-                  </p>
+                  <p className="project-card-description mb-4">{project.description}</p>
 
                   <h6 className="mb-2 fw-bold text-lavender">使用技術：</h6>
                   <div className="mb-4">
@@ -146,9 +136,7 @@ const ProjectCard = ({ project, index }) => {
                 </div>
 
                 <div className="mt-auto text-center pb-0.5">
-                  <p className="text-muted small mb-3">
-                    完成日期：{project.date}
-                  </p>
+                  <p className="text-muted small mb-3">完成日期：{project.date}</p>
                   <div className="d-flex justify-content-center gap-2">
                     {project.url && (
                       <a

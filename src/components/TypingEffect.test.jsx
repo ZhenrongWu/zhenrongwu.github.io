@@ -6,8 +6,7 @@ import { mockMatchMedia } from "../test/setup";
 const SEQUENCE = ["軟體設計師", "遊戲開發者"];
 
 // 從 DOM 取出目前顯示的打字文字
-const getText = (container) =>
-  container.querySelector(".typing-effect-text").textContent;
+const getText = (container) => container.querySelector(".typing-effect-text").textContent;
 
 describe("TypingEffect", () => {
   beforeEach(() => {

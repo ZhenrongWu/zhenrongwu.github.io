@@ -3,6 +3,7 @@ import globals from "globals";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
+import prettier from "eslint-config-prettier";
 
 export default [
   { ignores: ["build", "dist", "node_modules"] },
@@ -32,4 +33,6 @@ export default [
       "no-unused-vars": ["error", { varsIgnorePattern: "^React$" }],
     },
   },
+  // 必須放最後：關閉所有與 Prettier 衝突的格式類規則，格式一律交給 Prettier
+  prettier,
 ];

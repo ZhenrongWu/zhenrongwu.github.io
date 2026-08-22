@@ -10,17 +10,11 @@ const getLongestTextByLength = (sequence) =>
   );
 
 const getLongestTextByWidth = (sequence, referenceElement) => {
-  if (
-    !referenceElement ||
-    typeof window === "undefined" ||
-    !sequence.length
-  ) {
+  if (!referenceElement || typeof window === "undefined" || !sequence.length) {
     return getLongestTextByLength(sequence);
   }
 
-  const { fontWeight, fontSize, fontFamily } = window.getComputedStyle(
-    referenceElement
-  );
+  const { fontWeight, fontSize, fontFamily } = window.getComputedStyle(referenceElement);
   const canvas = document.createElement("canvas");
   const context = canvas.getContext("2d");
 
@@ -44,9 +38,7 @@ const sequencePropType = (props, propName, componentName) => {
       `Invalid prop \`${propName}\` supplied to \`${componentName}\`: must be a non-empty array of strings.`
     );
   }
-  const invalidIndex = value.findIndex(
-    (item) => typeof item !== "string" || item.length === 0
-  );
+  const invalidIndex = value.findIndex((item) => typeof item !== "string" || item.length === 0);
   if (invalidIndex !== -1) {
     return new Error(
       `Invalid prop \`${propName}\` supplied to \`${componentName}\`: item at index ${invalidIndex} must be a non-empty string.`
@@ -77,9 +69,7 @@ const TypingEffect = ({
   const timerRef = useRef(null);
   const sequenceRef = useRef(sequence);
   const [reduceMotion, setReduceMotion] = useState(false);
-  const [longestText, setLongestText] = useState(() =>
-    getLongestTextByLength(sequence)
-  );
+  const [longestText, setLongestText] = useState(() => getLongestTextByLength(sequence));
 
   const sequenceKey = createSequenceKey(sequence);
 
@@ -171,8 +161,7 @@ const TypingEffect = ({
         isDeleting = true;
       } else if (isDeleting && currentText === "") {
         isDeleting = false;
-        sequenceIndex =
-          (sequenceIndex + 1) % sequenceRef.current.length;
+        sequenceIndex = (sequenceIndex + 1) % sequenceRef.current.length;
         nextSpeed = delayBeforeType;
       }
 
@@ -192,20 +181,14 @@ const TypingEffect = ({
   }
 
   return (
-    <span
-      ref={containerRef}
-      className={`typing-effect-container ${className}`}
-      aria-hidden="true"
-    >
+    <span ref={containerRef} className={`typing-effect-container ${className}`} aria-hidden="true">
       <span className="typing-effect-sizer" aria-hidden="true">
         {longestText}
         <span className="typing-effect-sizer-cursor" aria-hidden="true" />
       </span>
       <span className="typing-effect-overlay">
         <span ref={elementRef} className="typing-effect-text" />
-        {!reduceMotion && (
-          <span className="typing-effect-cursor" aria-hidden="true" />
-        )}
+        {!reduceMotion && <span className="typing-effect-cursor" aria-hidden="true" />}
       </span>
     </span>
   );

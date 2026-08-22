@@ -7,7 +7,7 @@
     line-height: 0.85 !important;
     min-height: auto !important;
   }
-  
+
   .resume {
     background: white !important;
     box-shadow: none !important;
@@ -15,42 +15,42 @@
     padding: 1px !important;
     min-height: auto !important;
   }
-  
+
   .resume-header {
     margin-bottom: 6px !important;
   }
-  
+
   .heading-name {
     font-size: 1.5em !important;
     margin-bottom: 2px !important;
   }
-  
+
   .heading-meta p {
     margin-bottom: 1px !important;
     font-size: 0.85em !important;
   }
-  
+
   .resume-title {
-    font-size: 1.0em !important;
+    font-size: 1em !important;
     margin-bottom: 4px !important;
     padding-bottom: 1px !important;
   }
-  
+
   .timeline::before,
   .timeline-dot {
     display: none !important;
   }
-  
+
   .timeline {
     padding-left: 0 !important;
   }
-  
+
   .timeline-item {
     margin-bottom: 1px !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
   }
-  
+
   .timeline-content {
     background: white !important;
     border: 1px solid #ddd !important;
@@ -59,53 +59,53 @@
     page-break-inside: avoid !important;
     break-inside: avoid !important;
   }
-  
+
   .timeline-date {
     font-weight: bold !important;
     color: #333 !important;
     font-size: 0.85em !important;
     margin-bottom: 2px !important;
   }
-  
+
   .resume-item h3 {
     font-size: 0.9em !important;
     margin-bottom: 1px !important;
   }
-  
+
   .resume-item h4 {
     font-size: 0.75em !important;
     margin-bottom: 2px !important;
   }
-  
+
   .resume-item p {
     font-size: 0.7em !important;
     margin-bottom: 1px !important;
   }
-  
+
   .resume-item ul {
     padding-left: 12px !important;
     margin-bottom: 3px !important;
   }
-  
+
   .resume-item li {
     font-size: 0.7em !important;
     margin-bottom: 0px !important;
     line-height: 0.95 !important;
   }
-  
+
   .resume-section {
     margin-bottom: 6px !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
   }
-  
+
   .resume-section[aria-labelledby="achievements"] {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
     page-break-before: auto !important;
     page-break-after: auto !important;
   }
-  
+
   .resume-section[aria-labelledby="achievements"] .timeline-item {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
@@ -114,7 +114,7 @@
     page-break-before: auto !important;
     page-break-after: auto !important;
   }
-  
+
   .resume-section[aria-labelledby="achievements"] .timeline-item:nth-child(2) {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
@@ -123,11 +123,11 @@
     page-break-before: auto !important;
     page-break-after: auto !important;
   }
-  
+
   * {
     page-break-inside: auto !important;
   }
-  
+
   .resume-item {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
@@ -212,7 +212,9 @@
   color: var(--lavender-primary);
   text-decoration: none;
   border-bottom: 2px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .competition-link:hover,
@@ -276,20 +278,20 @@
   .resume {
     padding: 20px;
   }
-  
+
   .resume-content {
     padding: 20px 10px;
   }
-  
+
   .resume-left,
   .resume-right {
     padding: 0 10px;
   }
-  
+
   .heading-name {
     font-size: 2em;
   }
-  
+
   .resume-title {
     font-size: 1.4em;
     margin-bottom: 20px;

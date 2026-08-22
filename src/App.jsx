@@ -15,15 +15,15 @@ const App = () => {
     <MotionConfig reducedMotion="user">
       <Router>
         <Suspense fallback={<div className="py-5 text-center">載入中...</div>}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
         </Suspense>
       </Router>
     </MotionConfig>

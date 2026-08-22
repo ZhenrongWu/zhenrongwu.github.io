@@ -17,7 +17,10 @@ describe("Seo", () => {
     renderAt("/", {});
     expect(document.title).toBe(SITE_NAME);
     expect(meta('meta[name="description"]')).toBe(DEFAULT_DESCRIPTION);
-    expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute("href", `${SITE_URL}/`);
+    expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute(
+      "href",
+      `${SITE_URL}/`
+    );
   });
 
   it("子頁面標題加上站名後綴，canonical 對應目前路徑", () => {
@@ -25,7 +28,10 @@ describe("Seo", () => {
     expect(document.title).toBe(`關於我 | ${SITE_NAME}`);
     expect(meta('meta[name="description"]')).toBe("自訂描述");
     expect(meta('meta[property="og:title"]')).toBe(`關於我 | ${SITE_NAME}`);
-    expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute("href", `${SITE_URL}/about`);
+    expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute(
+      "href",
+      `${SITE_URL}/about`
+    );
   });
 
   it("noIndex 頁面輸出 robots noindex 且不輸出 canonical", () => {

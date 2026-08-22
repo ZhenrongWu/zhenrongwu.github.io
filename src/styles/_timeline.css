@@ -8,7 +8,7 @@
 }
 
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -108,7 +108,7 @@
   .timeline {
     padding-left: 25px;
   }
-  
+
   .timeline-dot {
     left: -28px;
     width: 10px;
@@ -116,11 +116,11 @@
     border-width: 2px;
     box-shadow: 0 0 0 2px var(--lavender-primary);
   }
-  
+
   .timeline-content {
     padding: 15px;
   }
-  
+
   .timeline-item {
     margin-bottom: 30px;
   }

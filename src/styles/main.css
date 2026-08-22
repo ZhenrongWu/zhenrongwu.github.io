@@ -1,47 +1,47 @@
 @charset "UTF-8";
 
 /* partials 必須緊接在 @charset 之後：CSS 規範要求 @import 先於所有其他規則，否則會被忽略 */
-@import '_theme-fix.css';
-@import '_nav.css';
-@import '_footer.css';
-@import '_home.css';
-@import '_portfolio.css';
-@import '_timeline.css';
-@import '_resume.css';
-@import '_scrollToTop.css';
-@import '_typingEffect.css';
-@import '_button.css';
-@import '_about.css';
+@import "_theme-fix.css";
+@import "_nav.css";
+@import "_footer.css";
+@import "_home.css";
+@import "_portfolio.css";
+@import "_timeline.css";
+@import "_resume.css";
+@import "_scrollToTop.css";
+@import "_typingEffect.css";
+@import "_button.css";
+@import "_about.css";
 
 :root {
   --navbar-height: 64px;
   --footer-height: 80px;
-  
+
   --lavender-primary: #663399;
-  --lavender-secondary: #4B0082;
-  --lavender-light: #F5F0FF;
-  --lavender-dark: #8A2BE2;
+  --lavender-secondary: #4b0082;
+  --lavender-light: #f5f0ff;
+  --lavender-dark: #8a2be2;
   --lavender-gradient: linear-gradient(45deg, var(--lavender-primary), var(--lavender-secondary));
   --lavender-text-shadow: 0 0 1px rgba(138, 43, 226, 0.2);
-  
+
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);
   --shadow-focus: 0 0 0 3px rgba(102, 51, 153, 0.4);
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  
+
   --border-lavender: 1px solid rgba(102, 51, 153, 0.1);
   --border-radius-sm: 0.5rem;
   --border-radius-md: 0.75rem;
   --border-radius-lg: 1rem;
-  
+
   --card-back-gradient: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
   --hover-gradient: linear-gradient(45deg, #7a46b3, var(--lavender-primary));
-  
+
   --text-primary: #444;
   --text-secondary: #666;
-  
+
   --transition-base: all 0.3s ease;
   --transition-transform: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -129,19 +129,19 @@
   .navbar-lavender .nav-link:after {
     display: none !important;
   }
-  
+
   .navbar-lavender .nav-link:hover,
   .navbar-lavender .nav-link:focus {
     color: rgba(255, 255, 255, 0.8);
   }
-  
+
   .btn,
   a.btn {
     -webkit-tap-highlight-color: transparent !important;
     -webkit-touch-callout: none !important;
     outline: none !important;
   }
-  
+
   .btn:focus,
   .btn:active,
   a.btn:focus,
@@ -152,24 +152,23 @@
     -moz-appearance: none !important;
     appearance: none !important;
   }
-  
+
   .btn-lavender:focus,
   .btn-lavender:active {
     background-color: var(--lavender-primary) !important;
     color: #ffffff !important;
   }
-  
+
   .btn-outline-lavender:focus,
   .btn-outline-lavender:active {
     color: var(--lavender-primary) !important;
     background-color: transparent !important;
   }
-  
+
   * {
     -webkit-tap-highlight-color: transparent !important;
   }
 }
-
 
 /* utility: justify text like Word */
 .text-justify {

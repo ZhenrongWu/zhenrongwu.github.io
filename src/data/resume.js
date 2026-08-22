@@ -75,10 +75,7 @@ export const resumeData = {
       company: "產業新尖兵計畫-AI前端工程師人才應用培訓班",
       location: "台灣, 台北市",
       period: "2026.01 - 2025.02",
-      responsibilities: [
-        "教授 UI/UX 設計與前端實作觀念",
-        "協助學員完成專題製作與成果發表",
-      ],
+      responsibilities: ["教授 UI/UX 設計與前端實作觀念", "協助學員完成專題製作與成果發表"],
     },
     {
       position: "授課講師",
@@ -138,23 +135,20 @@ export const resumeData = {
       year: "2025/01",
       result: "參加",
       url: "https://globalgamejam.org/games/2025/disizu-2",
-      description:
-        "活動主題是 Bubble，製作 2D 遊戲，主要負責所有遊戲功能和帶領團隊",
+      description: "活動主題是 Bubble，製作 2D 遊戲，主要負責所有遊戲功能和帶領團隊",
     },
     {
       name: "Global Game Jam 2024",
       year: "2024/01",
       result: "參加",
       url: "https://globalgamejam.org/games/2024/team3-8",
-      description:
-        "活動主題是 Make Me Laugh，製作 2D 遊戲，主要負責整合功能和帶領團隊",
+      description: "活動主題是 Make Me Laugh，製作 2D 遊戲，主要負責整合功能和帶領團隊",
     },
     {
       name: "Global Game Jam 2023",
       year: "2023/02",
       result: "參加",
-      description:
-        "活動主題是 Roots，製作 2D 遊戲，與同事一起參加，主要負責介面的功能",
+      description: "活動主題是 Roots，製作 2D 遊戲，與同事一起參加，主要負責介面的功能",
     },
     {
       name: "巴哈姆特 ACG 創作大賽 遊戲組",
@@ -172,8 +166,7 @@ export const resumeData = {
       name: "Global Game Jam 2022",
       year: "2022/01",
       result: "參加",
-      description:
-        "活動主題是 Duolity，製作 2D 遊戲，主要負責遊戲核心功能跟功能整合",
+      description: "活動主題是 Duolity，製作 2D 遊戲，主要負責遊戲核心功能跟功能整合",
     },
     {
       name: "全國大專程式設計極客挑戰賽",
@@ -213,11 +206,7 @@ export const resumeData = {
       title: "去日本見前同事們",
       period: "2024.10",
       description: "日本東京見前同事，為期 6 天",
-      highlights: [
-        "與朋友的約定",
-        "培養獨立思考和解決問題的能力",
-        "深刻體會到國際語言的重要性",
-      ],
+      highlights: ["與朋友的約定", "培養獨立思考和解決問題的能力", "深刻體會到國際語言的重要性"],
     },
     {
       title: "徒步環島",
@@ -235,34 +224,19 @@ export const resumeData = {
       title: "單車環島",
       period: "2019.07",
       description: "騎單車環繞台灣一圈，總長約 1,200 公里，為期 9 天",
-      highlights: [
-        "與堂哥的約定",
-        "挑戰自我極限",
-        "看到台灣的美",
-        "與騎友大哥的相遇和分別",
-      ],
+      highlights: ["與堂哥的約定", "挑戰自我極限", "看到台灣的美", "與騎友大哥的相遇和分別"],
     },
     {
       title: "青年就業領航計畫",
       period: "2017.08 - 2018.09",
       description: "參加青年就業領航計畫，為期 1 年",
-      highlights: [
-        "一人北漂",
-        "認識不同國家的人",
-        "職場相處",
-        "經濟自主",
-        "自主學習",
-      ],
+      highlights: ["一人北漂", "認識不同國家的人", "職場相處", "經濟自主", "自主學習"],
     },
     {
       title: "第一次出國",
       period: "2017.06",
       description: "日本京阪神奈獨旅，為期 5 天",
-      highlights: [
-        "一個人搭飛機",
-        "沿途記錄當地文化與自然風光",
-        "培養獨立思考和解決問題的能力",
-      ],
+      highlights: ["一個人搭飛機", "沿途記錄當地文化與自然風光", "培養獨立思考和解決問題的能力"],
     },
   ],
 };

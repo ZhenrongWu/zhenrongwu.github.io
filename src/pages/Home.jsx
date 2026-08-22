@@ -6,13 +6,7 @@ import Seo from "../components/Seo";
 import LazyImage from "../components/LazyImage";
 import avatarImg from "../assets/images/avatar.webp";
 
-const HERO_TITLES = [
-  "軟體設計師",
-  "遊戲開發者",
-  "網頁開發者",
-  "自由接案者",
-  "授課講師",
-];
+const HERO_TITLES = ["軟體設計師", "遊戲開發者", "網頁開發者", "自由接案者", "授課講師"];
 
 const HERO_TITLE_LABEL = `我是${HERO_TITLES.join("、")}`;
 

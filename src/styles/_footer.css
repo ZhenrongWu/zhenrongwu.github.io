@@ -52,7 +52,9 @@
 
 .social-icon-link {
   color: #ffffff;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -72,11 +74,11 @@
   .footer-lavender .row > div {
     width: 100%;
   }
-  
+
   .footer-lavender h3 {
     font-size: 0.9rem;
   }
-  
+
   .social-icon {
     font-size: 1.25rem !important;
   }

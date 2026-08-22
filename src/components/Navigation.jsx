@@ -16,11 +16,7 @@ const Navigation = () => {
   // 處理點擊外部收起導覽列
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        navbarRef.current &&
-        !navbarRef.current.contains(event.target) &&
-        isExpanded
-      ) {
+      if (navbarRef.current && !navbarRef.current.contains(event.target) && isExpanded) {
         setIsExpanded(false);
       }
     };
