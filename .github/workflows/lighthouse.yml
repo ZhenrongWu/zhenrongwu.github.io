@@ -28,4 +28,3 @@ jobs:
             https://zhenrongwu.github.io/resume
           configPath: ./lighthouserc.json
           uploadArtifacts: true
-          temporaryPublicStorage: true
