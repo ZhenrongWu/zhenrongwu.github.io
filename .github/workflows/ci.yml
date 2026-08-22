@@ -47,7 +47,7 @@ jobs:
       # 缺任何一個都代表深層連結在 GitHub Pages 會壞掉或回 404 狀態碼
       - name: Verify SPA fallback
         run: |
-          for f in build/404.html build/about/index.html build/portfolio/index.html build/resume/index.html; do
+          for f in build/404.html build/about.html build/portfolio.html build/resume.html; do
             cmp build/index.html "$f" || exit 1
           done
 

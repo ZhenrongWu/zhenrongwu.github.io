@@ -23,11 +23,11 @@ describe("createSpaFallback", () => {
     expect(fs.readFileSync(path.join(tmpDir, "404.html"), "utf8")).toBe(html);
   });
 
-  it("為每個非根路由建立 <route>/index.html，讓 GitHub Pages 回 200", () => {
+  it("為每個非根路由建立 <route>.html，讓 GitHub Pages 回 200 且不轉址", () => {
     fs.writeFileSync(path.join(tmpDir, "index.html"), html);
     const written = createSpaFallback(tmpDir, ["/", "/about", "/portfolio"]);
-    expect(fs.readFileSync(path.join(tmpDir, "about", "index.html"), "utf8")).toBe(html);
-    expect(fs.readFileSync(path.join(tmpDir, "portfolio", "index.html"), "utf8")).toBe(html);
+    expect(fs.readFileSync(path.join(tmpDir, "about.html"), "utf8")).toBe(html);
+    expect(fs.readFileSync(path.join(tmpDir, "portfolio.html"), "utf8")).toBe(html);
     expect(written).toHaveLength(3); // 404.html + 2 routes
   });
 
@@ -36,7 +36,7 @@ describe("createSpaFallback", () => {
     createSpaFallback(tmpDir);
     for (const { url } of routes) {
       if (url === "/") continue;
-      expect(fs.existsSync(path.join(tmpDir, url.slice(1), "index.html"))).toBe(true);
+      expect(fs.existsSync(path.join(tmpDir, `${url.slice(1)}.html`))).toBe(true);
     }
   });
 
