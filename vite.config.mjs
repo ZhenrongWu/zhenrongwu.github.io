@@ -9,6 +9,9 @@ export default defineConfig({
     // 沿用 CRA 的輸出目錄；fix-404.js 與 deploy.yml 的 upload-pages-artifact 皆以 build/ 為準
     outDir: "build",
     emptyOutDir: true,
+    // 唯一超過 500KB 的 chunk 是 react-to-pdf（html2canvas + jsPDF），
+    // 已改為按下「下載履歷」時才動態載入，不影響任何頁面的首次載入，故放寬警告門檻
+    chunkSizeWarningLimit: 650,
   },
   test: {
     // jsdom 提供 document / window，讓 React 元件測試能在 Node 執行

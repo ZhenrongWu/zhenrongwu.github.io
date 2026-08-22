@@ -1,37 +1,46 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
-import { usePDF } from "react-to-pdf";
 import Seo from "../components/Seo";
 import { resumeData } from "../data/resume";
 
-const Resume = () => {
-  const { toPDF, targetRef } = usePDF({
-    filename: "吳振榮履歷.pdf",
-    page: {
-      format: "A4",
-      margin: 2,
-    },
-    canvas: {
-      mimeType: "image/png",
-      qualityRatio: 1,
-      useCORS: true,
-    },
-    options: {
-      unit: "px",
-      hotfixes: ["px_scaling"],
-      windowWidth: 1200,
-      windowHeight: 4000,
-      scrollX: 0,
-      scrollY: 0,
-      usePrintMedia: true,
-      backgroundColor: "#ffffff",
-      waitForFonts: true,
-      allowTaint: true,
-      foreignObjectRendering: true,
-    },
-  });
+const PDF_OPTIONS = {
+  filename: "吳振榮履歷.pdf",
+  page: { format: "A4", margin: 2 },
+  canvas: { mimeType: "image/png", qualityRatio: 1, useCORS: true },
+  options: {
+    unit: "px",
+    hotfixes: ["px_scaling"],
+    windowWidth: 1200,
+    windowHeight: 4000,
+    scrollX: 0,
+    scrollY: 0,
+    usePrintMedia: true,
+    backgroundColor: "#ffffff",
+    waitForFonts: true,
+    allowTaint: true,
+    foreignObjectRendering: true,
+  },
+};
 
+const Resume = () => {
+  const targetRef = useRef(null);
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  // react-to-pdf 內含 html2canvas 與 jsPDF（約 600KB），只在使用者按下下載時才動態載入，
+  // 避免拖慢履歷頁的首次載入
+  const handleDownload = async () => {
+    if (isGenerating) return;
+    setIsGenerating(true);
+    try {
+      const { default: generatePDF } = await import("react-to-pdf");
+      await generatePDF(targetRef, PDF_OPTIONS);
+    } catch (error) {
+      console.error("PDF 生成失敗:", error);
+    } finally {
+      setIsGenerating(false);
+    }
+  };
 
   return (
     <div className="py-5">
@@ -56,29 +65,9 @@ const Resume = () => {
       <Row className="justify-content-center mb-5">
         <Col xs={12} className="text-center">
           <Button
-            onClick={() => {
-              // 添加下載提示
-              const button = document.querySelector(".download-button");
-              const originalText = button.innerHTML;
-              button.innerHTML =
-                "<span class='loading-text'>正在生成 PDF...</span>";
-              button.disabled = true;
-
-              // 執行 PDF 下載
-              toPDF()
-                .then(() => {
-                  // 下載完成後恢復按鈕
-                  setTimeout(() => {
-                    button.innerHTML = originalText;
-                    button.disabled = false;
-                  }, 500); // 延遲 500ms 讓使用者看到完成狀態
-                })
-                .catch((error) => {
-                  console.error("PDF 生成失敗:", error);
-                  button.innerHTML = originalText;
-                  button.disabled = false;
-                });
-            }}
+            onClick={handleDownload}
+            disabled={isGenerating}
+            aria-busy={isGenerating}
             className="download-button btn-lavender"
             aria-label="下載履歷 PDF 檔案"
             style={{
@@ -89,11 +78,14 @@ const Resume = () => {
               position: "relative",
             }}
           >
-            <AiOutlineDownload
-              aria-hidden="true"
-              style={{ marginRight: "8px" }}
-            />
-            <span>下載履歷</span>
+            {isGenerating ? (
+              <span className="loading-text">正在生成 PDF...</span>
+            ) : (
+              <>
+                <AiOutlineDownload aria-hidden="true" style={{ marginRight: "8px" }} />
+                <span>下載履歷</span>
+              </>
+            )}
             <div className="button-background" aria-hidden="true"></div>
           </Button>
         </Col>
@@ -125,18 +117,12 @@ const Resume = () => {
                     {resumeData.personalInfo.title}
                   </p>
                   <p className="meta-item">
-                    <a
-                      href={`mailto:${resumeData.personalInfo.email}`}
-                      className="contact-link"
-                    >
+                    <a href={`mailto:${resumeData.personalInfo.email}`} className="contact-link">
                       {resumeData.personalInfo.email}
                     </a>
                   </p>
                   <p className="meta-item">
-                    <a
-                      href={`tel:${resumeData.personalInfo.phone}`}
-                      className="contact-link"
-                    >
+                    <a href={`tel:${resumeData.personalInfo.phone}`} className="contact-link">
                       {resumeData.personalInfo.phone}
                     </a>
                   </p>
@@ -196,10 +182,7 @@ const Resume = () => {
 
             <Col lg={6} className="resume-right">
               {/* 競賽經驗 */}
-              <section
-                className="resume-section timeline-section"
-                aria-labelledby="competitions"
-              >
+              <section className="resume-section timeline-section" aria-labelledby="competitions">
                 <h2 id="competitions" className="resume-title" tabIndex="0">
                   競賽經驗
                 </h2>
@@ -234,10 +217,7 @@ const Resume = () => {
               </section>
 
               {/* 個人成就 */}
-              <section
-                className="resume-section timeline-section"
-                aria-labelledby="achievements"
-              >
+              <section className="resume-section timeline-section" aria-labelledby="achievements">
                 <h2 id="achievements" className="resume-title" tabIndex="0">
                   個人成就
                 </h2>
