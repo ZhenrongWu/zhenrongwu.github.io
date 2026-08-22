@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: { port: 3000, open: true },
   build: {
-    // 沿用 CRA 的輸出目錄；fix-404.js 與 gh-pages 部署皆以 build/ 為準
+    // 沿用 CRA 的輸出目錄；fix-404.js 與 deploy.yml 的 upload-pages-artifact 皆以 build/ 為準
     outDir: "build",
     emptyOutDir: true,
   },
