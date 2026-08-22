@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
+import Seo from "../components/Seo";
 
 const ProjectCard = ({ project, index }) => {
   // 使用 useState 來追蹤卡片是否被翻轉
@@ -10,6 +11,38 @@ const ProjectCard = ({ project, index }) => {
 
   const handleImageLoad = () => {
     setImageLoading(false);
+  };
+
+  // 翻面後把焦點移到對應面，讓鍵盤與螢幕閱讀器使用者不會「遺失」在隱藏面上
+  const frontCardRef = useRef(null);
+  const backButtonRef = useRef(null);
+  const hasFlippedRef = useRef(false);
+
+  useEffect(() => {
+    if (!hasFlippedRef.current) {
+      // 首次掛載不搶焦點
+      hasFlippedRef.current = true;
+      return;
+    }
+    const target = isFlipped ? backButtonRef.current : frontCardRef.current;
+    target?.focus();
+  }, [isFlipped]);
+
+  const flipToBack = () => setIsFlipped(true);
+  const flipToFront = () => setIsFlipped(false);
+
+  // 讓 role="button" 的卡片回應 Enter / Space；背面另外支援 Escape 返回
+  const handleFrontKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      flipToBack();
+    }
+  };
+  const handleBackKeyDown = (e) => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      flipToFront();
+    }
   };
 
   return (
@@ -25,11 +58,21 @@ const ProjectCard = ({ project, index }) => {
         transition={{ duration: 0.5, type: "spring", damping: 15 }}
       >
         {/* 卡片正面 */}
-        <motion.div className="project-card-face position-absolute w-100 h-100">
+        <motion.div
+          className="project-card-face position-absolute w-100 h-100"
+          aria-hidden={isFlipped}
+          inert={isFlipped || undefined}
+        >
           <motion.div className="project-card-border h-100">
             <Card
+              ref={frontCardRef}
               className="project-card-card h-100 border-0 shadow-sm"
-              onClick={() => setIsFlipped(true)}
+              role="button"
+              tabIndex={0}
+              aria-expanded={isFlipped}
+              aria-label={`查看 ${project.title} 詳細資料`}
+              onClick={flipToBack}
+              onKeyDown={handleFrontKeyDown}
             >
               <div className="project-card-img-container position-relative overflow-hidden">
                 {imageLoading && (
@@ -60,10 +103,14 @@ const ProjectCard = ({ project, index }) => {
 
                 <div className="mt-auto">
                   <button
+                    type="button"
                     className="btn btn-sm btn-outline-lavender project-card-button"
+                    // 外層卡片已可聚焦並處理鍵盤，此按鈕只作為視覺提示，避免 Tab 要按兩次
+                    tabIndex={-1}
+                    aria-hidden="true"
                     onClick={(e) => {
                       e.stopPropagation();
-                      setIsFlipped(true);
+                      flipToBack();
                     }}
                   >
                     查看詳細資料
@@ -75,11 +122,16 @@ const ProjectCard = ({ project, index }) => {
         </motion.div>
 
         {/* 卡片背面 */}
-        <motion.div className="project-card-face project-card-face-back position-absolute w-100 h-100">
+        <motion.div
+          className="project-card-face project-card-face-back position-absolute w-100 h-100"
+          aria-hidden={!isFlipped}
+          inert={!isFlipped || undefined}
+        >
           <motion.div className="project-card-border h-100">
             <Card
               className="project-card-card project-card-card-back h-100 border-0 shadow-sm"
-              onClick={() => setIsFlipped(false)}
+              onClick={flipToFront}
+              onKeyDown={handleBackKeyDown}
             >
               <Card.Body className="d-flex flex-column h-100 p-4">
                 <div className="text-center mb-3 pt-2">
@@ -123,10 +175,13 @@ const ProjectCard = ({ project, index }) => {
                       </a>
                     )}
                     <button
+                      ref={backButtonRef}
+                      type="button"
                       className="btn btn-sm btn-outline-lavender project-card-button"
+                      aria-label={`返回 ${project.title} 卡片正面`}
                       onClick={(e) => {
                         e.stopPropagation();
-                        setIsFlipped(false);
+                        flipToFront();
                       }}
                     >
                       返回
@@ -291,6 +346,10 @@ const Portfolio = () => {
 
   return (
     <div className="py-5">
+      <Seo
+        title="作品集"
+        description="吳振榮的作品集：網頁開發、遊戲開發與自動化工具專案，包含使用技術與作品連結。"
+      />
       {/* 頁面標題 */}
       <Row className="mb-5">
         <Col className="text-center">

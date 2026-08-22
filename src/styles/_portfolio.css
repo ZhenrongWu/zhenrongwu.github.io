@@ -44,6 +44,12 @@
   background: var(--card-back-gradient);
 }
 
+/* 鍵盤聚焦時顯示焦點環（滑鼠點擊不顯示），卡片為 role="button" 可 Tab 到 */
+.project-card-card:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus), var(--shadow-md);
+}
+
 .project-card-img-container {
   height: 220px;
   overflow: hidden;

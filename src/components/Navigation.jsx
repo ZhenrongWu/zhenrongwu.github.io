@@ -54,7 +54,7 @@ const Navigation = () => {
         <Navbar.Brand as={Link} to="/" className="me-4">
           我的網站
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" aria-label="切換導覽選單" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {navLinks.map(({ path, label }) => (

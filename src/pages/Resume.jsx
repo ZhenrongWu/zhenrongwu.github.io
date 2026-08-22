@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import { usePDF } from "react-to-pdf";
+import Seo from "../components/Seo";
 
 const Resume = () => {
   const { toPDF, targetRef } = usePDF({
@@ -301,6 +302,10 @@ const Resume = () => {
 
   return (
     <div className="py-5">
+      <Seo
+        title="履歷"
+        description="吳振榮的履歷：學歷、工作經歷、專案經驗與技能，並可下載 PDF 版本。"
+      />
       {/* 頁面標題 */}
       <Row className="mb-5">
         <Col className="text-center">

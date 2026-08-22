@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import Seo from "../components/Seo";
 import { Row, Col, Card } from "react-bootstrap";
 import {
   // 程式語言和框架圖標
@@ -460,6 +461,10 @@ const About = () => {
 
   return (
     <>
+      <Seo
+        title="關於我"
+        description="認識吳振榮：遊戲與網頁開發者的專業簡介、接觸過的技能、常用工具與興趣。"
+      />
       <style>{cardHoverStyle}</style>
       <div className="py-5">
         {/* 頁面標題與介紹 */}

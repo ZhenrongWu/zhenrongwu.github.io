@@ -7,33 +7,20 @@
     <meta name="theme-color" content="#663399" />
     <meta name="color-scheme" content="light only" />
     <meta
-      name="description"
-      content="吳振榮的個人網站，展示網頁開發、遊戲開發專案、技能與專業經歷。專注於前端技術、React、互動設計與數位產品開發。"
-    />
-    <meta
       name="keywords"
       content="吳振榮, Zhenrong Wu, 前端工程師, 網頁開發, 遊戲開發, React, 作品集, 程式設計, 台灣, 自由接案, 軟體設計師"
     />
     <meta name="author" content="Frank" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- 全站共用的社群分享 meta；頁面層級的 title / description / url 由 src/components/Seo.jsx 提供 -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://zhenrongwu.github.io/" />
-    <meta property="og:title" content="ZHENRONG WU" />
-    <meta
-      property="og:description"
-      content="吳振榮的個人網站，展示網頁開發、遊戲開發專案、技能與專業經歷。專注於前端技術、React、互動設計與數位產品開發。"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://zhenrongwu.github.io/" />
-    <meta property="twitter:title" content="ZHENRONG WU" />
-    <meta
-      property="twitter:description"
-      content="吳振榮的個人網站，展示網頁開發、遊戲開發專案、技能與專業經歷。專注於前端技術、React、互動設計與數位產品開發。"
-    />
+    <meta property="og:site_name" content="ZHENRONG WU" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:image" content="https://i.imgur.com/BEeKkLjl.jpg" />
+    <meta property="og:image:alt" content="吳振榮個人照" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://i.imgur.com/BEeKkLjl.jpg" />
     <link
       rel="preload"
       as="image"
@@ -47,10 +34,8 @@
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
+    <!-- 預設標題；React 掛載後由各頁 <Seo/> 覆寫 -->
     <title>ZHENRONG WU</title>
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://zhenrongwu.github.io/" />
   </head>
   <body>
     <noscript>請啟用 JavaScript 以瀏覽本網站。</noscript>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Row, Col, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import TypingEffect from "../components/TypingEffect";
+import Seo from "../components/Seo";
 
 const HERO_TITLES = [
   "軟體設計師",
@@ -22,6 +23,7 @@ const Home = () => {
 
   return (
     <div className="home-centered-container">
+      <Seo />
       <Row className="align-items-center w-100 gy-4">
         <Col lg={6} md={12} className="order-2 order-lg-1">
           <div className="text-center text-lg-start px-3 px-md-5">
