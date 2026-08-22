@@ -1,24 +1,25 @@
 import js from "@eslint/js";
 import globals from "globals";
+import tseslint from "typescript-eslint";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import prettier from "eslint-config-prettier";
 
-export default [
-  { ignores: ["build", "dist", "node_modules"] },
+export default tseslint.config(
+  { ignores: ["build", "dist", "coverage", "node_modules"] },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    files: ["**/*.{js,jsx,mjs,cjs}"],
-    ...js.configs.recommended,
+    files: ["**/*.{js,mjs,cjs,ts,mts,tsx}"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
       globals: { ...globals.browser, ...globals.node },
-      parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
   {
-    files: ["src/**/*.{js,jsx}"],
+    files: ["src/**/*.{ts,tsx}"],
     plugins: { react, "react-hooks": reactHooks, "react-refresh": reactRefresh },
     settings: { react: { version: "detect" } },
     rules: {
@@ -26,13 +27,9 @@ export default [
       ...react.configs.flat["jsx-runtime"].rules,
       ...reactHooks.configs["recommended-latest"].rules,
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
-      // 對齊原本 CRA `react-app` 預設的寬鬆度：不強制 prop-types 與 displayName
       "react/prop-types": "off",
       "react/display-name": "off",
-      // 新版 JSX runtime 不需 import React，但沿用舊寫法的檔案不視為錯誤
-      "no-unused-vars": ["error", { varsIgnorePattern: "^React$" }],
     },
   },
-  // 必須放最後：關閉所有與 Prettier 衝突的格式類規則，格式一律交給 Prettier
-  prettier,
-];
+  prettier
+);

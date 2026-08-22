@@ -1,4 +1,3 @@
-/* 頁面懶載入的全視窗置中讀條（由 SuspenseWithLoader 控制，位於 Suspense 之外） */
 .page-loader {
   position: fixed;
   inset: 0;
@@ -8,7 +7,7 @@
   background: #ffffff;
   z-index: 1040;
   opacity: 1;
-  transition: opacity 0.3s ease; /* 秒數需與 PageLoader.jsx 的 FADE_MS 一致 */
+  transition: opacity 0.3s ease;
 }
 
 .page-loader-fading {
@@ -32,7 +31,7 @@
 }
 
 .page-loader-percent {
-  font-variant-numeric: tabular-nums; /* 數字等寬，百分比跳動時不會左右抖動 */
+  font-variant-numeric: tabular-nums;
   letter-spacing: 0.05em;
 }
 
@@ -50,7 +49,6 @@
   transition: width 0.25s ease-out;
 }
 
-/* 使用者偏好減少動態：載入中不模擬進度，改為靜態的半滿讀條 */
 .page-loader-bar-static {
   width: 50%;
   transition: none;

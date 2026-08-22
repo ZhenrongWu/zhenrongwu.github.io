@@ -12,8 +12,6 @@
     />
     <meta name="author" content="Frank" />
     <meta name="robots" content="index, follow" />
-
-    <!-- 全站共用的社群分享 meta；頁面層級的 title / description / url 由 src/components/Seo.jsx 提供 -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ZHENRONG WU" />
     <meta property="og:locale" content="zh_TW" />
@@ -21,7 +19,6 @@
     <meta property="og:image:alt" content="吳振榮個人照" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://zhenrongwu.github.io/og-image.jpg" />
-    <!-- 首屏個人照：Vite 建置時會把 href 改寫成帶 hash 的實際路徑 -->
     <link
       rel="preload"
       as="image"
@@ -29,16 +26,12 @@
       type="image/webp"
       fetchpriority="high"
     />
-
-    <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-
-    <!-- 預設標題；React 掛載後由各頁 <Seo/> 覆寫 -->
     <title>ZHENRONG WU</title>
   </head>
   <body>
     <noscript>請啟用 JavaScript 以瀏覽本網站。</noscript>
     <div id="root"></div>
-    <script type="module" src="/src/index.jsx"></script>
+    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>

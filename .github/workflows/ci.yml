@@ -1,13 +1,9 @@
-# CI：Pull Request 的把關，回答「這份程式碼是否健康」，不做部署。
-# 直接 push 到 master 時由 deploy.yml 執行同樣的 lint / test / build，故此處不重複觸發。
 name: CI
 
 on:
   pull_request:
     branches: [master]
   workflow_dispatch:
-
-# 同一分支有新的 push 時，取消還在跑的舊任務，節省執行時間
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
@@ -24,10 +20,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
-          cache: npm # 快取 ~/.npm，第二次之後安裝只需數秒
-
-      # npm ci：嚴格依 package-lock.json 安裝，lockfile 不一致會直接失敗
-      # 這是 CI 與本機 `npm install` 最大的差別：結果可重現
+          cache: npm
       - name: Install dependencies
         run: npm ci
 
@@ -37,21 +30,19 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Typecheck
+        run: npm run typecheck
+
       - name: Test
         run: npm test
 
       - name: Build
         run: npm run build
-
-      # 驗證 SPA fallback：404.html 與各路由的 index.html 都必須與 index.html 一致，
-      # 缺任何一個都代表深層連結在 GitHub Pages 會壞掉或回 404 狀態碼
       - name: Verify SPA fallback
         run: |
           for f in build/404.html build/about.html build/portfolio.html build/resume.html; do
             cmp build/index.html "$f" || exit 1
           done
-
-      # 把 build 產物上傳，方便在 Actions 頁面下載檢查；保留 7 天即可
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:

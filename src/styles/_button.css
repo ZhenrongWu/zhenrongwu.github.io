@@ -81,7 +81,6 @@
   transform: translateX(0);
   opacity: 0.15;
 }
-/* 下載按鈕：原本內嵌於 DownloadButton.jsx 的樣式（styled-jsx 語法不受支援，移至此處） */
 .download-button {
   padding: 10px 25px;
   font-size: 1.1em;

@@ -1,20 +1,13 @@
-# CD：push 到 master 後自動部署到 GitHub Pages。
-# 與 ci.yml 分開的理由：CI 對 PR 也要跑，但部署只能發生在 master；
-# 職責分離後，任一邊出錯都容易定位。
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [master]
-  workflow_dispatch: # 允許在 Actions 頁面手動觸發（緊急重新部署用）
-
-# 部署需要的最小權限；其他權限一律 none（最小權限原則）
+  workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
-
-# 同時只允許一個部署進行，避免新舊版本互相覆蓋
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -35,13 +28,14 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      # 部署前再把關一次：lint 不過就不上線
       - name: Format check
         run: npm run format:check
 
       - name: Lint
         run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
 
       - name: Test
         run: npm test
@@ -51,8 +45,6 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      # 這個 action 會把 build/ 打包成 Pages 專用的 artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -60,10 +52,10 @@ jobs:
 
   deploy:
     name: Deploy
-    needs: build # build 成功才會執行
+    needs: build
     runs-on: ubuntu-latest
     environment:
-      name: github-pages # 在 repo 的 Environments 頁面可看到部署歷史與對應 commit
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages

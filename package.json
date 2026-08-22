@@ -6,20 +6,20 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build && node fix-404.js",
+    "build": "vite build && node fix-404.ts",
     "preview": "vite preview",
     "lint": "eslint .",
-    "generate-sitemap": "node sitemap-generator.js",
+    "generate-sitemap": "node sitemap-generator.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "bootstrap": "^5.3.5",
     "framer-motion": "^12.9.1",
-    "prop-types": "^15.8.1",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.1.0",
@@ -32,6 +32,9 @@
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.6",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^5.0.0",
     "@vitest/coverage-v8": "^4.1.11",
     "eslint": "^9.0.0",
@@ -43,8 +46,11 @@
     "jsdom": "^29.1.1",
     "prettier": "^3.9.6",
     "sitemap": "^8.0.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.67.0",
     "vite": "^7.0.0",
     "vitest": "^4.1.11",
     "xml2js": "^0.6.2"
-  }
+  },
+  "type": "module"
 }

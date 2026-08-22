@@ -1,4 +1,3 @@
-# https://editorconfig.org — 讓不同編輯器使用一致的縮排與編碼
 root = true
 
 [*]

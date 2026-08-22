@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* partials 必須緊接在 @charset 之後：CSS 規範要求 @import 先於所有其他規則，否則會被忽略 */
 @import "_theme-fix.css";
 @import "_nav.css";
 @import "_footer.css";
@@ -171,7 +170,6 @@
   }
 }
 
-/* utility: justify text like Word */
 .text-justify {
   text-align: justify;
   text-justify: inter-word;
