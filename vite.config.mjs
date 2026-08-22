@@ -10,4 +10,18 @@ export default defineConfig({
     outDir: "build",
     emptyOutDir: true,
   },
+  test: {
+    // jsdom 提供 document / window，讓 React 元件測試能在 Node 執行
+    environment: "jsdom",
+    // 每個測試檔都自動載入 jest-dom 的 matcher（toBeInTheDocument 等）
+    setupFiles: ["./src/test/setup.js"],
+    globals: true,
+    css: false,
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "html"],
+      include: ["src/**/*.{js,jsx}", "fix-404.js"],
+      exclude: ["src/index.jsx", "src/test/**"],
+    },
+  },
 });

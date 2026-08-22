@@ -1,18 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
+import { isActivePath } from "../utils/isActivePath";
 
 const Navigation = () => {
   const location = useLocation();
   const [isExpanded, setIsExpanded] = useState(false);
   const navbarRef = useRef(null);
-
-  const isActive = (path) => {
-    if (path === "/" && location.pathname === "/") {
-      return true;
-    }
-    return path !== "/" && location.pathname.startsWith(path);
-  };
 
   // 處理導覽列切換
   const handleToggle = () => {
@@ -68,7 +62,7 @@ const Navigation = () => {
                 key={path}
                 as={Link}
                 to={path}
-                className={`px-3 ${isActive(path) ? "active" : ""}`}
+                className={`px-3 ${isActivePath(path, location.pathname) ? "active" : ""}`}
               >
                 {label}
               </Nav.Link>
