@@ -35,13 +35,17 @@
   height: 100%;
   border-radius: var(--border-radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--card-shadow);
   cursor: pointer;
   background: #ffffff;
 }
 
 .project-card-card-back {
   background: var(--card-back-gradient);
+}
+
+.project-card-card:hover {
+  box-shadow: var(--shadow-lg);
 }
 
 .project-card-card:focus-visible {

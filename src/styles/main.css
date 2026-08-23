@@ -115,18 +115,6 @@
   color: var(--lavender-dark);
 }
 
-.project-card-card {
-  height: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--card-shadow);
-  cursor: pointer;
-}
-
-.project-card-card-back {
-  background: var(--card-back-gradient);
-}
-
 .card,
 .card:hover {
   border: none !important;

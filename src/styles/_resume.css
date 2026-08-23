@@ -113,17 +113,10 @@
   transform: translateX(0);
 }
 
-.project-card-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
 .resume-content {
   background-color: #ffffff;
   padding: 1px;
   max-width: 100%;
-  font-family: Arial, "Noto Sans TC", sans-serif;
-  line-height: 0.9;
 }
 
 .resume-left,
@@ -160,43 +153,6 @@
 }
 
 @media print {
-  @page {
-    size: A4;
-    margin: 12mm 12mm 16mm;
-
-    @top-left {
-      content: "";
-    }
-
-    @top-center {
-      content: "";
-    }
-
-    @top-right {
-      content: "";
-    }
-
-    @bottom-left {
-      content: "";
-    }
-
-    @bottom-right {
-      content: "";
-    }
-
-    @bottom-center {
-      content: counter(page) " / " counter(pages);
-      font-family: Arial, sans-serif;
-      font-size: 9pt;
-      color: #666666;
-    }
-  }
-
-  html,
-  body {
-    background: #ffffff;
-  }
-
   .navbar,
   .footer-lavender,
   .top-button,
@@ -206,95 +162,5 @@
 
   .main-content {
     padding-top: 0;
-  }
-
-  .main-content .container {
-    max-width: none;
-    padding: 0;
-  }
-
-  .py-5 {
-    padding: 0 !important;
-  }
-
-  .resume-content {
-    padding: 0;
-  }
-
-  .resume {
-    padding: 0;
-    box-shadow: none;
-    border-radius: 0;
-    max-width: none;
-  }
-
-  .resume-left,
-  .resume-right {
-    flex: 0 0 50%;
-    width: 50%;
-    max-width: 50%;
-    padding: 0 12px;
-  }
-
-  .resume-header {
-    margin-bottom: 24px;
-  }
-
-  .resume-section {
-    margin-bottom: 24px;
-  }
-
-  .timeline {
-    padding-left: 0;
-  }
-
-  .timeline::before {
-    display: none;
-  }
-
-  .timeline-item {
-    padding-left: 35px;
-    padding-bottom: 28px;
-    margin-bottom: 0;
-  }
-
-  .timeline-item:last-child {
-    padding-bottom: 0;
-  }
-
-  .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: 10.5px;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: var(--lavender-primary);
-    opacity: 0.4;
-    border-radius: 2px;
-  }
-
-  .timeline-dot {
-    left: 3px;
-  }
-
-  .resume-item,
-  .timeline-item {
-    break-inside: avoid;
-  }
-
-  .resume-title,
-  .resume-item h3 {
-    break-after: avoid;
-  }
-
-  .contact-link,
-  .competition-link {
-    color: var(--lavender-primary);
-  }
-
-  * {
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
   }
 }
