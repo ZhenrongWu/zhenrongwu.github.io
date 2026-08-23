@@ -91,12 +91,6 @@
   color: #7a46b3;
 }
 
-.download-button {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
 .button-background {
   position: absolute;
   top: 0;

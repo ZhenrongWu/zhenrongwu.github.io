@@ -35,53 +35,6 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
-}
-
-.download-button:disabled {
-  background-color: var(--lavender-secondary) !important;
-  border-color: var(--lavender-secondary) !important;
-  color: #ffffff !important;
-  cursor: not-allowed;
-  opacity: 0.9;
-  transition: var(--transition-base);
-}
-
-.download-button:disabled:hover {
-  background-color: var(--lavender-secondary) !important;
-  border-color: var(--lavender-secondary) !important;
-  transform: none !important;
-  box-shadow: var(--card-shadow) !important;
-}
-
-.download-button:disabled span:not(.loading-text) {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.download-button:disabled .loading-text {
-  opacity: 1 !important;
-  color: #ffffff !important;
-  font-weight: 500;
-  transition: opacity 0.3s ease;
-}
-
-.download-button:disabled svg {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.download-button:not(:disabled) span,
-.download-button:not(:disabled) svg {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.download-button:disabled .button-background {
-  background: linear-gradient(45deg, var(--lavender-primary), var(--lavender-secondary));
-  transform: translateX(0);
-  opacity: 0.15;
-}
-.download-button {
   padding: 10px 25px;
   font-size: 1.1em;
   border-radius: 30px;
@@ -90,7 +43,6 @@
 
 .download-button:hover,
 .download-button:focus {
-  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
   outline: none;
 }
