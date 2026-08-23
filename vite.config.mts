@@ -1,7 +1,6 @@
 import { defineConfig } from "vitest/config";
 import type { Plugin } from "vite";
 import react from "@vitejs/plugin-react";
-import { renderResumePdf, resumePdfName } from "./scripts/generate-resume-pdf.ts";
 
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -29,28 +28,8 @@ const cspPlugin = (): Plugin => ({
   ],
 });
 
-const resumePdfDevPlugin = (): Plugin => ({
-  name: "resume-pdf-dev",
-  apply: "serve",
-  configureServer: (server) => {
-    server.middlewares.use(`/${resumePdfName}`, (req, res) => {
-      const origin = `http://${req.headers.host ?? "localhost:3000"}`;
-      renderResumePdf(origin)
-        .then((pdf) => {
-          res.setHeader("Content-Type", "application/pdf");
-          res.setHeader("Cache-Control", "no-store");
-          res.end(pdf);
-        })
-        .catch((error: unknown) => {
-          res.statusCode = 500;
-          res.end(error instanceof Error ? error.message : String(error));
-        });
-    });
-  },
-});
-
 export default defineConfig({
-  plugins: [react(), cspPlugin(), resumePdfDevPlugin()],
+  plugins: [react(), cspPlugin()],
   server: { port: 3000, open: true },
   build: {
     outDir: "build",
