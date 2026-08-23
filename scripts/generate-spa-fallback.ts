@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { routes } from "../routes.config.ts";
+import { routes } from "../src/data/routes.ts";
 
 export function createSpaFallback(
   buildDir: string,

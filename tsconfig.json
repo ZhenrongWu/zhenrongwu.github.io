@@ -17,5 +17,5 @@
     "noEmit": true,
     "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom/vitest", "node"]
   },
-  "include": ["src", "scripts", "*.ts", "*.mts"]
+  "include": ["src", "scripts", "*.mts"]
 }

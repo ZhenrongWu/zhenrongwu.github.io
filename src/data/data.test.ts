@@ -1,7 +1,12 @@
+import { existsSync } from "node:fs";
+import { resolve } from "node:path";
 import { describe, it, expect } from "vitest";
 import { projects } from "./projects";
 import { resumeData } from "./resume";
 import { skills, tools, hobbies } from "./about";
+import { routes } from "./routes";
+
+const rootDir = resolve(import.meta.dirname, "../..");
 describe("projects 資料", () => {
   it("每筆都有必要欄位且 id 唯一", () => {
     const ids = new Set();
@@ -34,6 +39,21 @@ describe("about 資料", () => {
       expect(item.name).toBeTruthy();
       expect(typeof item.icon).toBe("function");
       expect(item.color).toMatch(/^#[0-9A-Fa-f]{6}$/);
+    }
+  });
+});
+
+describe("routes 資料", () => {
+  it("url 唯一、priority 合法且 sources 檔案存在", () => {
+    const urls = new Set();
+    for (const r of routes) {
+      expect(r.url.startsWith("/")).toBe(true);
+      expect(urls.has(r.url)).toBe(false);
+      urls.add(r.url);
+      expect(r.priority).toBeGreaterThan(0);
+      expect(r.priority).toBeLessThanOrEqual(1);
+      expect(r.sources.length).toBeGreaterThan(0);
+      for (const s of r.sources) expect(existsSync(resolve(rootDir, s))).toBe(true);
     }
   });
 });
