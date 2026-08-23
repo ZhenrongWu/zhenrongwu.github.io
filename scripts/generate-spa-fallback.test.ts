@@ -28,7 +28,7 @@ describe("createSpaFallback", () => {
     const written = createSpaFallback(tmpDir, ["/", "/about", "/portfolio"]);
     expect(fs.readFileSync(path.join(tmpDir, "about.html"), "utf8")).toBe(html);
     expect(fs.readFileSync(path.join(tmpDir, "portfolio.html"), "utf8")).toBe(html);
-    expect(written).toHaveLength(3); // 404.html + 2 routes
+    expect(written).toHaveLength(3);
   });
 
   it("預設使用 src/data/routes.ts 的路由清單", () => {
