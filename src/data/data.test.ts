@@ -53,6 +53,7 @@ describe("routes 資料", () => {
       expect(r.priority).toBeGreaterThan(0);
       expect(r.priority).toBeLessThanOrEqual(1);
       expect(r.sources.length).toBeGreaterThan(0);
+      expect(r.description).toBeTruthy();
       for (const s of r.sources) expect(existsSync(resolve(rootDir, s))).toBe(true);
     }
   });

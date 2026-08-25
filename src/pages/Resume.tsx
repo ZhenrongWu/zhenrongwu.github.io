@@ -1,6 +1,7 @@
 import { Row, Col } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import Seo from "../components/Seo";
+import { seoFor } from "../data/routes";
 import { resumeData } from "../data/resume";
 
 const resumePdfUrl = "/resume.pdf";
@@ -9,10 +10,7 @@ const resumePdfFileName = "吳振榮履歷.pdf";
 const Resume = () => {
   return (
     <div className="py-5">
-      <Seo
-        title="履歷"
-        description="吳振榮的履歷：學歷、工作經歷、專案經驗與技能，並可下載 PDF 版本。"
-      />
+      <Seo {...seoFor("/resume")} />
       <Row className="mb-5 d-print-none">
         <Col className="text-center">
           <div className="position-relative d-inline-block mb-4">

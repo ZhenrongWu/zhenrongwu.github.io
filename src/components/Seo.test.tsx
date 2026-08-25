@@ -1,7 +1,8 @@
 import { describe, it, expect } from "vitest";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import Seo, { SITE_NAME, SITE_URL, DEFAULT_DESCRIPTION } from "./Seo";
+import Seo from "./Seo";
+import { SITE_NAME, SITE_URL, DEFAULT_DESCRIPTION } from "../data/seo";
 
 type SeoProps = Parameters<typeof Seo>[0];
 

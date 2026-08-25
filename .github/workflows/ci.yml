@@ -17,6 +17,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          # sitemap 的 lastmod 取自各頁最後一次 commit 日期，淺層 clone 會讀不到
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
@@ -40,12 +43,15 @@ jobs:
 
       - name: Build
         run: npm run build
-      - name: Verify SPA fallback
+      - name: Verify route metadata
         run: |
-          for f in build/404.html build/about.html build/portfolio.html build/resume.html; do
-            cmp build/index.html "$f" || exit 1
-          done
-          test -s build/resume.pdf || exit 1
+          grep -q '<link rel="canonical" href="https://zhenrongwu.github.io/"' build/index.html
+          grep -q '<link rel="canonical" href="https://zhenrongwu.github.io/about"' build/about.html
+          grep -q '<link rel="canonical" href="https://zhenrongwu.github.io/portfolio"' build/portfolio.html
+          grep -q '<link rel="canonical" href="https://zhenrongwu.github.io/resume"' build/resume.html
+          grep -q 'content="noindex, follow"' build/404.html
+          test -s build/sitemap.xml
+          test -s build/resume.pdf
       - name: Upload build artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:

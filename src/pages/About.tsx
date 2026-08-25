@@ -1,5 +1,6 @@
 import { memo } from "react";
 import Seo from "../components/Seo";
+import { seoFor } from "../data/routes";
 import { skills, tools, hobbies, type IconItem } from "../data/about";
 import { Row, Col, Card } from "react-bootstrap";
 import { FaQuoteLeft } from "react-icons/fa";
@@ -113,10 +114,7 @@ const ProfessionalIntro = memo(() => (
 const About = () => {
   return (
     <>
-      <Seo
-        title="關於我"
-        description="認識吳振榮：遊戲與網頁開發者的專業簡介、接觸過的技能、常用工具與興趣。"
-      />
+      <Seo {...seoFor("/about")} />
       <div className="py-5">
         <ProfessionalIntro />
         <SkillSection title="接觸過的專業技能" items={skills} />

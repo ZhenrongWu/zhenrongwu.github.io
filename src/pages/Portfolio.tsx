@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, type KeyboardEvent } from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
 import Seo from "../components/Seo";
+import { seoFor } from "../data/routes";
 import LazyImage from "../components/LazyImage";
 import { projects, type Project } from "../data/projects";
 
@@ -167,10 +168,7 @@ const Portfolio = () => {
 
   return (
     <div className="py-5">
-      <Seo
-        title="作品集"
-        description="吳振榮的作品集：網頁開發、遊戲開發與自動化工具專案，包含使用技術與作品連結。"
-      />
+      <Seo {...seoFor("/portfolio")} />
       <Row className="mb-5">
         <Col className="text-center">
           <div className="position-relative d-inline-block mb-4">

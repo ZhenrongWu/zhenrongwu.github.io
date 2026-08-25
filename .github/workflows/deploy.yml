@@ -17,6 +17,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          # sitemap 的 lastmod 取自各頁最後一次 commit 日期，淺層 clone 會讀不到
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
@@ -40,6 +43,16 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Verify route metadata
+        run: |
+          grep -q '<link rel="canonical" href="https://zhenrongwu.github.io/"' build/index.html
+          grep -q '<link rel="canonical" href="https://zhenrongwu.github.io/about"' build/about.html
+          grep -q '<link rel="canonical" href="https://zhenrongwu.github.io/portfolio"' build/portfolio.html
+          grep -q '<link rel="canonical" href="https://zhenrongwu.github.io/resume"' build/resume.html
+          grep -q 'content="noindex, follow"' build/404.html
+          test -s build/sitemap.xml
+          test -s build/resume.pdf
 
       - name: Setup Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d

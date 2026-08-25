@@ -2,6 +2,7 @@ import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import TypingEffect from "../components/TypingEffect";
 import Seo from "../components/Seo";
+import { seoFor } from "../data/routes";
 import LazyImage from "../components/LazyImage";
 import avatarImg from "../assets/images/avatar.webp";
 
@@ -12,7 +13,7 @@ const HERO_TITLE_LABEL = `我是${HERO_TITLES.join("、")}`;
 const Home = () => {
   return (
     <div className="home-centered-container">
-      <Seo />
+      <Seo {...seoFor("/")} />
       <Row className="align-items-center w-100 gy-4">
         <Col lg={6} md={12} className="order-2 order-lg-1">
           <div className="text-center text-lg-start px-3 px-md-5">
