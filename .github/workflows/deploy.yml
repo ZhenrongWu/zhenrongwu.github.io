@@ -43,6 +43,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          CF_BEACON_TOKEN: ${{ vars.CF_BEACON_TOKEN }}
 
       - name: Verify route metadata
         run: |
