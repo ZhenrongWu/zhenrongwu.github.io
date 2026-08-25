@@ -3,8 +3,12 @@
 }
 
 .timeline {
+  --timeline-offset: 35px;
+  --timeline-line-width: 3px;
+  --timeline-dot-size: 12px;
+
   position: relative;
-  padding-left: 35px;
+  padding-left: var(--timeline-offset);
 }
 
 .timeline::before {
@@ -13,7 +17,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  width: 3px;
+  width: var(--timeline-line-width);
   background: var(--lavender-primary);
   opacity: 0.4;
   border-radius: 2px;
@@ -30,10 +34,10 @@
 
 .timeline-dot {
   position: absolute;
-  left: -38px;
+  left: calc((var(--timeline-line-width) - var(--timeline-dot-size)) / 2 - var(--timeline-offset));
   top: 5px;
-  width: 12px;
-  height: 12px;
+  width: var(--timeline-dot-size);
+  height: var(--timeline-dot-size);
   border-radius: 50%;
   background: var(--lavender-primary);
   border: 3px solid #ffffff;
@@ -106,13 +110,11 @@
 
 @media (max-width: 768px) {
   .timeline {
-    padding-left: 25px;
+    --timeline-offset: 25px;
+    --timeline-dot-size: 10px;
   }
 
   .timeline-dot {
-    left: -28px;
-    width: 10px;
-    height: 10px;
     border-width: 2px;
     box-shadow: 0 0 0 2px var(--lavender-primary);
   }
