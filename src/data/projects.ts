@@ -7,6 +7,7 @@ import p6Img from "../assets/images/p6.webp";
 import p7Img from "../assets/images/p7.webp";
 import p8Img from "../assets/images/p8.webp";
 import p9Img from "../assets/images/p9.webp";
+import p10Img from "../assets/images/p10.webp";
 export type ProjectImage = {
   src: string;
   width: number;
@@ -130,5 +131,25 @@ export const projects: Project[] = [
     date: "2026年5月",
     tags: ["TypeScript", "React", "Vite", "Tailwind CSS", "Canvas", "Netlify", "Git"],
     url: "https://paint-devherohub.netlify.app/",
+  },
+  {
+    id: 10,
+    title: "PassMD 密碼保險庫",
+    category: "網頁應用",
+    description:
+      "密碼產生器結合端對端加密的保險庫，密碼以 Markdown 形式存放在使用者自己的 Google Drive，換裝置也能同步；支援 PWA 安裝、離線使用與版本衝突處理。",
+    image: { src: p10Img, width: 1500, height: 680 },
+    date: "2026年9月",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Web Crypto API",
+      "Google Drive API",
+      "PWA",
+      "Netlify",
+      "Git",
+    ],
+    url: "https://passmd.devherohub.com/",
   },
 ];
