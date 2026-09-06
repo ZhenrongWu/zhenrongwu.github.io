@@ -1,3 +1,4 @@
+import { StrictMode } from "react";
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -47,6 +48,17 @@ describe("Portfolio 卡片無障礙", () => {
     await user.keyboard("{Escape}");
     expect(card).toHaveAttribute("aria-expanded", "false");
     expect(card).toHaveFocus();
+  });
+
+  it("StrictMode 下初次渲染不搶焦點", () => {
+    render(
+      <StrictMode>
+        <MemoryRouter>
+          <Portfolio />
+        </MemoryRouter>
+      </StrictMode>
+    );
+    expect(document.body).toHaveFocus();
   });
 
   it("未翻面時背面內容對輔助技術隱藏", () => {

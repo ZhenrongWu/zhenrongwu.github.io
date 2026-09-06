@@ -10,13 +10,11 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
   const [isFlipped, setIsFlipped] = useState(false);
   const frontCardRef = useRef<HTMLDivElement>(null);
   const backButtonRef = useRef<HTMLButtonElement>(null);
-  const hasFlippedRef = useRef(false);
+  const focusedFlipRef = useRef(isFlipped);
 
   useEffect(() => {
-    if (!hasFlippedRef.current) {
-      hasFlippedRef.current = true;
-      return;
-    }
+    if (focusedFlipRef.current === isFlipped) return;
+    focusedFlipRef.current = isFlipped;
     const target = isFlipped ? backButtonRef.current : frontCardRef.current;
     target?.focus();
   }, [isFlipped]);
