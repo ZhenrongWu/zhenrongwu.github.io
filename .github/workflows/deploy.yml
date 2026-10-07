@@ -55,6 +55,8 @@ jobs:
           grep -q 'content="noindex, follow"' build/404.html
           test -s build/sitemap.xml
           test -s build/resume.pdf
+          test -s build/projects.json
+          test -s build/projects/p1.webp
 
       - name: Setup Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
@@ -77,3 +79,19 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346
+
+  # devherohub.com 的「參與過的專案」在建置時讀 projects.json，部署完通知它重新建置
+  rebuild-devherohub:
+    name: Rebuild devherohub.com
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare deploy hook
+        env:
+          DEPLOY_HOOK: ${{ secrets.DEVHEROHUB_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$DEPLOY_HOOK" ]; then
+            echo "::warning::未設定 DEVHEROHUB_DEPLOY_HOOK，略過"
+            exit 0
+          fi
+          curl -fsS -X POST "$DEPLOY_HOOK" > /dev/null
