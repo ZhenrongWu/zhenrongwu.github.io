@@ -70,7 +70,7 @@ export const projects: Project[] = [
     image: { src: p3Img, width: 1456, height: 816 },
     date: "2023年12月",
     tags: ["Unity", "C#", "Jetbrain Rider", "vim", "Git"],
-    url: "https://play.google.com/store/apps/details?id=com.Nobollel.SandwichTycoon&hl=zh_TW",
+    url: "https://apps.apple.com/tw/app/sandwich-tycoon/id6475956767",
   },
   {
     id: 5,
