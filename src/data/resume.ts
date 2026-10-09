@@ -168,17 +168,25 @@ export const resumeData: ResumeData = {
   ],
   competitions: [
     {
+      name: "Faust Game Jam 2026",
+      year: "2026/10",
+      result: "參加",
+      url: "https://wanderviewer.itch.io/deep-sea-gambler",
+      description:
+        "活動主題是 Breath，製作 2D 橫向卷軸大話骰遊戲，以氧氣作為賭注，負責所有遊戲功能",
+    },
+    {
       name: "Global Game Jam 2026",
       year: "2026/01",
       result: "參加",
-      url: "https://globalgamejam.org/games/2026/whos-cat-ching-naps-7",
+      url: "https://wanderviewer.itch.io/whos-cat-ching-naps",
       description: "活動主題是 Mask，製作 2D 遊戲，主要負責專案管理和主程式",
     },
     {
       name: "Global Game Jam 2025",
       year: "2025/01",
       result: "參加",
-      url: "https://globalgamejam.org/games/2025/disizu-2",
+      url: "https://wanderviewer.itch.io/babble-bubble",
       description: "活動主題是 Bubble，製作 2D 遊戲，主要負責所有遊戲功能和帶領團隊",
     },
     {

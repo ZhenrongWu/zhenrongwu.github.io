@@ -26,7 +26,10 @@ describe("generateProjectsFeed", () => {
     expect(feed.projects[0]).toMatchObject({
       title: first.title,
       tags: first.tags,
-      image: { src: `${SITE_URL}/${FEED_IMAGE_DIR}/p1.webp`, width: first.image.width },
+      image: {
+        src: `${SITE_URL}/${FEED_IMAGE_DIR}/${path.basename(first.image.src)}`,
+        width: first.image.width,
+      },
     });
   });
 

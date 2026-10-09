@@ -8,6 +8,10 @@ import p7Img from "../assets/images/p7.webp";
 import p8Img from "../assets/images/p8.webp";
 import p9Img from "../assets/images/p9.webp";
 import p10Img from "../assets/images/p10.webp";
+import p11Img from "../assets/images/p11.webp";
+import p12Img from "../assets/images/p12.webp";
+import p13Img from "../assets/images/p13.webp";
+import p14Img from "../assets/images/p14.webp";
 export type ProjectImage = {
   src: string;
   width: number;
@@ -28,6 +32,17 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 1,
+    title: "Ctrl+S",
+    category: "遊戲開發",
+    description:
+      "Faust Game Jam 2020 參賽作品，主題為 Save Yourself, Not the World。2D 策略遊戲，我主要負責遊戲介面和功能整合。",
+    image: { src: p14Img, width: 880, height: 630 },
+    date: "2020年8月",
+    tags: ["Unity", "C#", "WebGL", "itch.io"],
+    url: "https://wanderviewer.itch.io/ctrls",
+  },
+  {
+    id: 2,
     title: "嶺東科技大學 教學評量自動填寫",
     category: "網頁應用",
     description: "懶人小工具。",
@@ -37,7 +52,7 @@ export const projects: Project[] = [
     url: "https://chromewebstore.google.com/detail/dnkodhghfphabiopghdmpcmpojlchajg?utm_source=item-share-cb",
   },
   {
-    id: 2,
+    id: 3,
     title: "迴魂",
     category: "遊戲開發",
     description: "此畢業專案，我主要負責遊戲系統與功能實作，另負責專案管理及部分關卡規劃。",
@@ -47,7 +62,7 @@ export const projects: Project[] = [
     url: "https://store.steampowered.com/app/2075110/Incarnation/?l=tchinese",
   },
   {
-    id: 3,
+    id: 4,
     title: "Sandwich-Tycoon",
     category: "遊戲開發",
     description:
@@ -58,7 +73,7 @@ export const projects: Project[] = [
     url: "https://play.google.com/store/apps/details?id=com.Nobollel.SandwichTycoon&hl=zh_TW",
   },
   {
-    id: 4,
+    id: 5,
     title: "開發者英雄基地",
     category: "網頁開發",
     description: "個人電子商務平台，含有付款系統和訂單功能。",
@@ -68,7 +83,7 @@ export const projects: Project[] = [
     url: "https://devherohub.com/",
   },
   {
-    id: 5,
+    id: 6,
     title: "胖老爹食堂",
     category: "網頁開發",
     description: "專為小型商家設計的一頁式網站，提供簡潔的線上展示平台。",
@@ -78,7 +93,18 @@ export const projects: Project[] = [
     url: "https://fat-dad-eatery.netlify.app/",
   },
   {
-    id: 6,
+    id: 7,
+    title: "Babble bubble",
+    category: "遊戲開發",
+    description:
+      "Global Game Jam 2025 參賽作品，主題為 Bubble。以傳話遊戲為靈感，玩家搧風推動對話泡泡，讓居民的話語傳到對的人耳中；我主要負責所有遊戲功能和帶領團隊。",
+    image: { src: p13Img, width: 960, height: 588 },
+    date: "2025年1月",
+    tags: ["Unity", "C#", "WebGL", "itch.io"],
+    url: "https://wanderviewer.itch.io/babble-bubble",
+  },
+  {
+    id: 8,
     title: "圖像畫廊",
     category: "網頁開發",
     description: "整合 Pexels API 的圖像網站，瀏覽與下載精美圖片。",
@@ -88,7 +114,18 @@ export const projects: Project[] = [
     url: "https://image-gallery-2025.netlify.app/",
   },
   {
-    id: 7,
+    id: 9,
+    title: "Who's Cat-ching Naps",
+    category: "遊戲開發",
+    description:
+      "Global Game Jam 2026 參賽作品，主題為 Mask。扮演老師在下課前揪出上課偷懶的學生，點擊越多次打混的學生分數越高；我主要負責專案管理和主程式。",
+    image: { src: p12Img, width: 960, height: 600 },
+    date: "2026年1月",
+    tags: ["Unity", "C#", "WebGL", "itch.io"],
+    url: "https://wanderviewer.itch.io/whos-cat-ching-naps",
+  },
+  {
+    id: 10,
     title: "RPA．ERP 系統",
     category: "網頁開發",
     description:
@@ -111,7 +148,7 @@ export const projects: Project[] = [
     url: "https://rpa-erp-system.vercel.app",
   },
   {
-    id: 8,
+    id: 11,
     title: "墨池爭食",
     category: "遊戲開發",
     description:
@@ -122,7 +159,7 @@ export const projects: Project[] = [
     url: "https://play.google.com/store/apps/details?id=com.Frank.InkPool",
   },
   {
-    id: 9,
+    id: 12,
     title: "網頁版小畫家",
     category: "網頁開發",
     description:
@@ -133,7 +170,7 @@ export const projects: Project[] = [
     url: "https://paint-devherohub.netlify.app/",
   },
   {
-    id: 10,
+    id: 13,
     title: "PassMD 密碼保險庫",
     category: "網頁應用",
     description:
@@ -151,5 +188,16 @@ export const projects: Project[] = [
       "Git",
     ],
     url: "https://passmd.devherohub.com/",
+  },
+  {
+    id: 14,
+    title: "Deep Sea Gambler",
+    category: "遊戲開發",
+    description:
+      "Faust Game Jam 2026 參賽作品，主題為 Breath。在深海中以氧氣作為籌碼，與四種深海生物進行大話骰對決，支援網頁直接遊玩；遊戲所有功能皆由我負責開發。",
+    image: { src: p11Img, width: 960, height: 600 },
+    date: "2026年10月",
+    tags: ["Unity", "C#", "WebGL", "itch.io"],
+    url: "https://wanderviewer.itch.io/deep-sea-gambler",
   },
 ];
