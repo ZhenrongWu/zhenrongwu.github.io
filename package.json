@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.5",
-    "framer-motion": "^13.4.6",
+    "framer-motion": "^14.0.0",
     "react": "^19.3.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.3.0",
