@@ -60,11 +60,6 @@ const Resume = () => {
                       {resumeData.personalInfo.email}
                     </a>
                   </p>
-                  <p className="meta-item">
-                    <a href={`tel:${resumeData.personalInfo.phone}`} className="contact-link">
-                      {resumeData.personalInfo.phone}
-                    </a>
-                  </p>
                   <p className="meta-item" tabIndex={0}>
                     {resumeData.personalInfo.location}
                   </p>

@@ -26,7 +26,7 @@ function bullets(items: string[]): string {
 
 export function buildResumeHtml(data: ResumeData): string {
   const info = data.personalInfo;
-  const contact = [info.email, info.phone, info.location]
+  const contact = [info.email, info.location]
     .filter(Boolean)
     .map(escapeHtml)
     .join('<span class="dot">・</span>');

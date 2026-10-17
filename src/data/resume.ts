@@ -2,7 +2,6 @@ export type PersonalInfo = {
   name: string;
   title: string;
   email: string;
-  phone: string;
   location: string;
 };
 
@@ -48,7 +47,6 @@ export const resumeData: ResumeData = {
     name: "吳振榮",
     title: "遊戲與網頁開發者",
     email: "tim4224171@gmail.com",
-    phone: "(+886) 989-365-942",
     location: "台灣，高雄市",
   },
   education: [

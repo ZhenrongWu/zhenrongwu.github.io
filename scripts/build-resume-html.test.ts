@@ -7,7 +7,6 @@ const emptyData: ResumeData = {
     name: "測試",
     title: "職稱",
     email: "test@example.com",
-    phone: "0912345678",
     location: "台灣",
   },
   education: [],
