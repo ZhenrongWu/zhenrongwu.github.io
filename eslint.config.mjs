@@ -7,7 +7,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import prettier from "eslint-config-prettier";
 
 export default tseslint.config(
-  { ignores: ["build", "dist", "coverage", "node_modules"] },
+  { ignores: ["build", "dist", "coverage", "node_modules", "public/drone-route-planner"] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {

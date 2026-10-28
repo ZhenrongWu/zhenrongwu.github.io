@@ -12,6 +12,7 @@ import p11Img from "../assets/images/p11.webp";
 import p12Img from "../assets/images/p12.webp";
 import p13Img from "../assets/images/p13.webp";
 import p14Img from "../assets/images/p14.webp";
+import p15Img from "../assets/images/p15.webp";
 export type ProjectImage = {
   src: string;
   width: number;
@@ -212,5 +213,27 @@ export const projects: Project[] = [
     date: "2026年10月",
     tags: ["Unity", "C#", "WebGL", "itch.io"],
     url: "https://wanderviewer.itch.io/deep-sea-gambler",
+  },
+  {
+    id: 15,
+    title: "無人機航線規劃",
+    category: "網頁開發",
+    description:
+      "規劃無人機航線並在送出前做空域檢核：航點與航段不得進入交通部民用航空局公告的限航區，高度不得超過民用航空法的 400 呎。以 BDD 流程開發，規格本身就是驗收測試；後端用 PostGIS 判斷，線上版為 Demo 模式，檢核改在瀏覽器執行，並以同一份規格驗證兩種模式結果一致。",
+    image: { src: p15Img, width: 1500, height: 680 },
+    date: "2026年10月",
+    tags: [
+      "TypeScript",
+      "Vue",
+      "MapLibre",
+      "Fastify",
+      "PostgreSQL",
+      "PostGIS",
+      "Turf.js",
+      "Playwright",
+      "BDD",
+      "Git",
+    ],
+    url: "https://zhenrongwu.github.io/drone-route-planner/",
   },
 ];
