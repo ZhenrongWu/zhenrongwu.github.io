@@ -2,13 +2,17 @@ import { describe, it, expect } from "vitest";
 import { toChineseNumber, yearsOfExperience } from "./yearsOfExperience";
 
 describe("yearsOfExperience", () => {
-  it("2026 年為六年", () => {
-    expect(yearsOfExperience(new Date(2026, 9, 29))).toBe(6);
+  it("起始年 2020 算第一年", () => {
+    expect(yearsOfExperience(new Date(2020, 0, 1))).toBe(1);
+  });
+
+  it("2026 年為第七年", () => {
+    expect(yearsOfExperience(new Date(2026, 9, 29))).toBe(7);
   });
 
   it("每跨一個年度增加一年", () => {
-    expect(yearsOfExperience(new Date(2026, 11, 31))).toBe(6);
-    expect(yearsOfExperience(new Date(2027, 0, 1))).toBe(7);
+    expect(yearsOfExperience(new Date(2026, 11, 31))).toBe(7);
+    expect(yearsOfExperience(new Date(2027, 0, 1))).toBe(8);
   });
 });
 

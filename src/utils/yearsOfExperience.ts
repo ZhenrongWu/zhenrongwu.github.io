@@ -10,4 +10,4 @@ export const toChineseNumber = (n: number): string => {
 };
 
 export const yearsOfExperience = (now: Date = new Date()): number =>
-  Math.max(now.getFullYear() - CAREER_START_YEAR, 0);
+  Math.max(now.getFullYear() - CAREER_START_YEAR + 1, 0);
