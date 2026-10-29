@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
 
       - name: Run Lighthouse CI
+        id: lighthouse
         uses: treosh/lighthouse-ci-action@3e7e23fb74242897f95c0ba9cabad3d0227b9b18
         with:
           urls: |
@@ -27,4 +28,12 @@ jobs:
             https://zhenrongwu.github.io/portfolio
             https://zhenrongwu.github.io/resume
           configPath: ./lighthouserc.json
-          uploadArtifacts: true
+          uploadArtifacts: false
+
+      - name: Upload Lighthouse results
+        if: ${{ always() && steps.lighthouse.outputs.resultsPath != '' }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: lighthouse-results
+          path: ${{ steps.lighthouse.outputs.resultsPath }}
+          retention-days: 7
