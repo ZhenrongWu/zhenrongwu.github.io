@@ -234,6 +234,6 @@ export const projects: Project[] = [
       "BDD",
       "Git",
     ],
-    url: "https://zhenrongwu.github.io/drone-route-planner/",
+    url: "https://drone-route-planner.netlify.app/",
   },
 ];

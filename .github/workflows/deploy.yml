@@ -57,8 +57,6 @@ jobs:
           test -s build/resume.pdf
           test -s build/projects.json
           test -s build/projects/p1.webp
-          grep -q 'Content-Security-Policy' build/drone-route-planner/index.html
-          test -s build/drone-route-planner/no-fly-zones.geojson
 
       - name: Setup Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
