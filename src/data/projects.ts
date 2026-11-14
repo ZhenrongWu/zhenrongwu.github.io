@@ -68,11 +68,11 @@ export const projects: Project[] = [
     title: "Sandwich-Tycoon",
     category: "遊戲開發",
     description:
-      "於 Nobollel 前公司成功上架的專案，我主要負責遊戲內的 AI、道具效果與部分前端頁面互動功能開發。",
+      "於 Nobollel 前公司成功上架的專案，我主要負責遊戲內的 AI、道具效果與部分前端頁面互動功能開發。遊戲現已下架，連結為 App Store 頁面存檔。",
     image: { src: p3Img, width: 1456, height: 816 },
     date: "2023年12月",
     tags: ["Unity", "C#", "JetBrains Rider", "Vim", "Git"],
-    url: "https://apps.apple.com/tw/app/sandwich-tycoon/id6475956767",
+    url: "https://web.archive.org/web/20240906214215/https://apps.apple.com/us/app/sandwich-tycoon/id6475956767",
   },
   {
     id: 5,
