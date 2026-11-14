@@ -58,5 +58,10 @@
     "vitest": "^5.0.5",
     "xml2js": "^0.6.2"
   },
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.1"
+    }
+  },
   "type": "module"
 }
