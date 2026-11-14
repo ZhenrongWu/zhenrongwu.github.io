@@ -17,5 +17,5 @@
     "noEmit": true,
     "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom/vitest", "node"]
   },
-  "include": ["src", "scripts", "*.mts"]
+  "include": ["src", "scripts", "e2e", "*.mts", "playwright.config.ts"]
 }

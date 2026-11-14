@@ -58,6 +58,9 @@ jobs:
           test -s build/projects.json
           test -s build/projects/p1.webp
 
+      - name: Acceptance tests
+        run: npm run test:bdd
+
       - name: Setup Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
       - name: Upload Pages artifact

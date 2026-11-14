@@ -4,9 +4,18 @@
 
 - **前端**：React 19、TypeScript、React Router 7、Vite 8
 - **UI**：Bootstrap 5 / React Bootstrap、framer-motion、react-icons
-- **測試**：Vitest、Testing Library
+- **測試**：Vitest、Testing Library；驗收測試以 playwright-bdd 執行 `specs/truth/features`
 - **程式品質**：ESLint、Prettier
 - **部署**：GitHub Actions、GitHub Pages
+
+## 規格與驗收測試
+
+採用 AIxBDD，規格結構與執行方式見 [specs/README.md](specs/README.md)。
+
+```bash
+npm run build
+npm run test:bdd
+```
 
 ## 安全性
 

@@ -7,7 +7,17 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import prettier from "eslint-config-prettier";
 
 export default tseslint.config(
-  { ignores: ["build", "dist", "coverage", "node_modules"] },
+  {
+    ignores: [
+      "build",
+      "dist",
+      "coverage",
+      "node_modules",
+      ".features-gen",
+      "test-results",
+      "playwright-report",
+    ],
+  },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
@@ -17,6 +27,10 @@ export default tseslint.config(
       sourceType: "module",
       globals: { ...globals.browser, ...globals.node },
     },
+  },
+  {
+    files: ["e2e/**/*.ts"],
+    rules: { "no-empty-pattern": "off" },
   },
   {
     files: ["src/**/*.{ts,tsx}"],

@@ -1,0 +1,10 @@
+openapi: 3.0.3
+info:
+  title: zhenrongwu.github.io 對外介面
+  version: 1.0.0
+  description: 網站對其他網站提供的靜態資料，各領域的完整定義見同目錄的 NN-領域.yaml。
+servers:
+  - url: https://zhenrongwu.github.io
+paths:
+  /projects.json:
+    $ref: "./03-作品集.yaml#/paths/~1projects.json"

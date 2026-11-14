@@ -57,3 +57,8 @@ logs
 # 臨時文件
 tmp/
 temp/
+
+# 驗收測試
+/.features-gen
+/test-results
+/playwright-report

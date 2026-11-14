@@ -63,6 +63,7 @@ export default defineConfig({
     setupFiles: ["./src/test/setup.ts"],
     globals: true,
     css: false,
+    include: ["src/**/*.test.{ts,tsx}", "scripts/**/*.test.ts", "e2e/**/*.test.ts"],
     coverage: {
       provider: "v8",
       reporter: ["text", "html"],

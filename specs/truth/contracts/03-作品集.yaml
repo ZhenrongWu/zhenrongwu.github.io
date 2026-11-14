@@ -1,0 +1,71 @@
+openapi: 3.0.3
+info:
+  title: 作品資料
+  version: 1.0.0
+  description: >-
+    建置時由 scripts/generate-projects-feed.ts 輸出的靜態 JSON，
+    devherohub.com 的「參與過的專案」在建置時讀取。
+    圖片另外複製到 /projects/ 底下，檔名不帶 hash。
+servers:
+  - url: https://zhenrongwu.github.io
+paths:
+  /projects.json:
+    get:
+      summary: 取得全部作品
+      operationId: getProjects
+      responses:
+        "200":
+          description: 全部作品，順序與 src/data/projects.ts 相同
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProjectsFeed"
+components:
+  schemas:
+    ProjectsFeed:
+      type: object
+      required: [projects]
+      properties:
+        projects:
+          type: array
+          items:
+            $ref: "#/components/schemas/Project"
+    Project:
+      type: object
+      required: [id, title, category, description, image, date, tags]
+      properties:
+        id:
+          type: integer
+          description: 作品編號，越大越新
+        title:
+          type: string
+        category:
+          type: string
+        description:
+          type: string
+        image:
+          $ref: "#/components/schemas/ProjectImage"
+        date:
+          type: string
+          description: 完成日期，格式如 2020年8月
+        tags:
+          type: array
+          minItems: 1
+          items:
+            type: string
+        url:
+          type: string
+          format: uri
+          description: 作品連結，沒有公開版本時省略
+    ProjectImage:
+      type: object
+      required: [src, width, height]
+      properties:
+        src:
+          type: string
+          format: uri
+          description: https://zhenrongwu.github.io/projects/ 底下的圖片網址
+        width:
+          type: integer
+        height:
+          type: integer
