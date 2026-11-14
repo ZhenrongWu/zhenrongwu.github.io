@@ -62,10 +62,7 @@ export const resumeData: ResumeData = {
       company: "藏識科技有限公司",
       location: "台灣, 高雄市",
       period: "2026.05 - 現在",
-      responsibilities: [
-        "使用 Unity 與 C# 開發無人機模擬器軟體",
-        "帶領同專案的新人上手專案開發",
-      ],
+      responsibilities: ["使用 Unity 與 C# 開發無人機模擬器軟體", "帶領同專案的新人上手專案開發"],
     },
     {
       position: "授課講師",
