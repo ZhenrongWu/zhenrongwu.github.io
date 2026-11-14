@@ -6,7 +6,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "node scripts/generate-sitemap.ts && vite build && node scripts/generate-spa-fallback.ts && node scripts/generate-projects-feed.ts",
+    "build": "node scripts/generate-sitemap.ts && vite build && vite build --ssr src/entry-server.tsx && node scripts/generate-spa-fallback.ts && node scripts/generate-projects-feed.ts",
     "preview": "vite preview",
     "lint": "eslint .",
     "generate-sitemap": "node scripts/generate-sitemap.ts",
@@ -18,7 +18,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "test:bdd": "bddgen && playwright test"
+    "test:bdd": "bddgen && playwright test",
+    "generate-og-image": "node scripts/generate-og-image.ts"
   },
   "dependencies": {
     "bootstrap": "^5.3.5",

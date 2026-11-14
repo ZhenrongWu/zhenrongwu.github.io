@@ -19,7 +19,8 @@ const nextProgress = (current: number): number => {
 
 const usePrefersReducedMotion = (): boolean => {
   const [reduceMotion, setReduceMotion] = useState(
-    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    () =>
+      typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
   );
 
   useEffect(() => {

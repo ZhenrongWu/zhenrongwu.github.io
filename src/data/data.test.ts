@@ -44,14 +44,12 @@ describe("about 資料", () => {
 });
 
 describe("routes 資料", () => {
-  it("url 唯一、priority 合法且 sources 檔案存在", () => {
+  it("url 唯一且 sources 檔案存在", () => {
     const urls = new Set();
     for (const r of routes) {
       expect(r.url.startsWith("/")).toBe(true);
       expect(urls.has(r.url)).toBe(false);
       urls.add(r.url);
-      expect(r.priority).toBeGreaterThan(0);
-      expect(r.priority).toBeLessThanOrEqual(1);
       expect(r.sources.length).toBeGreaterThan(0);
       expect(r.description).toBeTruthy();
       for (const s of r.sources) expect(existsSync(resolve(rootDir, s))).toBe(true);

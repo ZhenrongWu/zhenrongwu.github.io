@@ -62,3 +62,4 @@ temp/
 /.features-gen
 /test-results
 /playwright-report
+/build-ssr

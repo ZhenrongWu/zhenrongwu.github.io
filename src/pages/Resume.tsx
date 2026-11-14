@@ -48,9 +48,9 @@ const Resume = () => {
           <Row className="g-4">
             <Col lg={6} className="resume-left">
               <header className="resume-header mb-5">
-                <h1 className="heading-name" tabIndex={0}>
+                <h2 className="heading-name" tabIndex={0}>
                   {resumeData.personalInfo.name}
-                </h1>
+                </h2>
                 <div className="heading-meta">
                   <p className="meta-item" tabIndex={0}>
                     {resumeData.personalInfo.title}

@@ -26,8 +26,6 @@ const sitemap = new SitemapStream({ hostname });
 for (const route of routes) {
   sitemap.write({
     url: route.url,
-    changefreq: route.changefreq,
-    priority: route.priority,
     lastmod: lastModified(route.sources),
   });
 }

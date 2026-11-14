@@ -17,3 +17,16 @@
       | /about     | 關於我 \| ZHENRONG WU | https://zhenrongwu.github.io/about     |
       | /portfolio | 作品集 \| ZHENRONG WU | https://zhenrongwu.github.io/portfolio |
       | /resume    | 履歷 \| ZHENRONG WU   | https://zhenrongwu.github.io/resume    |
+
+  @need-clarification
+  場景大綱: 分享 <網址> 時預覽圖符合大圖卡片的尺寸
+    當 不執行 JavaScript 的爬蟲讀取 "<網址>"
+    那麼 分享預覽圖的尺寸是 1200×630
+    並且 分享預覽圖的替代文字是 "吳振榮的個人網站：遊戲與網頁開發者"
+
+    例子:
+      | 網址       |
+      | /          |
+      | /about     |
+      | /portfolio |
+      | /resume    |

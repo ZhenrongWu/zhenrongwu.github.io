@@ -7,3 +7,4 @@ public/404.html
 .features-gen
 test-results
 playwright-report
+build-ssr

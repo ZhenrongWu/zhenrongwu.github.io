@@ -97,7 +97,7 @@ const ProfessionalIntro = memo(() => (
       </div>
 
       <div className="bg-lavender-light p-4 rounded-3 shadow-sm mb-4">
-        <h4 className="mb-3">專業簡介</h4>
+        <h2 className="h4 mb-3">專業簡介</h2>
         <p className="lead mb-3 text-justify">
           大家好，我來自台灣，目前是一位軟體工程師。專注於遊戲開發和網頁應用程式設計，致力於帶給用戶良好的體驗。
         </p>

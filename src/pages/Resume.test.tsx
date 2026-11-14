@@ -36,7 +36,7 @@ describe("Resume 下載履歷", () => {
     const heading = screen.getByRole("heading", { level: 1, name: "履歷" });
     expect(heading.closest(".row")).toHaveClass("d-print-none");
     expect(downloadLink().closest(".row")).toHaveClass("d-print-none");
-    const name = screen.getByRole("heading", { level: 1, name: resumeData.personalInfo.name });
+    const name = screen.getByRole("heading", { level: 2, name: resumeData.personalInfo.name });
     expect(name.closest(".d-print-none")).toBeNull();
     expect(name.closest(".resume-content")).not.toBeNull();
   });

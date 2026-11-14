@@ -10,6 +10,7 @@ export default tseslint.config(
   {
     ignores: [
       "build",
+      "build-ssr",
       "dist",
       "coverage",
       "node_modules",

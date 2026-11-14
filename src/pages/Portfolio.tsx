@@ -107,14 +107,14 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
             >
               <Card.Body className="d-flex flex-column h-100 p-4">
                 <div className="text-center mb-3 pt-2">
-                  <h4 className="text-lavender fw-bold mb-1">{project.title}</h4>
+                  <h2 className="h4 text-lavender fw-bold mb-1">{project.title}</h2>
                   <p className="project-card-category text-muted small mb-0">{project.category}</p>
                 </div>
 
                 <div className="card-back-content my-3">
                   <p className="project-card-description mb-4">{project.description}</p>
 
-                  <h6 className="mb-2 fw-bold text-lavender">使用技術：</h6>
+                  <h3 className="h6 mb-2 fw-bold text-lavender">使用技術：</h3>
                   <div className="mb-4">
                     {project.tags.map((tag: string, tagIndex: number) => (
                       <span key={tagIndex} className="project-card-tag">

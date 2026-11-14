@@ -51,12 +51,13 @@ const analyticsPlugin = (): Plugin => ({
       : [],
 });
 
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   plugins: [react(), cspPlugin(), analyticsPlugin()],
   server: { port: 3000, open: true },
   build: {
-    outDir: "build",
+    outDir: isSsrBuild ? "build-ssr" : "build",
     emptyOutDir: true,
+    copyPublicDir: !isSsrBuild,
   },
   test: {
     environment: "jsdom",
@@ -71,4 +72,4 @@ export default defineConfig({
       exclude: ["src/index.tsx", "src/test/**", "src/**/*.d.ts", "**/*.test.ts"],
     },
   },
-});
+}));
