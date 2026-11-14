@@ -13,6 +13,7 @@ import p12Img from "../assets/images/p12.webp";
 import p13Img from "../assets/images/p13.webp";
 import p14Img from "../assets/images/p14.webp";
 import p15Img from "../assets/images/p15.webp";
+import p16Img from "../assets/images/p16.webp";
 export type ProjectImage = {
   src: string;
   width: number;
@@ -235,5 +236,28 @@ export const projects: Project[] = [
       "Git",
     ],
     url: "https://drone-route-planner.netlify.app/",
+  },
+  {
+    id: 16,
+    title: "徒步環島",
+    category: "網頁開發",
+    description:
+      "用 three.js 與 Blender 做的互動 3D 場景：旅人背著背包沿環島公路順時針走台灣一圈，可用滾輪、方向鍵或觸控前進，也能從行程表直接飛到各站。島嶼地形、公路、地標與旅人全部由 Blender 的 Python 腳本從海岸線經緯度產生，並以 Cycles 把環境遮蔽烘焙進頂點色；網頁端自己寫海面、天空與復古後製的著色器，光線隨路段在晨昏晝夜間變化。以 BDD 流程開發，規格即驗收測試，沒有 GPU 的環境會自動降畫質。",
+    image: { src: p16Img, width: 1500, height: 680 },
+    date: "2026年11月",
+    tags: [
+      "TypeScript",
+      "React",
+      "three.js",
+      "React Three Fiber",
+      "GLSL",
+      "Blender",
+      "Web Audio",
+      "Playwright",
+      "BDD",
+      "Netlify",
+      "Git",
+    ],
+    url: "https://taiwan-on-foot.netlify.app/",
   },
 ];
