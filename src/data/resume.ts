@@ -61,7 +61,7 @@ export const resumeData: ResumeData = {
       position: "自由接案者 (兼職)",
       company: "",
       location: "",
-      period: "2024.06 - 現在",
+      period: "2024.06 - 2026.09",
       responsibilities: [
         "開發與設計網站前端頁面",
         "提供一對一遊戲開發指導",
@@ -104,7 +104,7 @@ export const resumeData: ResumeData = {
       position: "前端工程師（遠端工作）",
       company: "遠山創品有限公司",
       location: "台灣, 高雄市",
-      period: "2025.05 - 現在",
+      period: "2025.05 - 2026.09",
       responsibilities: [
         "開發 LINE OA 前端功能，主要使用 React 與 Next.js",
         "實作 RWD 與可重用元件化 UI",
