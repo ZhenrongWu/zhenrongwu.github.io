@@ -58,34 +58,21 @@ export const resumeData: ResumeData = {
   ],
   workExperience: [
     {
-      position: "自由接案者 (兼職)",
-      company: "",
-      location: "",
-      period: "2024.06 - 2026.09",
-      responsibilities: [
-        "開發與設計網站前端頁面",
-        "提供一對一遊戲開發指導",
-        "教授兒童科學與資訊相關課程",
-        "輔導大學生完成專題製作與技術實作",
-        "剪輯數位短影音內容",
-      ],
-    },
-    {
       position: "Unity 工程師",
       company: "藏識科技有限公司",
       location: "台灣, 高雄市",
       period: "2026.05 - 現在",
       responsibilities: [
-        "使用 Unity 與 C# 開發跨平台互動式應用程式，包含模擬器、VR/AR 與遊戲系統",
-        "負責系統架構設計、功能開發、效能優化與 Bug 修復，提升產品穩定性與使用者體驗",
-        "進行 iOS、Android 與 Steam 平台應用程式打包、上架與版本維護",
-        "與 PM、前後端工程師跨部門協作，完成需求分析、功能整合與產品落地",
-        "參與客戶需求訪談，提供技術建議並協助釐清產品規格",
-        "整合 Unity Asset Store 與第三方 Plugins／開源資源，加速開發流程並解決技術瓶頸",
-        "使用 Git／SVN 進行版本控制與團隊協作開發",
-        "具 VR/AR/MR 開發、Shader Graph 與渲染優化經驗",
-        "對 Digital Twin、GIS 與飛行模擬相關應用具開發興趣與基礎認識",
+        "使用 Unity 與 C# 開發無人機模擬器軟體",
+        "帶領同專案的新人上手專案開發",
       ],
+    },
+    {
+      position: "授課講師",
+      company: "產業新尖兵計畫-AI前端工程師人才應用培訓班",
+      location: "台灣, 台北市",
+      period: "2026.01 - 2026.02",
+      responsibilities: ["教授 UI/UX 設計與前端實作觀念", "協助學員完成專題製作與成果發表"],
     },
     {
       position: "軟體專案工程師",
@@ -101,6 +88,16 @@ export const resumeData: ResumeData = {
       ],
     },
     {
+      position: "授課講師",
+      company: "產業新尖兵計畫-網頁前端設計師養成班",
+      location: "台灣, 台中市",
+      period: "2025.07 - 2025.08",
+      responsibilities: [
+        "教授 Bootstrap、JavaScript、jQuery、React、PHP、Git、GitHub",
+        "協助學員完成專題製作與成果發表",
+      ],
+    },
+    {
       position: "前端工程師（遠端工作）",
       company: "遠山創品有限公司",
       location: "台灣, 高雄市",
@@ -110,23 +107,6 @@ export const resumeData: ResumeData = {
         "實作 RWD 與可重用元件化 UI",
         "整合後端 API 並處理狀態與錯誤情境",
         "導入 GA、GTM 事件埋點與標籤管理以支援成效分析",
-      ],
-    },
-    {
-      position: "授課講師",
-      company: "產業新尖兵計畫-AI前端工程師人才應用培訓班",
-      location: "台灣, 台北市",
-      period: "2026.01 - 2025.02",
-      responsibilities: ["教授 UI/UX 設計與前端實作觀念", "協助學員完成專題製作與成果發表"],
-    },
-    {
-      position: "授課講師",
-      company: "產業新尖兵計畫-網頁前端設計師養成班",
-      location: "台灣, 台中市",
-      period: "2025.07 - 2025.08",
-      responsibilities: [
-        "教授 Bootstrap、JavaScript、jQuery、React、PHP、Git、GitHub",
-        "協助學員完成專題製作與成果發表",
       ],
     },
     {
